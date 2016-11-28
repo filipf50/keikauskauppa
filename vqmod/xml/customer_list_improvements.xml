@@ -1,0 +1,68 @@
+<modification>
+    <id>Customer list improvements</id>
+    <version>1.0</version>
+    <vqmver>2.1</vqmver>
+    <author>@filipf50</author>
+    <!-- ADMIN LANGUAGE -->
+    
+    <!-- ADMIN CONTROLLER -->
+    <file name="admin/controller/sale/customer.php">
+        <operation>
+            <search position="before"><![CDATA[public function delete()]]></search>
+            <add><![CDATA[
+                    public function updateCustomerGroup(){
+                        if (isset($this->request->post['customer_id'])){
+                            $this->load->model('sale/customer');
+                            $this->model_sale_customer->updateCustomerGroup((int)$this->request->post['customer_id'],(int)$this->request->post['value']);
+                        }
+                    }
+                ]]>                
+            </add>
+        </operation>
+    </file>
+    
+    <!-- ADMIN MODEL -->
+    <file name="admin/model/sale/customer.php">
+        <operation>
+            <search position="before"><![CDATA[public function editToken($customer_id, $token) {]]></search>
+            <add><![CDATA[
+                    public function updateCustomerGroup($customer_id,$customer_group_id){
+                        $this->db->query("UPDATE " . DB_PREFIX . "customer SET customer_group_id=" . $customer_group_id . " WHERE customer_id=" . $customer_id . ";");
+                    }
+                ]]>                
+            </add>
+        </operation>
+    </file>
+    <!-- ADMIN VIEW -->
+    <file name="admin/view/template/sale/customer_list.tpl">
+        <operation>
+            <search position="replace" index="1"><![CDATA[<td class="left"><?php echo $customer['customer_group']; ?></td>]]>
+            </search>
+            <add><![CDATA[
+                  <td><select id="customer_<?php echo $customer['customer_id'];?>_group_id" onchange="updateCustomer('<?php echo $customer['customer_id'];?>','customer_<?php echo $customer['customer_id'];?>_group_id');">
+                    <?php foreach ($customer_groups as $customer_group) { ?>
+                      <?php if ($customer_group['name'] == $customer['customer_group']) { ?>
+                        <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
+                      <?php } else { ?>
+                        <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
+                      <?php } ?>
+                    <?php } ?>
+                  </select><span id="saved_customer_<?php echo $customer['customer_id'];?>" style=" color: darkgreen; font-weight: bold; margin-left: 20px; font-style: italic; display: none; ">Saved</span></td>
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[function filter() {]]></search>
+            <add><![CDATA[
+                    function updateCustomer(customer_id,cb_name){
+                        $.ajax({type: "POST",
+                               url:"index.php?route=sale/customer/updateCustomerGroup&token=<?php echo $token; ?>",
+                               data:{customer_id: customer_id, value:$('#'+cb_name).val()},
+                               success: $('#saved_customer_' + customer_id).show()
+                        });
+                    }                    
+                ]]>                
+            </add>
+        </operation>
+    </file>
+</modification>

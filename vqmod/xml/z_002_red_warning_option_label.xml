@@ -1,0 +1,17 @@
+<modification>
+    <id>RedText Waringn</id>
+    <version>1.0</version>
+    <vqmver>2.1</vqmver>
+    <author>juanpenche</author>
+
+    <file name="catalog/view/theme/sellya/template/product/product.tpl">
+        <operation>
+            <search position="after"><![CDATA[<h4><?php echo $text_option; ?></h4>]]></search>
+            <add trim="true"><![CDATA[
+                   <h3 style="color:#FF0000;">HUOM! Jos valitset 30€ kokeilumaksun, summa muuttuu 30€: ksi vasta kassan viimeisessä vaiheessa!</h3>
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+</modification>

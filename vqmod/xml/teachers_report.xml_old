@@ -1,0 +1,92 @@
+<modification>
+    <id>Teachers Report</id>
+    <version>1.0</version>
+    <vqmver>2.1</vqmver>
+    <author>@filipf50</author>
+    <!-- ADMIN LANGUAGE -->
+    <file name="admin/language/english/common/header.php">
+        <operation>
+            <search position="after"><![CDATA[$_['text_tax_rate']]]>
+            </search>
+            <add><![CDATA[
+                $_['text_teachers']      = 'Teachers';
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$_['text_report_affiliate_commission']]]>
+            </search>
+            <add><![CDATA[
+                $_['text_report_teacher_courses'] = 'Courses';
+                ]]>
+            </add>
+        </operation>
+    </file>
+    <file name="admin/language/finnish/common/header.php">
+        <operation>
+            <search position="after"><![CDATA[$_['text_tax_rate']]]>
+            </search>
+            <add><![CDATA[
+                $_['text_teachers']      = 'Teachers';
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$_['text_report_affiliate_commission']]]>
+            </search>
+            <add><![CDATA[
+                $_['text_report_teacher_courses'] = 'Courses';
+                ]]>
+            </add>
+        </operation>
+    </file>
+    
+    <!-- ADMIN CONTROLLER -->
+    <file name="admin/controller/common/header.php">
+        <operation>
+            <search position="after"><![CDATA[$this->data['text_tax_rate'] = $this->language->get('text_tax_rate');]]>
+            </search>
+            <add><![CDATA[
+                    $this->data['text_teachers'] = $this->language->get('text_teachers');
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$this->data['text_report_customer_order'] = $this->language->get('text_report_customer_order');]]>
+            </search>
+            <add><![CDATA[
+                    $this->data['text_report_teacher_courses'] = $this->language->get('text_report_teacher_courses');
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$this->data['report_affiliate_commission'] = $this->url->link('report/affiliate_commission', 'token=' . $this->session->data['token'], 'SSL');]]>
+            </search>
+            <add><![CDATA[
+                    $this->data['report_teacher_courses'] = $this->url->link('report/teacher_courses', 'token=' . $this->session->data['token'], 'SSL');
+                ]]>
+            </add>
+        </operation>
+    </file>
+    
+    <!-- ADMIN MODEL -->
+    
+    <!-- ADMIN VIEW -->
+    <file name="admin/view/template/common/header.tpl">
+        <operation>
+            <search position="replace" offset="2"><![CDATA[<li><a href="<?php echo $report_affiliate_commission; ?>"><?php echo $text_report_affiliate_commission; ?></a></li>]]>
+            </search>
+            <add><![CDATA[
+                <li><a href="<?php echo $report_affiliate_commission; ?>"><?php echo $text_report_affiliate_commission; ?></a></li>
+            </ul>
+          </li>
+          <li><a class="parent"><?php echo $text_teachers; ?></a>
+            <ul>
+              <li><a href="<?php echo $report_teacher_courses; ?>"><?php echo $text_report_teacher_courses; ?></a></li>
+            </ul>
+          </li>
+                ]]>
+            </add>
+        </operation>
+    </file>
+</modification>

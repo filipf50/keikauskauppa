@@ -1,0 +1,240 @@
+<modification>
+    <id>Notify when arrives complete list</id>
+    <version>1.0</version>
+    <vqmver>2.1</vqmver>
+    <author>juanpenche</author>
+    <!-- CATALOG LANGUAGE -->
+    <file name="admin/model/module/notify_when_arrives.php">
+        <operation>
+            <search position="after"><![CDATA[$statistics[$group_id]['mails'] = null;]]></search>
+            <add trim="true"><![CDATA[
+                    $statistics[$group_id]['mails_full'] = null;
+                ]]>
+            </add>
+        </operation>
+
+        <operation>
+            <search position="after"><![CDATA[$statistics[$group_id]['notified']++;]]></search>
+            <add trim="true"><![CDATA[
+                    $complete_id= $request['id'] ;
+
+                    $statistics[$group_id]['mails_full'] .=  '<span style="display: none;" class="notify_status" id="waiting_status_' . $complete_id . '">Waiting</span><span style="display: inline;" class="notify_status" id="notified_status_' . $complete_id . '">Notified</span> <a class="changestatus" onclick="changeStatus(\'' . $complete_id . '\')"><span>[Change]</span></a>' .  $request['user'].' | '.$request['email'].' | '.$request['phone'].' | '.$request['custom'] . '<br/>';
+                ]]>
+            </add>
+        </operation>
+
+        <operation>
+            <search position="after"><![CDATA[$statistics[$group_id]['mails'] .=]]></search>
+            <add trim="true"><![CDATA[
+
+                    $complete_id= $request['id'] ;
+                    $statistics[$group_id]['mails_full'] .=  '<span style="display: inline;" class="notify_status" id="waiting_status_' . $complete_id . '">Waiting</span><span style="display: none;" class="notify_status" id="notified_status_' . $complete_id . '">Notified</span> <a class="changestatus" onclick="changeStatus(\'' . $complete_id . '\')"><span>[Change]</span></a>' .  $request['user'].' | '.$request['email'].' | '.$request['phone'].' | '.$request['custom'] . '<br/>';
+                ]]>
+            </add>
+        </operation>
+
+
+
+
+    </file>
+
+
+    <file name="admin/controller/module/notify_when_arrives.php">
+        <operation>
+            <search position="after"><![CDATA[$this->data['text_product_emails'] = $this->language->get('text_product_emails');]]></search>
+            <add trim="true"><![CDATA[
+                    $this->data['text_product_emails_full'] = $this->language->get('text_product_emails_full');
+                ]]>
+            </add>
+        </operation>
+
+        <operation>
+            <search position="before"><![CDATA[private function sendEmail($store, $address, $subject, $message) {]]></search>
+            <add trim="true"><![CDATA[
+    public function changestatus()
+    {
+        $req_id = $this->request->get['req_id'];
+
+        $query = $this->db->query("SELECT notified FROM notify_when_arrives	 WHERE	id='" . (int) $req_id . "'");
+
+        $current_notify = $query->rows[0]['notified'];
+        $new_notify = 1;
+        if($current_notify==1){
+        $new_notify = 0;
+        }
+        $status[] = $this->db->query("UPDATE notify_when_arrives SET NOTIFIED=".(int) $new_notify . "  WHERE	id='" . (int) $req_id . "'");
+        $return_data = array('errorStatus' => 0, 'notified' => (int) $new_notify);
+        $this->response->setOutput(json_encode($return_data));
+        return;
+    }
+                ]]>
+            </add>
+        </operation>
+
+    </file>
+
+
+
+
+
+
+
+    <file name="admin/view/template/module/notify_when_arrives.tpl">
+        <operation>
+            <search position="after"><![CDATA[<th width="330"><?php echo $text_product_emails; ?></th>]]></search>
+            <add trim="true"><![CDATA[
+<th width="330"><?php echo $text_product_emails_full; ?></th>
+                ]]>
+            </add>
+        </operation>
+
+        <operation>
+            <search position="after"><![CDATA[<td>&nbsp;</td>]]></search>
+            <add trim="true"><![CDATA[
+<td>&nbsp;</td>
+                ]]>
+            </add>
+        </operation>
+
+
+        <operation>
+            <search position="before"><![CDATA[<td><input type="checkbox" name="products_id[]" value="<?php echo $product_id; ?>"/>]]></search>
+            <add trim="true"><![CDATA[
+                <td>
+                                            <?php if ($product['mails_full']) { ?>
+                                                [ <a class="view_mails">
+                                                    <span><?php echo $text_view_mails; ?></span>
+                                                    <span style="display:none;"><?php echo $text_hide_mails; ?></span>
+                                                </a> ]
+                                                <div style="display:none;"><?php echo $product['mails_full']; ?></div>
+                                            <?php } else { ?>
+                                                -
+                                            <?php } ?>
+                                        </td>
+                ]]>
+            </add>
+        </operation>
+
+
+
+        <operation>
+            <search position="before"><![CDATA[function deleteStatistic(product_id) {]]></search>
+            <add trim="true"><![CDATA[
+
+ function changeStatus(req_id) {
+
+
+    var c =  req_id;
+
+    $.ajax({
+        type: "GET",
+        url: "index.php?route=module/notify_when_arrives/changestatus&req_id=" + c + "&token=<?php echo $token; ?>" ,
+        dataType: "json",
+        beforeSend: function () {
+
+        },
+        success: function (d) {
+
+            if (d.errorStatus == 0) {
+
+                if (d.notified == 1) {
+                    $( "#waiting_status_" + c ).css( "display", "none" );
+                    $( "#notified_status_" + c ).css( "display", "inline" );
+                }else{
+                    $( "#waiting_status_" + c ).css( "display", "inline" );
+                    $( "#notified_status_" + c ).css( "display", "none" );
+                }
+
+            } else {
+                alert("An error occurred!\nCode: " + d.errorCode + "\nDescription: " + d.errorMessage)
+            }
+        },
+        error: function (d, f, e) {
+            alert("Error: " + f + " " + e)
+        },
+        complete: function () {
+
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                ]]>
+            </add>
+        </operation>
+
+
+        <operation>
+            <search position="after"><![CDATA[<?php echo $header; ?>]]></search>
+            <add trim="true"><![CDATA[
+<style type="text/css">
+.notify_status {
+    font-weight: bold;
+}
+
+</style>
+
+                ]]>
+            </add>
+        </operation>
+
+
+
+
+    </file>
+
+
+
+    <file name="admin/language/english/module/notify_when_arrives.php">
+        <operation>
+            <search position="after"><![CDATA[$_['text_product_emails']]]></search>
+            <add trim="true"><![CDATA[
+                    $_['text_product_emails_full'] = 'Customers interested <span class="help">Display order: Name | E-mail | Phone | Custom</span>';
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+
+
+</modification>

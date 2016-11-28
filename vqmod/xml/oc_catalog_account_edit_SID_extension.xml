@@ -1,0 +1,95 @@
+<modification>
+    <id>Cancel Order button</id>
+    <version>1.0</version>
+    <vqmver>2.1</vqmver>
+    <author>@filipf50</author>
+    <!-- CATALOG LANGUAGE -->
+    <file name="catalog/language/english/account/edit.php">
+        <operation>
+            <search position="after"><![CDATA[$_['entry_fax']        = 'Fax:';]]></search>
+            <add><![CDATA[
+                    $_['entry_customer_group']        = 'Customer group:<br/><span class="help">Enable/Disable new review entry and display of existing reviews</span>';
+                ]]>
+            </add>
+        </operation>
+    </file>
+    <file name="catalog/language/finnish/account/edit.php">
+        <operation>
+            <search position="after"><![CDATA[$_['entry_fax']        = 'Faksi:';]]></search>
+            <add><![CDATA[
+                    $_['entry_customer_group'] = 'Asiakasryhm&auml;:<br/><span class="help">Valitse tästä ryhmä johon kuulu, jotta saat oikean sähköpostilistan viestit! Jos ryhmäsi tulevaisuudessa muuttuu, voit muuttaa ryhmän myös täältä jotta saat jatkossa oikeat viestit</span>';
+                ]]>
+            </add>
+        </operation>
+    </file>
+    
+    <!-- CATALOG CONTROLLER -->
+    <file name="catalog/controller/account/edit.php">
+        <operation>
+            <search position="after"><![CDATA[$this->data['entry_fax'] = $this->language->get('entry_fax');]]></search>
+            <add><![CDATA[
+                    $this->data['entry_customer_group'] = $this->language->get('entry_customer_group');
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[$this->data['back'] = $this->url->link('account/account', '', 'SSL');]]></search>
+            <add><![CDATA[
+                    if (isset($this->request->post['customer_group_id'])) {
+                            $this->data['customer_group_id'] = $this->request->post['customer_group_id'];
+                    } elseif (isset($customer_info)) {
+                            $this->data['customer_group_id'] = $customer_info['customer_group_id'];
+                    } else {
+                            $this->data['customer_group_id'] = $this->config->get('config_customer_group_id');
+                    }
+                    
+                    $this->load->model('account/customer_group');
+		
+                    $this->data['customer_groups'] = array();
+                
+                    $customer_groups = $this->model_account_customer_group->getCustomerGroups();
+
+                    foreach ($customer_groups as $customer_group) {
+                        $this->data['customer_groups'][] = $customer_group;
+                    }
+                ]]>
+            </add>
+        </operation>
+                            
+
+    </file>
+    
+    <!-- CATALOG MODEL -->
+    <file name="catalog/model/account/customer.php">
+        <operation>
+            <search position="replace"><![CDATA[$this->db->query("UPDATE " . DB_PREFIX . "customer SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");]]></search>
+            <add><![CDATA[
+                    $this->db->query("UPDATE " . DB_PREFIX . "customer SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', customer_group_id=" . (int)$this->db->escape($data['customer_group_id']) . " WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+    <!-- CATALOG VIEW -->
+    <file name="catalog/view/theme/*/template/account/edit.tpl">
+        <operation>
+            <search position="before"><![CDATA[</table>]]></search>
+            <add><![CDATA[
+                    <tr style="display: <?php echo (count($customer_groups) > 1 ? 'table-row' : 'none'); ?>;">
+                        <td><span class="required">*</span> <?php echo $entry_customer_group; ?></td>
+                        <td><select id="customer_group_id" name="customer_group_id">
+                            <?php foreach ($customer_groups as $customer_group) { ?>
+                              <?php if ($customer_group['customer_group_id'] == $customer_group_id) { ?>
+                                <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
+                              <?php } else { ?>
+                                <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
+                              <?php } ?>
+                            <?php } ?>
+                          </select>
+                        </td>
+                      </tr>      
+                ]]>
+            </add>
+        </operation>
+    </file>
+</modification>

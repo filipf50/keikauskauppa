@@ -1,0 +1,6 @@
+[07-Aug-2014 11:53:22 UTC] PHP Fatal error:  Class 'Controller' not found in /home/keika509/public_html/catalog/controller/information/information.php on line 2
+[08-Aug-2014 09:54:53 UTC] PHP Fatal error:  Class 'Controller' not found in /home/keika509/public_html/catalog/controller/information/contact.php on line 2
+[21-Aug-2014 03:37:46 UTC] PHP Fatal error:  Class 'Controller' not found in /home/keika509/public_html/catalog/controller/information/sitemap.php on line 2
+[11-Oct-2014 20:47:22 UTC] PHP Fatal error:  Class 'Controller' not found in /home/keika509/public_html/catalog/controller/information/contact.php on line 2
+[21-Nov-2014 05:03:23 UTC] PHP Fatal error:  Class 'Controller' not found in /home/keika509/public_html/catalog/controller/information/information.php on line 2
+[14-Dec-2014 07:30:56 UTC] PHP Fatal error:  Class 'Controller' not found in /home/keika509/public_html/catalog/controller/information/contact.php on line 2

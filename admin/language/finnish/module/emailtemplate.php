@@ -1,0 +1,157 @@
+<?php 
+
+// Heading
+$_['heading'] 			= 'Professional Email Template';
+$_['heading_body'] 		= 'Body';
+$_['heading_config'] 	= 'Config';
+$_['heading_docs'] 		= 'Email Template: Documentation';
+$_['heading_editor'] 	= 'Editor';
+$_['heading_footer'] 	= 'Footer';
+$_['heading_head'] 		= 'Head (top of email)';
+$_['heading_header'] 	= 'Header';
+$_['heading_invoice'] 	= 'Invoice (PDF)';
+$_['heading_language']  = 'Language Editor';
+$_['heading_logo'] 		= 'Logo - Header';
+$_['heading_preview'] 	= 'Email Preview';
+$_['heading_showcase'] 	= 'Showcase/Promotion';
+$_['heading_settings'] 	= 'Email Settings';
+$_['heading_shadow'] 	= 'Shadow';
+$_['heading_tags'] 		= 'Short Tags (will get replaced with order/customer data)';
+$_['heading_test'] 		= 'Test';
+$_['heading_template'] 	= 'Template Details';
+$_['heading_templates'] = 'Templates';
+$_['heading_title'] 	= 'Professional Email Template: 4.5.1.6';
+
+// Buttons
+$_['button_create']		 = 'Create';
+$_['button_create_exit'] = 'Create &amp; Exit';
+$_['button_save_exit']	 = 'Save &amp; Exit';
+$_['button_send']		 = 'Send';
+$_['button_filter']   	 = 'Filter';
+$_['button_insert_template'] = 'New Template';
+$_['button_language']    = 'Language Editor';
+
+// Entry
+$_['entry_body']				= 'Body:';
+$_['entry_body_bg_color']		= 'Body background color:';
+$_['entry_body_comment_length']	= 'Order Comment Max Length:';
+$_['entry_body_heading_color']	= 'Heading color:';
+$_['entry_body_font_color']		= 'Font color:';
+$_['entry_body_link_color']		= 'Link color:';
+$_['entry_body_product_option_length']= 'Product Option Character Length:';
+$_['entry_body_product_option_size'] = 'Product Option Font Size:';
+$_['entry_color']				= 'Color';
+$_['entry_corner_image']		= 'Corner Images';
+$_['entry_contactus_customer']	= 'Send a copy of the "contact us" email to the customer?';
+$_['entry_customer_password']	= 'Show password in "customer registration" email?';
+$_['entry_email_address']		= 'Email Address:';
+$_['entry_email_width']			= 'Email Width:';
+$_['entry_footer_text']		 	= 'Footer text:';
+$_['entry_header_height']		= 'Header height:';
+$_['entry_head_text']			= 'Head text:';
+$_['entry_header_bg_image']		= 'Background image:';
+$_['entry_header_bg_color']		= 'Background color:';
+$_['entry_header_border_color'] = 'Border bottom color';
+$_['entry_header_border_height']= 'Border bottom height';
+$_['entry_invoice_heading_color']= 'Heading color:';
+$_['entry_invoice_logo']		= 'Logo:';
+$_['entry_invoice_logo_width']  = 'Logo width(mm):';
+$_['entry_invoice_products_limit'] = 'Products per page(limit):';
+$_['entry_invoice_text']		= 'Text:';
+$_['entry_invoice_title']		= 'Title:';
+$_['entry_limit']				= 'Limit:';
+$_['entry_logo']				= 'Logo upload:';
+$_['entry_logo_resize_options'] = 'Logo size</span>';
+$_['entry_name']				= 'Name:';
+$_['entry_overlap']				= 'Overlap';
+$_['entry_order_picture']		= 'Show product picture in order email:';
+$_['entry_page_bg_color']		= 'Page background color:';
+$_['entry_page_footer_text']	= 'Body footer text: <br /><span class="help">Displayed at the bottom of the email but above the shadow.</span>';
+$_['entry_page_padding']		= 'Email Padding:';
+$_['entry_showcase']			= 'Showcase Area:';
+$_['entry_section_color']		= 'Section background color:';
+$_['entry_selection']			= 'Selection: <br /><span class="help">Type product name</span>';
+$_['entry_theme']				= 'Which theme contains uploaded files?';
+$_['entry_title']				= 'Title:';
+$_['entry_tracking_campaign_name'] = 'Campaign Name(utm_source): <br />Everything else is automatically setup and added to each email, apart from newsletter you can overwrite this. <a href="https://support.google.com/analytics/answer/1033863" target="_blank">more info</a>';
+$_['entry_type']				= 'Type:';
+$_['entry_unsubscribe']			= 'Newsletter unsubscribe link:';
+
+// Column
+$_['column_action'] 		= 'Action';
+$_['column_body'] 			= 'Body';
+$_['column_description'] 	= 'Description';
+$_['column_id']				= 'ID';
+$_['column_name']			= 'Name';
+$_['column_type']			= 'Type';
+
+// Text
+$_['text_align']		= 'Align:';
+$_['text_all'] 			= 'All';
+$_['text_baseline']		= 'Baseline';
+$_['text_bottom']		= 'Bottom';
+$_['text_bottom_left']	= 'Bottom Left';
+$_['text_bottom_right'] = 'Bottom Right';
+$_['text_browse']		= 'Browse files';
+$_['text_center']		= 'Center';
+$_['text_clear']		= 'Clear image';
+$_['text_config_info']	= '- edit how the default email is displayed OR create a custom config specific for :: store / language / customer group';
+$_['text_delete_confirm'] = 'Are you sure that you want to permanently delete the selected?';
+$_['text_docs']			= 'Docs';
+$_['text_download']		= 'Download';
+$_['text_end']			= 'End';
+$_['text_font_color']	= 'Font color:';
+$_['text_font_size']	= 'Font size:';
+$_['text_height']		= 'Height';
+$_['text_image_manager'] = 'Image manager';
+$_['text_language_info'] = '- easily edit &amp; search for all language text stored in files for :: catalog / admin';
+$_['text_languages'] 	= 'Languages';
+$_['text_language_permissions'] = 'Manually create language file:<b>%s</b> in:<b>%s</b>';
+$_['text_latest_products'] = 'Latest Products';
+$_['text_left']			= 'Left';
+$_['text_middle']		= 'Middle';
+$_['text_module']		= 'Modules';
+$_['text_newsletter']	= 'Newsletter';
+$_['text_none']			= 'None';
+$_['text_no_customers']	= 'Please ensure there is at least one customer.';
+$_['text_no_preview']	= 'Please save the module to make preview available.';
+$_['text_no_orders']	= 'Please ensure that there is at least one order.';
+$_['text_order_status'] = 'Order Status';
+$_['text_preview_invoice'] = 'Preview PDF Invoice';
+$_['text_products']		= 'Products';
+$_['text_product']		= 'Product';
+$_['text_resize']		= 'Resize?';
+$_['text_right']		= 'Right';
+$_['text_sendhtml']		= 'Send Email as HTML?';
+$_['text_shadow_info']	= '<p>To get around using an image for the page shadow we actually draw each cell using background colors.</p><p>Overlap is the amount of which the corner image may overlap the page. <br />Set the height to: 0 if you dont want a shadow</p>';
+$_['text_start']		= 'Start';
+$_['text_support']		= 'Support';
+$_['text_test_info']	= '- test all vQmod modifications for all the files we modify, check if there are any conflicts. WARNING today\'s vqmod log will be deleted before we begin our tests.';
+$_['text_test_send']	= 'Test Send';
+$_['text_top']			= 'Top';
+$_['text_top_left']		= 'Top Left';
+$_['text_top_right']	= 'Top Right';
+$_['text_type']			= 'Type';
+$_['text_valign']		= 'Vertical Align:';
+$_['text_width']		= 'Width';
+$_['text_withimages']	= 'With Images';
+$_['text_withoutimages'] = 'Without Images';
+
+// Success
+$_['install_success']			= '<b>'. $_['heading_title'] .'</b> Installed successfully.';
+$_['uninstall_success']			= '<b>'. $_['heading_title'] .'</b> Uninstalled successfully.';
+$_['test_success']				= 'Tests completed successfully without any errors.';
+$_['text_success']				= 'HTML Email Template settings were successfully changed.';
+$_['text_success_send']			= 'Email send successfully.';
+$_['error_required']          	= 'Error: must contain a value.';
+$_['error_warning']          	= 'Warning: please check the form carefully for any errors.';
+$_['error_vqmod']      			= 'Warning: please check vqmod has been installed correctly and re-install this extension.';
+$_['error_vqmod_log']    		= 'Warning: test have produced errors, check log file: <b>%s</b>';
+$_['error_install_sql']			= 'Email Template install SQL files not found. On successful install this file gets deleted. If you are reinstalling you will need to re-upload: <u>%s</u>';
+$_['error_theme']				= 'Email Template files not found in: <u>%s</u>';
+$_['error_permission']			= 'Warning: You do not have permission to modify ' . $_['heading_title'] . '!';
+$_['error_language_permissions'] = 'Error server unable to write to: %s';
+$_['error_logo_dimension']     	= 'Logo Width &amp; Height dimensions required!';
+$_['error_logo_filename']     	= 'Logo filename (%s) must be valid, must only contain "a-z","0-9",".","-","_"';
+$_['error_templates_notfound']	= '<p>Please ensure that you have selected the theme where you have uploaded the files e.g: <b>%sview/theme/%s/template/mail/_mail.tpl</b>.</p>';
+?>

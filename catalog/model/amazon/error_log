@@ -1,0 +1,2 @@
+[16-Aug-2014 21:05:02 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/amazon/listing.php on line 3
+[22-Aug-2014 00:18:26 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/amazon/order.php on line 3

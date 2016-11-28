@@ -1,0 +1,1 @@
+0 0 * * * lynx "http://www.keikauskauppa.fi/admin/index.php?route=module/notify_when_arrives/notify&nwa_cron_key=cronkey" > /dev/null 2>&1

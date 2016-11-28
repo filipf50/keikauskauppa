@@ -1,0 +1,309 @@
+<modification>
+
+	<id>Restricted Categories</id>
+	<version>v153.1</version>
+	<vqmver>2.1.6</vqmver>
+	<author>qphoria</author>
+
+
+
+	<!-- ADMIN CHANGES -->
+
+	<file name="admin/controller/catalog/category.php">
+        <operation>
+            <search position="before"><![CDATA[
+            $this->template = 'catalog/category_form.tpl';
+            ]]></search>
+            <add><![CDATA[
+
+//Q: Customer Group Category Filter
+$query = $this->db->query("DESC ".DB_PREFIX."category customer_group");
+if (!$query->num_rows) {
+	$this->db->query("ALTER TABLE `" . DB_PREFIX . "category` ADD `customer_group` varchar(255) not null default ''");
+}
+$this->data['entry_customer_group'] = $this->language->get('entry_customer_group');
+if (file_exists(DIR_APPLICATION . 'model/sale/customer_group.php')) {
+	$this->load->model('sale/customer_group');
+	$this->data['customer_groups'] = $this->model_sale_customer_group->getCustomerGroups();
+} else {
+	$this->load->model('customer/customer_group');
+	$this->data['customer_groups'] = $this->model_customer_customer_group->getCustomerGroups();
+}
+
+if (isset($this->request->post['customer_group'])) {
+	$this->data['customer_group'] = $this->request->post['customer_group'];
+} elseif (isset($category_info) && isset($category_info['customer_group'])) {
+	$this->data['customer_group'] = explode(',', $category_info['customer_group']);
+} else {
+	$this->data['customer_group'] = array();
+}//
+
+            ]]></add>
+        </operation>
+	</file>
+
+	<file name="admin/language/*/catalog/category.php">
+		<operation>
+			<search position="bottom" offset="1"><![CDATA[
+			]]></search>
+			<add trim="true"><![CDATA[
+//Q: Customer Group Filter
+$_['entry_customer_group']       = 'Restricted Customer Groups:<br/><span class="help">Check the customer groups that should NOT see this category!</span>';
+$_['text_logged_out']       	 = 'Guest';
+            ]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/model/catalog/category.php">
+		<operation>
+			<search position="after"><![CDATA[
+			$category_id = $this->db->getLastId();
+			]]></search>
+			<add trim="true"><![CDATA[
+//Q: Customer Group Filter
+		if (isset($data['customer_group'])) {
+			$this->db->query("UPDATE " . DB_PREFIX . "category SET customer_group = '" . implode(',', $data['customer_group']) . "' where category_id = '" . (int)$category_id . "'");
+		} else {
+			$this->db->query("UPDATE " . DB_PREFIX . "category SET customer_group = '' WHERE category_id = '" . (int)$category_id . "'");
+		}//
+            ]]></add>
+		</operation>
+		<operation>
+			<search position="after" offset="2"><![CDATA[
+			public function editCategory($category_id, $data) {
+			]]></search>
+			<add trim="true"><![CDATA[
+//Q: Customer Group Filter
+		if (isset($data['customer_group'])) {
+			$this->db->query("UPDATE " . DB_PREFIX . "category SET customer_group = '" . implode(',', $data['customer_group']) . "' where category_id = '" . (int)$category_id . "'");
+		} else {
+			$this->db->query("UPDATE " . DB_PREFIX . "category SET customer_group = '' WHERE category_id = '" . (int)$category_id . "'");
+		}//
+            ]]></add>
+		</operation>
+	</file>
+
+	<file name="admin/view/template/catalog/category_form.tpl">
+		<operation>
+			<search position="after" offset="1"><![CDATA[
+			value="<?php echo $sort_order; ?>" size="1"
+			]]></search>
+			<add trim="true"><![CDATA[
+<!-- //Q: Start Category Customer Group Filter -->
+	      <tr>
+          <td><?php echo $entry_customer_group; ?></td>
+          <td>
+            <div class="scrollbox">
+              <?php $j=1; ?>
+              <div class="odd"><input type="checkbox" name="customer_group[]" value="0" <?php echo (in_array('0', $customer_group)) ? 'checked="checked"' : '' ?> /> <?php echo $this->language->get('text_logged_out'); ?></div>
+              <?php foreach ($customer_groups as $k => $v) { ?>
+              <?php $name = $v['name']; ?>
+              <?php $id = $v['customer_group_id']; ?>
+              <?php if($j != 1) {$j = 1;}else{$j = 0;} ?>
+              <?php if($j == 0) {$class = 'even';}elseif($j == 1){$class = 'odd';} ?>
+              <div class="<?php echo $class;?>">
+                <input type="checkbox" name="customer_group[]" value="<?php echo $id; ?>" <?php echo (in_array($id, $customer_group)) ? 'checked="checked"' : '' ?> />
+                <?php echo $name; ?>
+              </div>
+              <?php } ?>
+            </div>
+          </td>
+        </tr>
+	    <!-- //Q: End Category Customer Group Filter -->
+            ]]></add>
+		</operation>
+	</file>
+
+
+
+
+	<!-- CATALOG CHANGES -->
+
+
+	<file name="catalog/model/catalog/category.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[
+			return $query->row;
+			]]></search>
+			<add trim="true"><![CDATA[
+//Q: Customer Group Filter
+		$dbquery = $this->db->query("DESC ".DB_PREFIX."category customer_group");
+		if (!$dbquery->num_rows) {
+			$this->db->query("ALTER TABLE `" . DB_PREFIX . "category` ADD `customer_group` varchar(255) not null default ''");
+		}
+		if (isset($query->row['customer_group'])) {
+			
+			if (isset($this->session->data['restcat_customer_group_id'])) {
+				$customer_group_id = $this->customer->getCustomerGroupId();
+			} else {
+				$customer_group_id = 0; 
+			}
+		
+			if (in_array((string)$customer_group_id, explode(',', $query->row['customer_group']))) {
+				$query->row = array();
+			}
+		}
+            ]]></add>
+		</operation>
+
+		<operation><!-- v1.4.8 and newer -->
+			<search position="before"><![CDATA[
+			return $query->rows;
+			]]></search>
+			<add><![CDATA[
+			//Q: Customer Group Filter
+		$dbquery = $this->db->query("DESC ".DB_PREFIX."category customer_group");
+		if (!$dbquery->num_rows) {
+			$this->db->query("ALTER TABLE `" . DB_PREFIX . "category` ADD `customer_group` varchar(255) not null default ''");
+		}
+		
+		if (isset($this->session->data['restcat_customer_group_id'])) {
+			$customer_group_id = $this->customer->getCustomerGroupId();
+		} else {
+			$customer_group_id = 0; 
+		}
+		
+    	foreach ($query->rows as $k => $category) {
+			if (isset($category['customer_group'])) {
+				if (in_array((string)$customer_group_id, explode(',', $category['customer_group']))) {
+					unset($query->rows[$k]);
+				}
+			}
+		}//
+            ]]></add>
+		</operation>
+
+		<operation error="skip"><!-- v1.5.0 and newer. Might need to fine tune this-->
+			<search position="replace"><![CDATA[
+			$category_query = $this->db->query("SELECT category_id FROM " . DB_PREFIX . "category WHERE parent_id = '" . (int)$category_id . "'");
+			]]></search>
+			<add><![CDATA[
+$customer_group_id = $this->customer->getCustomerGroupId();
+if (!isset($customer_group_id)) { $customer_group_id = 0; }
+$category_query = $this->db->query("SELECT category_id FROM " . DB_PREFIX . "category WHERE parent_id = '" . (int)$category_id . "' AND '" . (int)$customer_group_id . "' NOT IN (SELECT customer_group FROM " . DB_PREFIX . "category WHERE category_id = '" . (int)$category_id . "')");
+            ]]></add>
+		</operation>
+
+	</file>
+
+
+
+
+	<file name="catalog/model/catalog/product.php">
+
+		<!-- Possible bug in OpenCart 1.5.x not showing unless category calls a non-existent product
+		     This will fix it even tho it will never be seen without using this mod -->
+		<operation error="skip">
+			<search position="replace"><![CDATA[
+			$this->cache->set('product.' . $cache . '.' . $customer_group_id, $product_data);
+			]]></search>
+			<add trim="true"><![CDATA[
+			$product_data = array_filter($product_data);
+            ]]></add>
+		</operation>
+
+
+		<operation error="skip">
+			<search position="before" index="1"><![CDATA[
+			if ($query->num_rows) {
+			]]></search>
+			<add trim="true"><![CDATA[
+		//Q: Restricted Categories
+		//$this->cache->delete('product');
+		$query = $this->removeRestricted($query);
+		if (empty($query->rows)) { $query->row = array(); $query->num_rows = 0;}
+		//
+            ]]></add>
+		</operation>
+
+		<operation error="skip">
+			<search position="before"><![CDATA[
+			public function getProducts($data = array()) {
+			]]></search>
+			<add trim="true"><![CDATA[
+	public function removeRestricted($query) {
+
+		//Q: Customer Group Filter
+		$dbquery = $this->db->query("DESC ".DB_PREFIX."category customer_group");
+		if (!$dbquery->num_rows) {
+			$this->db->query("ALTER TABLE `" . DB_PREFIX . "category` ADD `customer_group` varchar(255) not null default ''");
+		}
+		
+		if (isset($this->session->data['restcat_customer_group_id'])) {
+			$customer_group_id = $this->customer->getCustomerGroupId();
+		} else {
+			$customer_group_id = 0; 
+		}
+
+		//get categories that product belongs to:
+		if (isset($query->rows)) {
+			foreach ($query->rows as $k => $product) {
+				$categories = $this->db->query("SELECT category_id FROM " . DB_PREFIX . "product_to_category  WHERE product_id = '" . (int)$product['product_id'] . "'");
+				foreach ($categories->rows as $category) {
+					$category_query = $this->db->query("SELECT customer_group FROM " . DB_PREFIX . "category WHERE category_id = '" . (int)$category['category_id'] . "'");
+					if ($category_query->num_rows) {
+						if (in_array((string)$customer_group_id, explode(',', $category_query->row['customer_group']))) {
+							unset($query->rows[$k]);
+						}
+					}
+				}
+			}
+		} else {
+			foreach ($query as $k => $product) {
+				if ($product === false) { unset($query[$k]); }
+				$categories = $this->db->query("SELECT category_id FROM " . DB_PREFIX . "product_to_category  WHERE product_id = '" . (int)$product['product_id'] . "'");
+				foreach ($categories->rows as $category) {
+					$category_query = $this->db->query("SELECT customer_group FROM " . DB_PREFIX . "category WHERE category_id = '" . (int)$category['category_id'] . "'");
+					if ($category_query->num_rows) {
+						if (in_array((string)$customer_group_id, explode(',', $category_query->row['customer_group']))) {
+							unset($query[$k]);
+						}
+					}
+				}
+			}
+		}
+
+		return $query;
+	}
+
+            ]]></add>
+		</operation>
+
+
+		<operation error="skip"><!-- Multiple locations here -->
+			<search position="before" index="1,2,3,4,5,8"><![CDATA[
+			return $product_data;
+			]]></search>
+			<add trim="true"><![CDATA[
+			//Q: Restricted Categories
+			$product_data = $this->removeRestricted($product_data);
+			//
+            ]]></add>
+		</operation>
+	</file>
+	
+	<!-- TO MAKE IT MORE COMPATIBLE, SET/CLEAR A NEW SESSION VARIABLE WITH CUSTOMER GROUP ID INSTEAD OF TRYING TO LOAD THE REGISTRY -->
+	<file name="system/library/customer.php">
+		<operation error="skip"><!-- Multiple locations here -->
+			<search position="after"><![CDATA[
+			$this->customer_id = $customer_query->row['customer_id'];
+			]]></search>
+			<add trim="true"><![CDATA[
+			//Q: Restricted Categories
+			$this->session->data['restcat_customer_group_id'] = $this->customer_id;
+			//
+            ]]></add>
+		</operation>
+		<operation error="skip"><!-- Multiple locations here -->
+			<search position="after"><![CDATA[
+			function logout
+			]]></search>
+			<add trim="true"><![CDATA[
+			//Q: Restricted Categories
+			unset($this->session->data['restcat_customer_group_id']);
+			//
+            ]]></add>
+		</operation>
+	</file>
+
+</modification>

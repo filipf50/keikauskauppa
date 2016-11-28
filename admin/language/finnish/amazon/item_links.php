@@ -1,0 +1,27 @@
+<?php
+$_['lang_title']                    = 'OpenBay Pro for Amazon | Nimikelinkit';
+$_['lang_openbay']                  = 'OpenBay Pro';
+$_['lang_overview']                 = 'Amazon Yleiskatsaus';
+$_['lang_btn_return']               = 'Paluu';
+$_['lang_link_items']               = 'Nimikkeiden linkki';
+$_['lang_item_links']               = 'Nimikelinkit';
+$_['lang_desc1']                    = 'Linking your items will allow for stock control on your Amazon listings.<br /> For each item that is updated the local stock (the stock available in your OpenCart store) will update your Amazon listing';
+$_['lang_desc2']                    = 'You can link items manualy by entering Amazon SKU and product name or load all unlinked products and then enter amazon SKUs. (Uploading products from OpenCart to Amazon will automaticaly add links)';
+$_['lang_load_btn']                 = 'Lataa';
+$_['lang_new_link']                 = 'Uusi linkki';
+$_['lang_autocomplete_product']     = 'Tuote<span class="help">(T&auml;ydennetty nimell&auml;)</span>';
+$_['lang_amazon_sku']               = 'Amazon SKU nimike';
+$_['lang_action']                   = 'Toimenpide';
+$_['lang_add']                      = 'Lis&auml;&auml;';
+$_['lang_add_sku_tooltip']          = 'Lis&auml;&auml; sku nimike';
+$_['lang_remove']                   = 'Poista';
+$_['lang_linked_items']             = 'Linkitetty nimike';
+$_['lang_unlinked_items']           = 'Linkit&ouml;n nimike';
+$_['lang_name']                     = 'Nimi';
+$_['lang_model']                    = 'Malli';
+$_['lang_combination']              = 'Yhdistelm&auml;';
+$_['lang_sku']                      = 'SKU';
+$_['lang_amazon_sku']               = 'Amazon SKU nimike';
+$_['lang_sku_empty_warning']        = 'Amazon SKU ei voi olle tyhj&auml;!';
+$_['lang_name_empty_warning']       = 'Tuotteen nimi t&auml;ytyy kirjata!';
+$_['lang_product_warning']          = 'Tuotetta ei l&ouml;ydy. Anna j&auml;rjestelm&auml;n t&auml;ydent&auml;&auml; tiedot.';

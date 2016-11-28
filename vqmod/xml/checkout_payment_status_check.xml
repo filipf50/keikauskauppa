@@ -1,0 +1,85 @@
+<!--
+*************************************************************
+*	CHECKOUT FINLAND PAYMENT METHOD							*
+*	Version:	1.5.4										*
+*	Date:		01-05-2013									*
+*	File:		vqmod/xml/checkout_payment_status_check.xml	*
+*	Author:		HydeNet										*
+*	Web:		www.hydenet.fi								*
+*	Email:		info@hydenet.fi								*
+*************************************************************
+-->
+<modification>
+	<id>Checkout payment status check</id>
+	<version>1.0</version>
+	<vqmver>2.1.5</vqmver>
+	<author>HydeNet info@hydenet.fi</author>
+	<file name="admin/view/template/sale/order_info.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<td><?php echo $payment_method; ?></td>]]></search>
+			<add><![CDATA[
+				<td><?php echo $payment_method; ?><br /><span id="payment-status"><b>[</b> <a id="checkout-check"><?php echo $text_checkout_check; ?></a> <b>]</b></span></td>
+			]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+			<add><![CDATA[
+				<script type="text/javascript"><!--
+				$('#checkout-check').live('click', function() {
+					$.ajax({
+						url: 'index.php?route=payment/checkout/paymentStatus&token=<?php echo $token; ?>&order_id=<?php echo $order_id; ?>',
+						dataType: 'json',
+						beforeSend: function() {
+							$('#payment-status').after('<img src="view/image/loading.gif" class="loading" style="padding-left: 5px;" />');	
+						},
+						complete: function() {
+							$('.loading').remove();
+						},
+						success: function(json) {
+							$('.success, .warning').remove();
+										
+							if (json['error']) {
+								$('#tab-order').prepend('<div class="warning" style="display: none;">' + json['error'] + '</div>');
+								
+								$('.warning').fadeIn('slow');
+							}
+							
+							if (json.status_id) {
+								$('#payment-status').fadeOut('slow', function() {
+									$('#payment-status').html(json['status_id']);
+									
+									$('#payment-status').fadeIn('slow');
+								});
+							}
+						}
+					});
+				});
+				//--></script>
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/sale/order.php">
+		<operation>
+			<search position="before"><![CDATA[$this->data['text_order_id'] = $this->language->get('text_order_id');]]></search>
+			<add><![CDATA[
+				$this->data['text_checkout_check'] = $this->language->get('text_checkout_check');
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/english/sale/order.php" error="skip">
+		<operation>
+			<search position="before"><![CDATA[$_['text_order_id']]]></search>
+			<add><![CDATA[
+				$_['text_checkout_check'] = 'Check payment status';
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/finnish/sale/order.php" error="skip">
+		<operation>
+			<search position="before"><![CDATA[$_['text_order_id']]]></search>
+			<add><![CDATA[
+				$_['text_checkout_check'] = 'Tarkista maksun tila';
+			]]></add>
+		</operation>
+	</file>
+</modification>

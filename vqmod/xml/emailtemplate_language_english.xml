@@ -1,0 +1,123 @@
+<modification>
+	<id>HTML Email Template: 4.4.3 - Swedish Language</id>
+	<version>1.5.0 - 1.5.4.1</version>
+	<author>opencart-templates.co.uk</author>	
+	<vqmver>2.2.1</vqmver>
+			
+	<file name="catalog/language/english/mail/customer.php">
+        <operation>
+            <search position="before"><![CDATA[?>]]></search>
+            <add><![CDATA[
+            $_['text_mail_welcome'] = 'Tervetuloa %s ja kiitos rekisteröitymisestäsi %s!';
+            $_['text_address']  	= 'Osoite:';
+			$_['text_email']  		= 'Sähköposti';
+			$_['text_password'] 	= 'Salasana';
+			$_['text_telephone']	= 'Puhelinnumero';
+			$_['text_fax'] 			= 'Fax';
+			$_['text_company'] 		= 'Yritys';
+			$_['text_newsletter'] 	= 'Uutiskirje';
+			$_['text_name']  		= 'Nimi';
+			$_['text_customer_group'] = 'Asiakasryhmä';
+			$_['text_approve'] 		= 'Asiakastili vaatii hyväksynnän, paina alla olevaa linkkiä hyväksyäksesi:';
+            $_['text_account_login'] = 'Vieraile verkkokaupassamme NYT';
+			]]></add>
+        </operation>
+	</file>
+			
+	<file name="catalog/language/english/mail/order.php">
+        <operation>
+            <search position="before"><![CDATA[?>]]></search>
+            <add><![CDATA[
+                        $_['text_address']  = 'Osoite:';
+			$_['text_customer_group'] = 'Asiakasryhmä';
+			$_['text_id'] 				= 'ID';
+			$_['text_new_subject_admin'] = 'Järjestys %s - %s (%s)';
+                        $_['text_order_link']  = 'Klikkaa alla olevaa linkkiä nähdäksesi tilauksen:';
+			$_['text_sku']  			= 'SKU';
+                        $_['text_stock_quantity']  	= 'Varastossa oleva määrä';
+            ]]></add>
+        </operation>
+	</file>
+			
+	<file name="catalog/language/english/information/contact.php">
+        <operation>
+            <search position="before"><![CDATA[?>]]></search>
+            <add><![CDATA[
+            $_['ip_address']  = 'IP-osoite:';
+            $_['user_agent']  = 'User Agent:';
+            $_['accept_language']  = 'Hyväksy kieli:';
+            ]]></add>
+        </operation>
+	</file>
+	
+	<file name="catalog/language/english/mail/forgotten.php">
+        <operation>
+            <search position="before"><![CDATA[?>]]></search>
+            <add><![CDATA[
+            $_['text_login']  = 'Kirjaudu sisään klikkaamalla linkkiä:';
+            $_['text_new_password']  = 'Uusi salasanasi on:';
+            ]]></add>
+        </operation>
+	</file>
+			
+	<file name="catalog/language/english/account/newsletter.php">
+        <operation>
+            <search position="before"><![CDATA[?>]]></search>
+            <add><![CDATA[
+			$_['heading_unsubscribe']   = 'Peru uutiskirje';
+			$_['success_unsubscribe']   = '<p>Valmis! Sähköpostiosoite %s on poistettu listoiltamme. Jatkossa sinulle ei tule enää uutiskirjettä.</p>';
+			$_['error_unsubscribe']     = '<p>Varoitus! Sähköpostiosoitteesi ei ole listassamme, Ole hyvä ja yritä uudelleen!</p>';
+            ]]></add>
+        </operation>
+	</file>
+			
+	
+			
+	<file name="catalog/language/english/product/product.php">
+		<operation>
+			<search position="before"><![CDATA[?>]]></search>
+			<add><![CDATA[
+			$_['text_subject']	= 'Uusia kommentteja hyväksyttävänä: %s';
+			$_['text_product']	= 'Sinulle on tullut uusi kommentti hyväksyttäväksi';
+			$_['text_author']	= 'Kirjoittaja';
+			$_['text_rating']	= 'Arvostelu';
+			$_['text_message']	= 'Viesti';
+			$_['text_approve']	= 'Hyväksyäksesi kommentin, klikkaa alla olevaa linkkiä';
+			]]></add>
+		</operation>
+	</file>
+			
+	<file name="catalog/language/english/account/return.php">
+		<operation>
+			<search position="before"><![CDATA[?>]]></search>
+			<add><![CDATA[
+			$_['text_subject']		 = 'Uusi palautus: %s';
+			$_['text_greeting']		 = 'Uusi tuotepalautus on tehty: %s';
+			$_['text_return_detail'] = 'Palatus tiedot';			
+			$_['text_firstname']	= 'Etunimi';
+			$_['text_lastname']		= 'Sukunimi';
+			$_['text_email']		= 'Sähköposti';
+			$_['text_telephone']	= 'Puhelin';
+			$_['text_order_id']	 	= 'Tilaus#';
+			$_['text_order_date']	= 'Tilauspäivämäärä';			
+			$_['text_products']	 	= 'Tuote(et) jotka ovat palautettu';
+			$_['text_product']		= 'Tuote';
+			$_['text_model']		= 'Malli nr.';
+			$_['text_quantity']	 	= 'Määrä';
+			$_['text_reason']		= 'Syy';
+			$_['text_opened']		= 'Avattu';
+			$_['text_comment']		= 'Kommentit';			
+			$_['text_action']	 	= 'Kirjaudu sisään pääkäyttäjänä nähdäksesi tarkemmat tiedot';
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/language/english/sale/contact.php">
+        <operation>
+            <search position="before"><![CDATA[?>]]></search>
+            <add><![CDATA[
+            $_['text_unsubscribe']  = '<a href="%s">Peruuta</a> uutiskirjeemme';
+            ]]></add>
+        </operation>
+	</file>
+</modification>

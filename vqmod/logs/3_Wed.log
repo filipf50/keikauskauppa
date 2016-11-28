@@ -1,0 +1,14 @@
+---------- Date: 2016-11-23 00:34:19 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/index.php?route=account/login&amp;token=6caeaf4d95eb67e738b3b424319fc149
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : catalog/model/account/customer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id =
+----------------------------------------------------------------------
+
+

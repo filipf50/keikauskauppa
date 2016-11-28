@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>delete quantity on product - sellya enhanced!</id>
+	<version>0.1.2.sallie</version>
+	<vqmver>2.0.0</vqmver>
+	<author>MichelePeggion</author>
+<file name="catalog/view/theme/sellya/template/checkout/cart.tpl">
+<operation>
+<search position="replace">
+<![CDATA[<input style="width:30px;" type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />]]>
+</search>
+<add>
+<![CDATA[
+&nbsp<?php echo $product['quantity']; ?>
+]]>
+</add>
+</operation>
+</file>
+</modification>

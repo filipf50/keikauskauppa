@@ -1,0 +1,30 @@
+<modification>
+	<id><![CDATA[FacebookLogin]]></id>
+	<version><![CDATA[1.3.2]]></version>
+	<vqmver><![CDATA[]]></vqmver>
+	<author><![CDATA[iSenseLabs Team | http://isenselabs.com]]></author>
+
+	<file name="catalog/controller/account/login.php">
+		<operation error="skip">
+			<search position="before"><![CDATA[if (isset($this->session->data['success'])) {]]></search>
+			<add><![CDATA[
+				if (!empty($this->data['redirect'])) {
+					$this->session->data['facebooklogin_redirect'] = $this->data['redirect'];
+				}
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/view/template/common/header.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[<script type="text/javascript" src="view/javascript/jquery/jquery-1.6.1.min.js"></script>]]></search>
+			<add><![CDATA[
+				<?php if (VERSION == '1.5.1.3' && !empty($this->request->get['route']) && $this->request->get['route'] == 'module/facebooklogin') { ?>
+				<script type="text/javascript" src="view/javascript/facebooklogin/jquery-1.7.1.min.js"></script>
+				<?php } else { ?>
+				<script type="text/javascript" src="view/javascript/jquery/jquery-1.6.1.min.js"></script>
+				<?php } ?>
+			]]></add>
+		</operation>
+	</file>
+</modification>

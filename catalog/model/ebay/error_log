@@ -1,0 +1,3 @@
+[20-Aug-2014 15:19:35 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/ebay/order.php on line 2
+[29-Oct-2014 08:38:54 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/ebay/openbay.php on line 2
+[30-Oct-2014 02:22:41 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/ebay/product.php on line 2

@@ -1,0 +1,1019 @@
+2015-12-01 22:00:02 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-01 22:00:09 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:11:19 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:11:26 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:11:33 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:11:39 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:11:45 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:11:51 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:09 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:15 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:22 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:28 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:34 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:40 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:47 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:53 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:12:59 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:13:05 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:13:11 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:13:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:13:49 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:13:55 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:02 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:08 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:14 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:20 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:27 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:33 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:39 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:46 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:52 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:14:58 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:15:21 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:15:27 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:15:33 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:15:40 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:15:46 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:15:52 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:15:59 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:16:05 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:16:11 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:16:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:16:23 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:16:29 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:18:28 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:18:34 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:18:40 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:18:46 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:18:52 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:18:59 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:19:05 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:19:11 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:19:18 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:19:24 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:19:30 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:19:36 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:19:56 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:20:02 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:20:12 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:20:18 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:20:25 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:20:31 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:21:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:21:25 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:21:31 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:21:38 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:21:44 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:21:50 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:21:57 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:22:03 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:22:09 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:22:16 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:22:22 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:22:28 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:22:44 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:22:50 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:22:56 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:23:03 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:23:09 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:23:15 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:23:21 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:24:11 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:24:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:24:23 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:24:29 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:24:36 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:24:42 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:30:10 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:30:16 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:30:22 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:30:38 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:30:44 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:30:50 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:31:09 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:31:15 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:31:21 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:31:27 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:31:34 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:31:40 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:31:46 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:33:05 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:33:12 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:33:18 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:33:24 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:33:30 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:33:36 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:36:36 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:36:42 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:36:48 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:36:54 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:37:01 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:37:07 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:37:14 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:37:20 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:37:26 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:37:32 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:37:39 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:37:45 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:38:15 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:38:21 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:38:27 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:38:33 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:38:39 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:38:46 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:39:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:39:23 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:39:29 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:39:35 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:39:42 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 7:39:48 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:03:54 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:00 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:07 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:13 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:19 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:25 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:32 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:38 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:44 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:50 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:04:57 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:05:03 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:05:18 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:05:28 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:05:34 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:05:40 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:05:46 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:05:56 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:06:27 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:06:37 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:06:44 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:06:50 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:06:56 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:07:03 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:08:19 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:08:25 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:08:31 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:08:37 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:08:44 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:08:50 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:09:18 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:09:24 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:09:30 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:09:36 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:09:42 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:09:49 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:10:10 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:10:16 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:10:22 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:10:28 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:10:34 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:10:41 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:12:42 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:12:48 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:12:54 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:13:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:13:23 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:13:30 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:14:33 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:14:39 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:14:45 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:14:54 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:15:01 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:15:10 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:15:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:15:23 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:15:30 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:15:36 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:15:42 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:15:48 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:16:11 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:16:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:16:24 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:16:33 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:16:39 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:16:45 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:17:01 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:17:10 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:17:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:17:23 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:17:29 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:17:35 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:18:37 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:18:43 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:18:52 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:18:59 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:19:06 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:19:12 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:19:30 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:19:37 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:19:43 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:19:52 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:19:58 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:20:08 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:20:14 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:21:11 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:21:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:21:23 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:21:29 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:21:39 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:21:45 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:22:01 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:22:07 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:22:13 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:22:19 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:22:26 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:22:33 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:23:03 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:23:09 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:23:16 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:23:22 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:23:28 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:23:34 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:23:55 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:24:01 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:24:07 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:24:13 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:24:19 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:24:25 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:24:42 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:24:49 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:24:55 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:25:02 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:25:08 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:25:14 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:25:20 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:29:59 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:30:05 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:30:11 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:30:17 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:30:27 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:30:36 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:30:55 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:31:02 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:31:09 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:31:15 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:31:23 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:31:29 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:31:44 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:31:54 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:32:01 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:32:07 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:32:13 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 9:32:19 - PHP Notice:  Array to string conversion in /home/keika509/public_html/vqmod/vqcache/vq2-admin_controller_module_notify_when_arrives.php on line 781
+2015-12-02 18:00:31 - Notify when arrives mail:[413] salonenjonnamaria@gmail.com
+2015-12-02 18:00:37 - Notify when arrives mail:[413] reetta.m.niemi@gmail.com
+2015-12-02 18:00:43 - Notify when arrives mail:[413] mira@jaurola.fi
+2015-12-02 18:00:50 - Notify when arrives mail:[413] tiina82.jauhiainen@gmail.com
+2015-12-02 18:00:56 - Notify when arrives mail:[413] mikrpu@gmail.com
+2015-12-02 18:01:02 - Notify when arrives mail:[413] hannelaitila@msn.com
+2015-12-02 18:01:18 - Notify when arrives mail:[417] reetta.m.niemi@gmail.com
+2015-12-02 18:01:24 - Notify when arrives mail:[417] mira@jaurola.fi
+2015-12-02 18:01:30 - Notify when arrives mail:[417] katri.gronroos@gmail.com
+2015-12-02 18:01:36 - Notify when arrives mail:[417] tiina82.jauhiainen@gmail.com
+2015-12-02 18:01:43 - Notify when arrives mail:[417] mikrpu@gmail.com
+2015-12-02 18:01:53 - Notify when arrives mail:[417] hannelaitila@msn.com
+2015-12-02 18:06:31 - Notify when arrives mail:[418] mira@jaurola.fi
+2015-12-02 18:06:38 - Notify when arrives mail:[418] anna@vanhanen.net
+2015-12-02 18:06:45 - Notify when arrives mail:[418] katri.gronroos@gmail.com
+2015-12-02 18:06:51 - Notify when arrives mail:[418] tiina82.jauhiainen@gmail.com
+2015-12-02 18:07:01 - Notify when arrives mail:[418] mikrpu@gmail.com
+2015-12-02 18:07:07 - Notify when arrives mail:[418] hannelaitila@msn.com
+2015-12-02 18:20:09 - Notify when arrives mail:[419] anna@vanhanen.net
+2015-12-02 18:20:15 - Notify when arrives mail:[419] katri.gronroos@gmail.com
+2015-12-02 18:20:22 - Notify when arrives mail:[419] tiina82.jauhiainen@gmail.com
+2015-12-02 18:20:28 - Notify when arrives mail:[419] mikrpu@gmail.com
+2015-12-02 18:20:34 - Notify when arrives mail:[419] ville.ahtee@gmail.com
+2015-12-02 18:20:40 - Notify when arrives mail:[419] hannelaitila@msn.com
+2015-12-02 18:21:38 - Notify when arrives mail:[420] katri.gronroos@gmail.com
+2015-12-02 18:21:44 - Notify when arrives mail:[420] tiina82.jauhiainen@gmail.com
+2015-12-02 18:21:50 - Notify when arrives mail:[420] mikrpu@gmail.com
+2015-12-02 18:21:57 - Notify when arrives mail:[420] mikrpu@gmail.com
+2015-12-02 18:22:03 - Notify when arrives mail:[420] ville.ahtee@gmail.com
+2015-12-02 18:22:09 - Notify when arrives mail:[420] hannelaitila@msn.com
+2015-12-02 18:24:44 - Notify when arrives mail:[423] tiina82.jauhiainen@gmail.com
+2015-12-02 18:24:50 - Notify when arrives mail:[423] mikrpu@gmail.com
+2015-12-02 18:24:56 - Notify when arrives mail:[423] mikrpu@gmail.com
+2015-12-02 18:25:02 - Notify when arrives mail:[423] ville.ahtee@gmail.com
+2015-12-02 18:25:08 - Notify when arrives mail:[423] mianores@yahoo.com
+2015-12-02 18:25:14 - Notify when arrives mail:[423] hannelaitila@msn.com
+2015-12-02 18:25:21 - Notify when arrives mail:[425] mikrpu@gmail.com
+2015-12-02 18:25:30 - Notify when arrives mail:[425] mikrpu@gmail.com
+2015-12-02 18:25:36 - Notify when arrives mail:[425] ville.ahtee@gmail.com
+2015-12-02 18:25:43 - Notify when arrives mail:[425] mianores@yahoo.com
+2015-12-02 18:25:49 - Notify when arrives mail:[425] hannelaitila@msn.com
+2015-12-02 18:25:55 - Notify when arrives mail:[425] hannelaitila@msn.com
+2015-12-02 18:27:41 - Notify when arrives mail:[426] mikrpu@gmail.com
+2015-12-02 18:27:47 - Notify when arrives mail:[426] ville.ahtee@gmail.com
+2015-12-02 18:27:54 - Notify when arrives mail:[426] mianores@yahoo.com
+2015-12-02 18:28:00 - Notify when arrives mail:[426] hannelaitila@msn.com
+2015-12-02 18:28:06 - Notify when arrives mail:[426] hannelaitila@msn.com
+2015-12-02 18:28:13 - Notify when arrives mail:[429] ville.ahtee@gmail.com
+2015-12-02 18:28:19 - Notify when arrives mail:[429] mianores@yahoo.com
+2015-12-02 18:28:25 - Notify when arrives mail:[429] hannelaitila@msn.com
+2015-12-02 18:28:31 - Notify when arrives mail:[429] hannelaitila@msn.com
+2015-12-02 18:28:38 - Notify when arrives mail:[429] fanglan.tao@gmail.com
+2015-12-02 18:28:59 - Notify when arrives mail:[430] mianores@yahoo.com
+2015-12-02 18:29:06 - Notify when arrives mail:[430] hannelaitila@msn.com
+2015-12-02 18:29:12 - Notify when arrives mail:[430] hannelaitila@msn.com
+2015-12-02 18:29:18 - Notify when arrives mail:[430] fanglan.tao@gmail.com
+2015-12-02 18:29:24 - Notify when arrives mail:[431] hannelaitila@msn.com
+2015-12-02 18:29:31 - Notify when arrives mail:[431] hannelaitila@msn.com
+2015-12-02 18:29:37 - Notify when arrives mail:[431] fanglan.tao@gmail.com
+2015-12-02 18:30:53 - Notify when arrives mail:[432] hannelaitila@msn.com
+2015-12-02 18:31:00 - Notify when arrives mail:[432] fanglan.tao@gmail.com
+2015-12-02 18:31:12 - Notify when arrives mail:[433] fanglan.tao@gmail.com
+2015-12-02 22:48:42 - Notify when arrives mail:[437] auri.lempinen@gmail.com
+2015-12-03 14:21:38 - Notify when arrives mail:[438] astalena@hotmail.com
+2015-12-07 7:11:01 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1449468589): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2015-12-10 20:13:45 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2015-12-14 10:05:48 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1450087426): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2015-12-14 18:28:33 - Notify when arrives mail:[439] jenna.lindell@hotmail.com
+2015-12-17 1:21:25 - Notify when arrives mail:[444] annika@kaarnalehto.fi
+2015-12-28 14:58:54 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1451310281): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2015-12-28 14:58:54 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1451310281): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-01-07 18:58:13 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-07 18:58:16 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-01-07 18:58:32 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-01-08 16:24:42 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-08 16:25:58 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-09 8:08:32 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1452324875): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-01-11 13:24:11 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 578
+2016-01-11 13:24:11 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 601
+2016-01-18 12:31:24 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1453120260): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-01-24 12:50:50 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-24 12:50:50 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-24 12:51:06 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-24 12:51:06 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-24 12:51:09 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-24 12:52:20 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-24 12:53:10 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-24 12:53:17 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-01-29 10:43:15 - Notify when arrives mail:[450] Tuija.halva@netti.fi
+2016-01-29 13:54:30 - Notify when arrives mail:[440] rami@laiho.ent
+2016-01-29 13:54:36 - Notify when arrives mail:[440] jaanabrockmann@hotmail.com
+2016-01-29 22:00:08 - Notify when arrives mail:[456] jaanabrockmann@hotmail.com
+2016-01-30 22:00:09 - Notify when arrives mail:[461] paivi.puntila@iki.fi
+2016-01-31 20:37:19 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-01-31 20:37:31 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-01-31 22:00:08 - Notify when arrives mail:[465] katsamja@gmail.com
+2016-02-01 19:13:17 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-01 19:13:36 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-01 23:38:25 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-02 9:35:36 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-02 9:35:40 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-02 9:38:41 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-02 10:52:39 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-02 20:40:37 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-02 20:40:52 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-02 20:41:01 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-02 20:41:08 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-02 20:41:19 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-02 20:41:27 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-04 13:45:26 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-04 13:45:44 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-04 16:58:49 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-04 16:59:25 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-08 23:48:48 - Notify when arrives mail:[458] Messala.hanna@gmail.com
+2016-02-09 10:17:43 - Notify when arrives mail:[466] kkorsman@gmail.com
+2016-02-09 18:04:44 - Notify when arrives mail:[467] mianores@yahoo.com
+2016-02-11 11:25:13 - PHP Warning:  file_get_contents(/home/keika509/public_html/system/cache/cache.manufacturer.0.1455189011): failed to open stream: No such file or directory in /home/keika509/public_html/system/library/cache.php on line 9
+2016-02-16 1:24:14 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1455583677): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-02-17 21:00:47 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-17 21:00:47 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-18 15:38:29 - Notify when arrives mail:[452] riikka_hynynen@hotmail.com
+2016-02-18 15:38:36 - Notify when arrives mail:[454] Kaisa.koskipuro@gmail.com
+2016-02-18 15:41:20 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/catalog/controller/payment/bank_transfer.php on line 34
+2016-02-18 15:42:32 - Notify when arrives mail:[441] janette.kontio@gmail.com
+2016-02-18 15:46:03 - Notify when arrives mail:[442] enna-inari@laiho.net
+2016-02-18 15:47:16 - Notify when arrives mail:[443] jenna.lindell@hotmail.com
+2016-02-18 15:48:31 - Notify when arrives mail:[445] emmi.lumivirta@gmail.com
+2016-02-18 15:48:48 - Notify when arrives mail:[447] heidi.j.junnila@gmail.com
+2016-02-18 15:53:25 - Notify when arrives mail:[462] lpirtiai@abo.fi
+2016-02-18 17:13:03 - Notify when arrives mail:[446] eva.fagerstrom@kolumbus.fi
+2016-02-18 17:13:09 - Notify when arrives mail:[448] sari.huittinen@hotmail.com
+2016-02-18 18:24:10 - Notify when arrives mail:[453] riikka_hynynen@hotmail.com
+2016-02-18 18:24:47 - Notify when arrives mail:[459] halonen.essi@gmail.com
+2016-02-19 12:58:49 - Notify when arrives mail:[451] toni.huttunen@asuntoasiantuntijat.fi
+2016-02-19 12:58:56 - Notify when arrives mail:[455] kaisa.koskipuro@Gmail.com
+2016-02-19 12:59:51 - Notify when arrives mail:[457] sari.ruokolahti@gmail.com
+2016-02-19 17:50:59 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-19 17:51:05 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-02-19 17:57:51 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-20 14:52:44 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 578
+2016-02-20 14:52:44 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 601
+2016-02-26 8:07:39 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 578
+2016-02-26 8:07:39 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 601
+2016-02-27 13:38:02 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1456569835): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-02-28 21:21:49 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-02-28 21:22:00 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-03-04 15:13:18 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.country.status.1457035418): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-03-07 7:26:19 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1457335261): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-03-12 9:14:32 - PHP Warning:  file_get_contents(/home/keika509/public_html/system/cache/cache.language.1457762546): failed to open stream: No such file or directory in /home/keika509/public_html/system/library/cache.php on line 9
+2016-03-14 18:48:53 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1457978645): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-03-18 21:29:16 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1458334645): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-03-24 8:02:14 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1458801215): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-03-28 2:41:55 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1459132845): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-03-28 2:41:56 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1459132846): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-03-28 2:41:57 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1459132846): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-01 20:05:12 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1459535432): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-01 20:05:12 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1459538349): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-01 20:05:13 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1459538349): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-01 20:05:13 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1459538349): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-04 19:22:43 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1459796002): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-07 4:13:36 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1460002143): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-16 19:58:17 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1460835515): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-18 19:06:58 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1461002362): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-18 19:06:59 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1461004305): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-18 19:07:02 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1461004306): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-19 20:24:59 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1461096716): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-19 20:24:59 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1461096720): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-04-19 20:24:59 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1461096720): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-05-21 1:21:54 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1463791684): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-05-24 12:10:08 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1464090204): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-05-24 13:49:01 - Notify when arrives mail:[449] styleko@hotmail.com
+2016-05-24 13:49:33 - Notify when arrives mail:[460] jarno.nieminen@live.fi
+2016-05-24 13:50:11 - Notify when arrives mail:[464] sanna.karoliussen@live.fi
+2016-05-24 13:56:05 - Notify when arrives mail:[472] katariina.luukkanen@gmail.com
+2016-05-24 13:59:49 - Notify when arrives mail:[469] reetta.karvonen@gmail.com
+2016-05-24 14:00:17 - Notify when arrives mail:[468] reetta.siltanen@gmail.com
+2016-05-24 14:00:22 - Notify when arrives mail:[468] laura.huurtola@gmail.com
+2016-05-24 14:00:54 - Notify when arrives mail:[470] laura.huurtola@gmail.com
+2016-05-24 14:00:59 - Notify when arrives mail:[470] laura.huurtola@gmail.com
+2016-05-24 14:01:12 - Notify when arrives mail:[471] laura.huurtola@gmail.com
+2016-05-25 12:14:36 - Notify when arrives mail:[463] petra.tienvieri@gmail.com
+2016-05-25 15:17:09 - Notify when arrives mail:[473] noora.sopula@gmail.com
+2016-05-31 10:31:56 - PHP Warning:  simplexml_load_string(): Entity: line 1: parser error : Extra content at the end of the document in /home/keika509/public_html/catalog/view/theme/default/template/payment/checkout_xml.tpl on line 19
+2016-05-31 10:31:56 - PHP Warning:  simplexml_load_string(): &lt;p&gt;Maksutapahtuman luonti ei onnistunut (-24).&lt;/p&gt;&lt;p&gt;Error in field/Virhekentäs in /home/keika509/public_html/catalog/view/theme/default/template/payment/checkout_xml.tpl on line 19
+2016-05-31 10:31:56 - PHP Warning:  simplexml_load_string():                                                   ^ in /home/keika509/public_html/catalog/view/theme/default/template/payment/checkout_xml.tpl on line 19
+2016-05-31 10:31:56 - PHP Notice:  Trying to get property of non-object in /home/keika509/public_html/catalog/view/theme/default/template/payment/checkout_xml.tpl on line 20
+2016-05-31 10:31:56 - PHP Notice:  Trying to get property of non-object in /home/keika509/public_html/catalog/view/theme/default/template/payment/checkout_xml.tpl on line 20
+2016-05-31 10:31:56 - PHP Notice:  Trying to get property of non-object in /home/keika509/public_html/catalog/view/theme/default/template/payment/checkout_xml.tpl on line 20
+2016-05-31 10:31:56 - PHP Warning:  Invalid argument supplied for foreach() in /home/keika509/public_html/catalog/view/theme/default/template/payment/checkout_xml.tpl on line 20
+2016-06-06 21:09:31 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1465247012): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-06 21:09:31 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1465247012): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-06 21:09:31 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1465247050): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-06 21:09:31 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1465247050): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-06 22:13:49 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1465250971): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-06 22:13:50 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1465250973): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-13 14:14:24 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-06-13 14:14:51 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-06-20 15:57:50 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1466437958): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-20 15:57:51 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1466437958): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-20 15:57:52 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1466437958): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-22 0:20:30 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1466553904): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-22 0:20:31 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1466553906): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-22 0:20:31 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1466553906): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-24 15:42:07 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1466780572): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-25 12:53:14 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 578
+2016-06-25 12:53:14 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 601
+2016-06-27 18:50:36 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1467048241): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-27 18:50:37 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1467048241): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-28 13:02:55 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-06-29 17:46:55 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1467221558): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-30 22:31:45 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1467324841): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-30 22:31:46 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1467323027): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-06-30 22:31:46 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1467323027): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-04 15:45:29 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1467645749): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-04 15:45:31 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1467645789): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-05 8:50:33 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1467708468): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-06 15:46:28 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1467817830): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-09 0:53:47 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1468017380): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-09 0:53:51 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1468017859): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-09 0:53:51 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1468017859): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-09 18:23:16 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 578
+2016-07-09 18:23:16 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 601
+2016-07-13 11:08:24 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1468395807): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-15 13:14:55 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1468586398): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-07-29 7:52:58 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 578
+2016-07-29 7:52:58 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 601
+2016-08-02 14:54:28 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1470147569): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-02 14:54:28 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1470147570): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-09 2:12:10 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1470707018): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-11 4:58:00 - PHP Notice:  Undefined index: enquiry in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_information_contact.php on line 293
+2016-08-11 4:58:00 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/keika509/public_html/index.php:108) in /home/keika509/public_html/system/library/currency.php on line 45
+2016-08-11 4:58:00 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/keika509/public_html/index.php:108) in /home/keika509/public_html/vqmod/vqcache/vq2-system_engine_controller.php on line 28
+2016-08-11 4:58:00 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/keika509/public_html/index.php:108) in /home/keika509/public_html/vqmod/vqcache/vq2-system_engine_controller.php on line 29
+2016-08-16 12:41:16 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1471349655): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-16 12:41:17 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1471350792): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-16 12:41:19 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1471349655): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-16 12:41:19 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1471349655): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-16 13:32:23 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 578
+2016-08-16 13:32:23 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 601
+2016-08-18 5:45:08 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1471498854): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-22 7:07:30 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1471847719): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-22 7:07:35 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1471847719): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-22 13:35:00 - Notify when arrives mail:[483] tuomas.koivula@kolumbus.fi
+2016-08-22 15:40:21 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1471880255): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-22 15:40:21 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1471880357): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-22 15:40:22 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1471880255): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-22 17:17:16 - Notify when arrives mail:[497] heidi.s.viljamaa@gmail.com
+2016-08-22 17:34:44 - Notify when arrives mail:[477] svetlana.iivonen@gmail.com
+2016-08-22 17:41:18 - Notify when arrives mail:[478] anniteppan@gmail.com
+2016-08-22 17:41:31 - Notify when arrives mail:[479] maarit.kahila@mapita.fi
+2016-08-22 17:51:21 - Notify when arrives mail:[498] odenmaili@gmail.com
+2016-08-23 7:34:47 - PHP Notice:  Undefined index: enquiry in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_information_contact.php on line 293
+2016-08-23 7:34:47 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/keika509/public_html/index.php:108) in /home/keika509/public_html/system/library/currency.php on line 45
+2016-08-23 7:34:47 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/keika509/public_html/index.php:108) in /home/keika509/public_html/vqmod/vqcache/vq2-system_engine_controller.php on line 28
+2016-08-23 7:34:47 - PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/keika509/public_html/index.php:108) in /home/keika509/public_html/vqmod/vqcache/vq2-system_engine_controller.php on line 29
+2016-08-30 6:27:32 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1472537158): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-08-30 11:53:08 - Notify when arrives mail:[489] laura.huurtola@gmail.com
+2016-08-30 11:55:50 - Notify when arrives mail:[491] emmalaaksonen@gmail.com
+2016-08-30 11:55:57 - Notify when arrives mail:[494] sankriber@gmail.com
+2016-08-30 11:56:27 - Notify when arrives mail:[496] emiliajarvinen@gmail.com
+2016-08-30 11:56:35 - Notify when arrives mail:[500] outi.sarkka@gmail.com
+2016-08-30 11:58:10 - Notify when arrives mail:[505] hiironen.elli@gmail.com
+2016-08-30 21:00:07 - Notify when arrives mail:[502] Katriina.hanen@gmail.com
+2016-08-30 21:00:12 - Notify when arrives mail:[502] Katriina.hanen@gmail.com
+2016-08-31 9:47:10 - Notify when arrives mail:[503] maija.brunni@gmail.com
+2016-08-31 9:54:57 - Notify when arrives mail:[523] kaisa_schroderus@hotmail.com
+2016-08-31 19:41:02 - Notify when arrives mail:[525] jaritaskula@hotmail.com
+2016-09-07 18:52:11 - Notify when arrives mail:[518] maria.katas@gmail.com
+2016-09-07 21:00:06 - Notify when arrives mail:[521] heidi.s.viljamaa@gmail.com
+2016-09-08 6:43:51 - Notify when arrives mail:[506] paivi.puntila@iki.fi
+2016-09-08 9:52:39 - Notify when arrives mail:[509] anne.paloranta@iki.fi
+2016-09-08 9:56:34 - Notify when arrives mail:[511] tuijah82@yahoo.com
+2016-09-08 9:56:39 - Notify when arrives mail:[513] fanglan.tao@gmail.com
+2016-09-08 9:57:20 - Notify when arrives mail:[515] elina.ehanti@gmail.com
+2016-09-08 9:58:00 - Notify when arrives mail:[517] toni.vild@gmail.com
+2016-09-08 9:59:04 - Notify when arrives mail:[528] Hiironen.elli@gmail.com
+2016-09-08 10:09:58 - Notify when arrives mail:[482] leena.k.kaikkonen@gmail.com
+2016-09-08 10:11:39 - Notify when arrives mail:[487] Sari.ropponen@elisanet.fi
+2016-09-08 11:37:48 - Notify when arrives mail:[492] emmalaaksonen@gmail.com
+2016-09-08 11:38:40 - Notify when arrives mail:[493] sankriber@gmail.com
+2016-09-08 21:00:07 - Notify when arrives mail:[499] outi.sarkka@gmail.com
+2016-09-09 4:17:40 - Notify when arrives mail:[501] juuli.v.partanen@gmail.com
+2016-09-09 4:17:50 - Notify when arrives mail:[504] hiironen.elli@gmail.com
+2016-09-09 6:10:02 - Notify when arrives mail:[510] ullis.muuttis@gmail.com
+2016-09-09 6:10:55 - Notify when arrives mail:[524] j.s.saastamoinen@gmail.com
+2016-09-09 6:11:17 - Notify when arrives mail:[529] anuriikka.kyttala@gmail.com
+2016-09-10 1:13:28 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1473468659): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-09-11 16:38:49 - Notify when arrives mail:[519] marjaana.tiittanen@gmail.com
+2016-09-12 10:59:45 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1473675404): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-09-12 10:59:45 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1473675980): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-09-12 10:59:45 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1473676045): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-09-12 11:01:53 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-12 11:02:00 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-12 14:31:05 - Notify when arrives mail:[490] hanna.rintakokko@gmail.com
+2016-09-12 18:26:26 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-12 18:26:37 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-12 18:29:35 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-12 21:00:12 - Notify when arrives mail:[512] marja.sarmela@hel.fi
+2016-09-12 21:11:05 - Notify when arrives mail:[526] annegronberg@gmail.com
+2016-09-13 11:33:51 - Notify when arrives mail:[532] annegronberg@gmail.com
+2016-09-13 21:04:56 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-13 21:04:56 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-13 21:05:01 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-13 21:05:48 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-14 9:25:48 - Notify when arrives mail:[530] annina.malin@gmail.com
+2016-09-14 11:30:56 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-14 14:23:27 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-14 14:23:27 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-14 14:24:00 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-14 14:24:05 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-14 14:26:58 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-14 14:27:03 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-15 7:13:40 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.country.status.1473922479): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-09-17 19:52:12 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-17 19:52:22 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-18 17:58:06 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-18 17:58:06 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-18 17:58:10 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-18 17:58:13 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-19 1:17:04 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1474245868): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-09-19 15:38:30 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 578
+2016-09-19 15:38:30 - PHP Notice:  Undefined index: order_id in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_controller_account_order.php on line 601
+2016-09-19 17:04:41 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-19 17:05:29 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-19 17:06:34 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-19 17:06:48 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-20 17:33:14 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-20 17:33:27 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-20 17:33:41 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-20 17:35:02 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-20 17:35:16 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-22 18:50:07 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-22 18:50:35 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-26 16:23:22 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1474905214): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-09-28 4:02:25 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-28 4:02:39 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-28 4:02:54 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-28 4:15:38 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-28 4:15:38 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-28 4:15:42 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-28 5:42:20 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-28 5:42:23 - PHP Notice:  Undefined variable: total_amount in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_checkout.tpl on line 12
+2016-09-28 7:04:29 - Notify when arrives mail:[480] golda.ella@gmail.com
+2016-09-28 21:00:08 - Notify when arrives mail:[481] h.korpelainen@hotmail.com
+2016-09-29 4:46:17 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-29 4:46:17 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-29 4:46:23 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-09-29 6:07:37 - Notify when arrives mail:[486] Jenni.arteli@gmail.com
+2016-09-29 14:38:53 - Notify when arrives mail:[488] laura.huurtola@gmail.com
+2016-09-29 14:39:16 - Notify when arrives mail:[495] emiliajarvinen@gmail.com
+2016-09-29 15:16:48 - Notify when arrives mail:[508] marja.lahtinen@gmail.com
+2016-09-29 15:39:06 - Notify when arrives mail:[516] mannela@gmail.com
+2016-10-01 15:17:04 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-10-04 9:25:11 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1475572245): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-10-04 9:25:12 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1475572247): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-10-04 9:25:12 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1475572248): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-10-04 15:46:26 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-10-18 12:00:58 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.nwa_osl.1476788514): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-10-18 12:01:00 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1476789406): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-10-24 20:43:53 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1477337504): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-10-24 20:43:56 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.language.1477337504): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-10-24 20:43:56 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.currency.1477337504): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-10-27 19:32:31 - Notify when arrives mail:[534] mannela@gmail.com
+2016-10-29 20:10:14 - Notify when arrives mail:[531] annina.malin@gmail.com
+2016-10-31 2:40:20 - PHP Notice:  Undefined index: email in /home/keika509/public_html/catalog/model/tool/popup.php on line 17
+2016-11-02 12:59:32 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-11-13 5:37:17 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1479008803): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-11-17 1:07:52 - PHP Warning:  unlink(/home/keika509/public_html/system/cache/cache.manufacturer.0.1479344541): No such file or directory in /home/keika509/public_html/system/library/cache.php on line 18
+2016-11-17 1:07:52 - PHP Warning:  file_get_contents(/home/keika509/public_html/system/cache/cache.manufacturer.0.1479344541): failed to open stream: No such file or directory in /home/keika509/public_html/system/library/cache.php on line 9
+2016-11-18 14:50:02 - Notify when arrives mail:[484] pia.peippo@hotmail.com
+2016-11-18 14:52:09 - Notify when arrives mail:[485] jussi.muhonen@iki.fi
+2016-11-18 14:55:03 - Notify when arrives mail:[507] maria.makkonen@lyreco.com
+2016-11-18 14:59:15 - Notify when arrives mail:[514] Salme.lassila@gmail.com
+2016-11-18 15:11:37 - PHP Notice:  Undefined variable: text_remove in /home/keika509/public_html/vqmod/vqcache/vq2-catalog_view_theme_sellya_template_checkout_cart.tpl on line 91
+2016-11-18 15:24:20 - Notify when arrives mail:[520] anniteppan@gmail.com
+2016-11-18 15:24:40 - Notify when arrives mail:[522] taru.villikari@gmail.com
+2016-11-18 15:25:08 - Notify when arrives mail:[527] emilia.kahola@gmail.com
+2016-11-18 15:25:31 - Notify when arrives mail:[533] Samuli.poykko@gmail.com
+2016-11-18 15:25:58 - Notify when arrives mail:[535] krista.kalenius@hotmail.com
+2016-11-21 14:51:44 - Notify when arrives mail:[536] meri.tuuli.rantanen@gmail.com
+2016-11-21 14:51:57 - Notify when arrives mail:[537] meri.rantanen@eduvantaa.fi
+2016-11-22 21:55:15 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-22 21:55:16 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-22 21:55:16 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-22 21:55:28 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-22 21:55:29 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-22 21:55:29 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-22 22:10:05 - PHP Notice:  Undefined index: bits in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\library\image.php on line 16
+2016-11-23 0:34:27 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:34:28 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:34:28 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:34:46 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:34:46 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:34:46 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:35:01 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:35:01 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:35:01 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:35:22 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:35:22 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:35:23 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:29 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:29 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:30 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:45 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:45 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:46 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:59 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:59 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:40:59 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:41:10 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:41:11 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:41:11 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:41:22 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:41:22 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:41:23 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:42:03 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:42:03 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:42:03 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:42:14 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:42:14 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-23 0:42:14 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:06:37 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:08:48 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:13:02 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:14:29 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:15:00 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:17:39 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:26:14 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:26:17 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:26:20 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:28:20 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:29:10 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:29:33 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:31:27 - PHP Notice:  Error: Could not load language module/sid_orders_products_remover! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_library_language.php on line 73
+2016-11-24 22:36:58 - PHP Notice:  Undefined index: status in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\module\sid_orders_products_remover.tpl on line 38
+2016-11-24 22:37:27 - PHP Notice:  Undefined index: status in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\module\sid_orders_products_remover.tpl on line 38
+2016-11-24 22:38:57 - PHP Notice:  Error: Table 'keika509_store.oc_otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name FROM oc_otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=74; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:43:16 - PHP Notice:  Error: Table 'keika509_store.oc_otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name FROM oc_otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=74; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:49:18 - PHP Notice:  Error: Table 'keika509_store.oc_otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name FROM oc_otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=74; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:51:32 - PHP Notice:  Error: Table 'keika509_store.oc_otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name FROM oc_otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=74; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:53:34 - PHP Notice:  Error: Table 'keika509_store.oc_otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name FROM oc_otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=74; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:54:50 - PHP Notice:  Error: Table 'keika509_store.oc_otp_option_value' doesn't exist<br />Error No: 1146<br />SELECT DISTINCT otp.parent_option_id option_id, otp.parent_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.parent_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.parent_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=74 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.child_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.child_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.child_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=74 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.grandchild_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.grandchild_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.grandchild_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=74
+                            UNION ALL
+                            SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM oc_product_option_value po
+                            INNER JOIN oc_option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=po.option_value_id
+                            WHERE po.product_id=74; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:55:31 - PHP Notice:  Error: Table 'keika509_store.oc_otp_option_value' doesn't exist<br />Error No: 1146<br />SELECT DISTINCT otp.parent_option_id option_id, otp.parent_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.parent_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.parent_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=74 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.child_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.child_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.child_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=74 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.grandchild_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.grandchild_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.grandchild_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=74
+                            UNION ALL
+                            SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM oc_product_option_value po
+                            INNER JOIN oc_option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=po.option_value_id
+                            WHERE po.product_id=74; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:57:02 - PHP Notice:  Error: Table 'keika509_store.oc_otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name FROM oc_otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=73; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:59:54 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:59:54 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 22:59:55 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:02:37 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:02:37 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:02:37 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:02:47 - PHP Notice:  Undefined variable: option_value in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-catalog_view_theme_sellya_template_product_product.tpl on line 298
+2016-11-24 23:02:47 - PHP Notice:  Undefined variable: option_value in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-catalog_view_theme_sellya_template_product_product.tpl on line 298
+2016-11-24 23:02:54 - PHP Notice:  Error: Table 'keika509_store.contact_popup' doesn't exist<br />Error No: 1146<br />SELECT * FROM contact_popup WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:02:54 - PHP Notice:  Error: Table 'keika509_store.popup_dynamic' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_dynamic WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:02:55 - PHP Notice:  Error: Table 'keika509_store.popup_newsletter' doesn't exist<br />Error No: 1146<br />SELECT * FROM popup_newsletter WHERE lang_id = '1' AND status = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:04:20 - PHP Notice:  Error: Table 'keika509_store.oc_otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name FROM oc_otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=79; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:06:05 - PHP Notice:  Error: Table 'keika509_store.otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name 
+                  FROM otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=86; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:06:20 - PHP Notice:  Error: Table 'keika509_store.oc_otp_option_value' doesn't exist<br />Error No: 1146<br />SELECT DISTINCT otp.parent_option_id option_id, otp.parent_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.parent_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.parent_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=86 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.child_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.child_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.child_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=86 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.grandchild_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.grandchild_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.grandchild_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=86
+                            UNION ALL
+                            SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM oc_product_option_value po
+                            INNER JOIN oc_option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=po.option_value_id
+                            WHERE po.product_id=86; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:42:52 - PHP Notice:  Error: Table 'keika509_store.ne_subscribe_box' doesn't exist<br />Error No: 1146<br />SELECT * FROM ne_subscribe_box WHERE subscribe_box_id = '1' in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-24 23:50:59 - PHP Notice:  Undefined index: status in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\module\sid_orders_products_remover.tpl on line 38
+2016-11-24 23:54:48 - PHP Notice:  Undefined index: tax_rate in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 113
+2016-11-24 23:54:48 - PHP Notice:  Undefined index: tax_rate in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-admin_view_template_catalog_product_form.tpl on line 113
+2016-11-25 0:11:03 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 239
+2016-11-25 0:11:03 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 267
+2016-11-25 0:11:03 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 322
+2016-11-25 0:11:03 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 375
+2016-11-25 0:11:03 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 421
+2016-11-25 0:11:16 - PHP Notice:  Error: Table 'keika509_store.otp_data' doesn't exist<br />Error No: 1146<br />SELECT otp_id,CONCAT(CASE WHEN odp.name IS NULL THEN '' ELSE CONCAT(odp.name,':',ovdp.name) END,
+                                        CASE WHEN odc.name IS NULL THEN '' ELSE CONCAT(' ',odc.name,':',ovdc.name) END,
+                                        CASE WHEN odgc.name IS NULL THEN '' ELSE CONCAT(' ',odgc.name,':',ovdgc.name)END) description, parent_option_id, odp.name, parent_option_value_id, ovdp.name, child_option_id, odc.name, child_option_value_id,ovdc.name, grandchild_option_id,odgc.name, grandchild_option_value_id, ovdgc.name 
+                  FROM otp_data otp
+                   INNER JOIN otp_option_value otpo ON otpo.id=otp.otp_id
+                   LEFT JOIN option_description odp ON odp.option_id=otpo.parent_option_id AND odp.language_id=1
+                   LEFT JOIN option_value_description ovdp ON ovdp.option_value_id=otpo.parent_option_value_id AND ovdp.language_id=1
+                   LEFT JOIN option_description odc ON odc.option_id=otpo.child_option_id AND odc.language_id=1
+                   LEFT JOIN option_value_description ovdc ON ovdc.option_value_id=otpo.child_option_value_id AND ovdc.language_id=1
+                   LEFT JOIN option_description odgc ON odgc.option_id=otpo.grandchild_option_id AND odgc.language_id=1
+                   LEFT JOIN option_value_description ovdgc ON ovdgc.option_value_id=otpo.grandchild_option_value_id AND ovdgc.language_id=1
+                   WHERE otp.product_id=98; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-25 0:12:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 239
+2016-11-25 0:12:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 267
+2016-11-25 0:12:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 322
+2016-11-25 0:12:18 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 375
+2016-11-25 0:12:18 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 421
+2016-11-25 0:14:29 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 239
+2016-11-25 0:14:29 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 267
+2016-11-25 0:14:29 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 322
+2016-11-25 0:14:29 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 375
+2016-11-25 0:14:29 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 421
+2016-11-25 0:19:50 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 239
+2016-11-25 0:19:50 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 267
+2016-11-25 0:19:50 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 322
+2016-11-25 0:19:50 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 375
+2016-11-25 0:19:50 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 421
+2016-11-25 0:27:12 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 240
+2016-11-25 0:27:12 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 268
+2016-11-25 0:27:12 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 323
+2016-11-25 0:27:12 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 376
+2016-11-25 0:27:12 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 422
+2016-11-25 0:28:33 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 240
+2016-11-25 0:28:33 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 268
+2016-11-25 0:28:33 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 323
+2016-11-25 0:28:33 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 376
+2016-11-25 0:28:33 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 422
+2016-11-25 0:32:55 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 241
+2016-11-25 0:32:55 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 269
+2016-11-25 0:32:55 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 324
+2016-11-25 0:32:55 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-25 0:32:55 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 423
+2016-11-25 0:33:30 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 241
+2016-11-25 0:33:30 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 269
+2016-11-25 0:33:30 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 324
+2016-11-25 0:33:30 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-25 0:33:30 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 423
+2016-11-25 0:44:45 - PHP Notice:  Error: Could not load model payment/layaway! in E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod\vqcache\vq2-system_engine_loader.php on line 54
+2016-11-25 0:48:59 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 241
+2016-11-25 0:48:59 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 269
+2016-11-25 0:48:59 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 324
+2016-11-25 0:48:59 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-25 0:48:59 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 423
+2016-11-25 0:49:09 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UNION ALL
+                            SELECT DISTINCT otp.child_option_id option' at line 6<br />Error No: 1064<br />SELECT DISTINCT otp.parent_option_id option_id, otp.parent_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.parent_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.parent_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id= 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.child_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.child_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.child_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id= 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.grandchild_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.grandchild_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.grandchild_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=
+                            UNION ALL
+                            SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM oc_product_option_value po
+                            INNER JOIN oc_option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=po.option_value_id
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-25 0:49:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 241
+2016-11-25 0:49:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 269
+2016-11-25 0:49:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 324
+2016-11-25 0:49:18 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-25 0:49:18 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 423
+2016-11-28 20:56:26 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 241
+2016-11-28 20:56:26 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 269
+2016-11-28 20:56:26 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 324
+2016-11-28 20:56:26 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-28 20:56:26 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 423
+2016-11-28 21:02:43 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 241
+2016-11-28 21:02:43 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 269
+2016-11-28 21:02:43 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 324
+2016-11-28 21:02:43 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-28 21:02:43 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 423
+2016-11-28 21:05:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 241
+2016-11-28 21:05:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 269
+2016-11-28 21:05:18 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 324
+2016-11-28 21:05:18 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-28 21:05:18 - PHP Notice:  Undefined variable: entry_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 423
+2016-11-28 21:08:02 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-28 21:24:59 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-28 21:25:39 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UNION ALL
+                            SELECT DISTINCT otp.child_option_id option' at line 6<br />Error No: 1064<br />SELECT DISTINCT otp.parent_option_id option_id, otp.parent_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.parent_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.parent_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id= 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.child_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.child_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.child_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id= 
+                            UNION ALL
+                            SELECT DISTINCT otp.child_option_id option_id, otp.grandchild_option_value_id option_value_id, od.name optionName,ovd.name valueName
+                            FROM oc_otp_option_value otp
+                            INNER JOIN oc_option_description od ON od.option_id=otp.grandchild_option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=otp.grandchild_option_value_id AND ovd.language_id=1
+                            WHERE otp.product_id=
+                            UNION ALL
+                            SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM oc_product_option_value po
+                            INNER JOIN oc_option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=po.option_value_id
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-28 21:25:50 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-28 21:29:01 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-28 21:30:05 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 377
+2016-11-28 21:36:23 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 364
+2016-11-28 21:44:38 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 364
+2016-11-28 22:12:48 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 370
+2016-11-28 22:15:55 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 370
+2016-11-28 22:22:01 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 370
+2016-11-28 22:23:05 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 370
+2016-11-28 22:24:43 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 370
+2016-11-28 22:25:20 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 370
+2016-11-28 22:28:21 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 370
+2016-11-28 22:40:28 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 345
+2016-11-28 22:41:15 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 345
+2016-11-28 22:44:49 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 345
+2016-11-28 22:48:23 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-11-28 22:50:58 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-11-28 23:07:46 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346

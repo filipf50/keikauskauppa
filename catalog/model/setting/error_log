@@ -1,0 +1,2 @@
+[26-Oct-2014 03:27:47 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/setting/setting.php on line 2
+[30-Oct-2014 08:05:46 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/setting/store.php on line 2

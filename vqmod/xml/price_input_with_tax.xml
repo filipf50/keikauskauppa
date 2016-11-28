@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/****************************************************
+*	INPUT PRODUCT PRICES WITH TAX					*
+*	Version:	1.0.7								*
+*	Date:		16.3.2014							*
+*	File:		vqmod/xml/price_input_with_tax.xml	*
+*	Author:		HydeNet								*
+*	Web:		www.hydenet.fi						*
+*	Email:		info@hydenet.fi						*
+****************************************************/
+-->
+<modification>
+	<id>Price Input With Tax</id>
+	<version>1.0.6</version>
+	<vqmver>2.1.5</vqmver>
+	<author>HydeNet info@hydenet.fi</author>
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation error="log">
+			<search position="before"><![CDATA[<script type="text/javascript" src="view/javascript/ckeditor/ckeditor.js"></script>]]></search>
+			<add><![CDATA[
+<!-- PRICE INPUT -->
+	<script type="text/javascript" src="view/javascript/price_with_tax.js"></script>
+<!-- END PRICE INPUT -->
+			]]></add>
+		</operation>
+		<operation error="log">
+			<search position="replace"><![CDATA[<td class="right"><?php echo $entry_price; ?></td>]]></search>
+			<add><![CDATA[<td class="right"><?php echo $entry_price_w_tax; ?></td>]]></add>
+		</operation>
+	<!-- PRICE -->
+		<operation error="log">
+			<search position="replace"><![CDATA[<td><input type="text" name="price" value="<?php echo $price; ?>" /></td>]]></search>
+			<add><![CDATA[
+	<td><input type="text" name="price_w_tax" value="" /><br /><br /><input type="text" name="price" value="<?php echo $price; ?>" /></td></script>
+			]]></add>
+		</operation>
+		<operation error="log">
+			<search position="replace" offset="10"><![CDATA[<td><select name="tax_class_id">]]></search>
+			<add><![CDATA[
+				<td><select name="tax_class_id" id="tax_class_id">
+					<option value="0" title="0.00"><?php echo $text_none; ?></option>
+					<?php foreach ($tax_classes_rates as $tax_class) { ?>
+					<?php if ($tax_class['tax_class_id'] == $tax_class_id) { ?>
+					<option value="<?php echo $tax_class['tax_class_id']; ?>" selected="selected" title="<?php echo $tax_class['tax_rate']; ?>"><?php echo $tax_class['title']; ?></option>
+					<?php } else { ?>
+					<option value="<?php echo $tax_class['tax_class_id']; ?>" title="<?php echo $tax_class['tax_rate']; ?>"><?php echo $tax_class['title']; ?></option>
+					<?php } ?>
+					<?php } ?>
+				</select></td>
+			]]></add>
+		</operation>
+	<!-- OPTION -->
+		<operation error="log">
+			<search position="replace"><![CDATA[html += '    <input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][price]" value="" size="5" /></td>';]]></search>
+			<add><![CDATA[
+	html += '    <input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][price]" value="" size="5" />';
+	html += '    <input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][price_w_tax]" value="" size="5" /></td>';
+			]]></add>
+		</operation>
+	<!-- DISCOUNT -->
+		<operation error="log">
+			<search position="replace"><![CDATA[html += '    <td class="right"><input type="text" name="product_discount[' + discount_row + '][price]" value="" /></td>';]]></search>
+			<add><![CDATA[
+	html += '    <td class="right"><input type="text" name="product_discount[' + discount_row + '][price]" value="" />';
+	html += '    <input type="text" name="product_discount[' + discount_row + '][price_w_tax]" value="" /></td>';
+			]]></add>
+		</operation>
+	<!-- SPECIAL -->
+		<operation error="log">
+			<search position="replace"><![CDATA[html += '    <td class="right"><input type="text" name="product_special[' + special_row + '][price]" value="" /></td>';]]></search>
+			<add><![CDATA[
+	html += '    <td class="right"><input type="text" name="product_special[' + special_row + '][price]" value="" />';
+	html += '    <input type="text" name="product_special[' + special_row + '][price_w_tax]" value="" /></td>';
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/catalog/product.php">
+		<operation error="log">
+			<search position="after"><![CDATA[$this->data['entry_price'] = $this->language->get('entry_price');]]></search>
+			<add><![CDATA[
+/* PRICE INPUT */
+		$this->data['entry_price_w_tax'] = $this->language->get('entry_price_w_tax');
+/* END PRICE INPUT */
+			]]></add>
+		</operation>
+		<operation error="log">
+			<search position="after"><![CDATA[$this->data['entry_price'] = $this->language->get('entry_price');]]></search>
+			<add><![CDATA[
+/* PRICE INPUT */
+		$this->load->model('localisation/tax_class');
+		$this->data['tax_classes'] = $this->model_localisation_tax_class->getTaxClasses();
+		
+		$this->load->model('localisation/tax_rate');
+		
+		$tax_classes = $this->model_localisation_tax_class->getTaxClasses();
+
+		$class_rates = array();
+		foreach ($tax_classes as $tax_class) {
+			$tax_rules = $this->model_localisation_tax_class->getTaxRules($tax_class['tax_class_id']);
+			$class_rates[$tax_class['tax_class_id']] = $tax_class;
+
+			foreach ($tax_rules as $tax_rule) {
+				$tax_rate = $this->model_localisation_tax_rate->getTaxRate($tax_rule['tax_rate_id']);
+				$testdata = print_r($tax_rate, true);
+				file_put_contents(DIR_LOGS . "taxrate.txt", "\nTax rate\n{$testdata}\n", FILE_APPEND);
+					if ($tax_rate['type'] == 'P'){
+						$class_rates[$tax_class['tax_class_id']]['tax_rate'] = $tax_rate['rate'];
+					}
+			}
+		}
+		$this->data['tax_classes_rates'] = $class_rates;
+/* END PRICE INPUT */
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/english/catalog/product.php" error="skip">
+		<operation error="log">
+			<search position="after"><![CDATA[$_['entry_price']]]></search>
+			<add><![CDATA[
+/* PRICE INPUT */
+$_['entry_price']            = 'Price With Tax:<br /><br />Price Without tax:';
+$_['entry_price_w_tax']      = 'Price: <span class="help" style="display: inline;">(Without tax | With tax)</span>';
+/* END PRICE INPUT */
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/finnish/catalog/product.php" error="skip">
+		<operation error="log">
+			<search position="after"><![CDATA[$_['entry_price']]]></search>
+			<add><![CDATA[
+/* PRICE INPUT */
+$_['entry_price']            = 'Verollinen hinta:<br /><br />Veroton hinta:';
+$_['entry_price_w_tax']      = 'Hinta: <span class="help" style="display: inline;">(Veroton | Verollinen)</span>';
+/* END PRICE INPUT */
+			]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/swedish/catalog/product.php" error="skip">
+		<operation error="log">
+			<search position="after"><![CDATA[$_['entry_price']]]></search>
+			<add><![CDATA[
+/* PRICE INPUT */
+$_['entry_price']            = 'Pris med moms:<br /><br />Pris exkl moms:';
+$_['entry_price_w_tax']      = 'Pris: <span class="help" style="display: inline;">(Med moms | Exkl moms)</span>';
+/* END PRICE INPUT */
+			]]></add>
+		</operation>
+	</file>
+</modification>

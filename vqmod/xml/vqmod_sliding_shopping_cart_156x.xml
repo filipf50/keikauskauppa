@@ -1,0 +1,177 @@
+<modification>
+    <id>Sliding Shopping Cart With Popup Confirmations 156x</id>
+      <version>2.2</version>
+		   <vqmver>2.3.2</vqmver>
+       <author>www.best-byte.com</author>
+<file name="catalog/controller/common/header.php">
+  <operation>
+    <search position="after"><![CDATA[$this->language->load('common/header');]]></search>
+    <add><![CDATA[
+    $this->language->load('module/slidecart');
+    ]]></add>
+  </operation>
+</file>        		
+<file name="catalog/view/theme/*/template/common/header.tpl">
+	<operation>
+		<search position="replace"><![CDATA[<script type="text/javascript" src="catalog/view/javascript/common.js"></script>]]></search>
+		<add><![CDATA[<script type="text/javascript" src="catalog/view/javascript/sliding-cart/common.js"></script>]]></add>
+	</operation>
+	<operation>
+		<search position="before"><![CDATA[</head>]]></search>
+		<add><![CDATA[
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/sliding-cart/sliding-cart.css" />		
+<script type="text/javascript" src="catalog/view/javascript/sliding-cart/jquery.tabSlideOut.v1.3.js"></script>		
+<script type="text/javascript">
+var cart_title = '<?php echo addslashes($this->language->get('text_cart_title')); ?>';
+var cart_checkout = '<?php echo addslashes($this->language->get('text_cart_checkout')); ?>';
+var cart_view = '<?php echo addslashes($this->language->get('text_cart_view')); ?>';
+var wish_title = '<?php echo addslashes($this->language->get('text_wish_title')); ?>';
+var wish_view = '<?php echo addslashes($this->language->get('text_wish_view')); ?>';
+var comp_title = '<?php echo addslashes($this->language->get('text_comp_title')); ?>';
+var comp_view = '<?php echo addslashes($this->language->get('text_comp_view')); ?>';
+var pop_continue = '<?php echo addslashes($this->language->get('text_pop_continue')); ?>';
+</script>		
+    ]]></add>
+	</operation>
+</file>
+<file name="catalog/controller/checkout/cart.php">	
+	<operation>
+		<search position="after" index="2"><![CDATA[$this->language->load('checkout/cart');]]></search>
+		<add><![CDATA[   
+    $this->language->load('module/slidecart');
+    ]]></add>
+	</operation>		
+	<operation>
+		<search position="after"><![CDATA[$this->cart->add($this->request->post['product_id'], $quantity, $option, $profile_id);]]></search>
+		<add><![CDATA[ 
+    $this->load->model('tool/image');
+				if ($product_info['image']) {
+					$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'));
+				} else {
+					$image = '';
+				}       
+    $json['confirmation'] = sprintf($this->language->get('text_cart_confirm'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $image, $quantity, $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
+    ]]></add>
+	</operation>	
+</file>
+<file name="catalog/controller/account/wishlist.php">	
+	<operation>
+		<search position="after" index="2"><![CDATA[$this->language->load('account/wishlist');]]></search>
+		<add><![CDATA[   
+    $this->language->load('module/slidecart');
+    ]]></add>
+	</operation>	
+	<operation>
+		<search position="after"><![CDATA[if ($this->customer->isLogged()) {]]></search>
+		<add><![CDATA[
+    $this->load->model('tool/image');
+				if ($product_info['image']) {
+					$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'));
+				} else {
+					$image = '';
+				}       
+    $json['confirmation'] = sprintf($this->language->get('text_wish_confirm'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $image, $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+    ]]></add>
+	</operation>
+	<operation>
+		<search position="before"><![CDATA[
+    $json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', 'SSL'), $this->url->link('account/register', '', 'SSL'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+    ]]></search>
+		<add><![CDATA[   
+    $json['confirmation'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', 'SSL'), $this->url->link('account/register', '', 'SSL'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+    ]]></add>
+	</operation>  	
+</file>
+<file name="catalog/controller/product/compare.php">	
+	<operation>
+		<search position="after" index="2"><![CDATA[$this->language->load('product/compare');]]></search>
+		<add><![CDATA[   
+    $this->language->load('module/slidecart');
+    ]]></add>
+	</operation>		
+	<operation>
+		<search position="after" offset="1"><![CDATA[$this->session->data['compare'][] = $this->request->post['product_id'];]]></search>
+		<add><![CDATA[ 
+    $this->load->model('tool/image');
+				if ($product_info['image']) {
+					$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'));
+				} else {
+					$image = '';
+				}       
+    $json['confirmation'] = sprintf($this->language->get('text_comp_confirm'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $image, $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('product/compare'));
+    ]]></add>
+	</operation>	
+</file>
+<file name="catalog/view/theme/*/template/common/footer.tpl">	
+	<operation>
+		<search position="before"><![CDATA[</html>]]></search>
+		<add><![CDATA[   
+    <div id="slidecart-success"></div>
+    ]]></add>
+	</operation>	
+</file>
+<file name="catalog/view/theme/*/template/product/product.tpl">
+	<operation>
+    <search position="replace" index="2" offset="7"><![CDATA[if (json['success']) {]]></search>
+		<add><![CDATA[
+    if (json['success']) {     
+     	
+      $('#cart-total').html(json['total']);
+        
+      $('#slide_cart .content').load('index.php?route=module/slidecart #slide_cart .content > *');  
+
+				var image = $('#image').offset();
+        if($("#slide_cart").length > 0){
+	      var cart = $('#slide_cart');
+	      var cart_offset = cart.offset();
+        } else {
+	      var cart = $('#cart');
+	      var cart_offset = cart.offset();
+        }
+				$('#image').before('<img src="' + $('#image').attr('src') + '" id="temp" style="z-index: 9999999; position: absolute; top: ' + image.top + 'px; left: ' + image.left + 'px;" />');
+        params = {
+	      top : cart_offset.top + 'px',
+	      left : cart_offset.left + 'px',
+	      opacity : 0.0,
+	      width : cart.width(),  
+	      height : cart.height()
+        };
+				$('#temp').animate(params, 'slow', false, function () {
+				$('#temp').remove();
+        });	                   
+				
+			$('<div id="slidecart-success">'+json["confirmation"]+'</div>').
+				dialog({
+					autoOpen : true,
+					modal: true,
+					width : 480,
+					resizable: false,					
+					title : cart_title,
+          buttons: [{
+        text: cart_checkout,
+        click: function() { location = 'index.php?route=checkout/checkout'; }
+      },{
+        text: cart_view,
+        click: function() { location = 'index.php?route=checkout/cart'; }
+      },{
+        text: pop_continue,
+        click: function() { $(this).dialog("close"); }
+      }
+    ],					
+					dialogClass: "slidecart-success",
+					create:function(){
+						$("#slidecart-success-confirm").bind("click", 
+							function(){
+								$('#slidecart-success').dialog('close');
+							}
+						);
+					},
+					close: function(){
+						$("#slidecart-success-confirm").unbind("click"); 
+						$('#slidecart-success').remove();
+					}
+				});         	        	
+    ]]></add>
+	</operation>
+</file>		
+</modification> 

@@ -1,0 +1,587 @@
+<modification>
+    <id>Notify when arrive extension</id>
+    <version>1.0</version>
+    <vqmver>1.2.3</vqmver>
+    <author>www.sid-alicante.es @filipf50</author>
+    
+    <!-- ADMIN LANGUAGE -->
+    <file name="admin/language/english/module/notify_when_arrives.php">
+        <operation>
+            <search position="before"><![CDATA[// Error]]></search>
+            <add><![CDATA[
+                    #One by one mail---------------------------------------------------------------------------
+                    $_['default_onebyone_subject']  = '{store_name}  - Product {product_name} arrived in our store!';
+
+                    $_['default_onebyone_body'] = 
+                    'Hi {user_name}!<br/> <br/> 
+                    You asked us to notify you when the product {product_name} arrives in our store.
+                    <br/><br/> 
+                    You can check it out now by clicking here: {product_link}
+                    <br/><br/> 
+                    <b>Remenber, you have got 24 hour to check it out. Afterward, we will send this offer to next interested customer in our list.</b>
+                    <br/> <br/>
+                    If you are not interested in this product, please click on next link to decline this offer. {decline_link}
+                    <br/> <br/>
+                    Thanks for your interest in our products.
+                    <br/> <br/>
+                    Best Regards
+                    <br/> <br/>
+                    {store_name}';
+ 
+                    #One by one mail admin--------------------------------------------------------------------
+
+                    $_['default_onebyone_mail_subject_admin'] = '{store_name} -  Notices of available product {product_name} delivered to {user_name}.';
+
+                    $_['default_onebyone_mail_body_admin'] =
+                    'Hello!
+                    <br/> <br/> 
+                    Notices of product {product_name} availability were delivered to {user_name}.
+                    <br/> <br/> 
+                    Best Regards,
+                    <br/> <br/>
+                    {store_name}';
+                
+                    $_['tab_mail_onebyone'] = 'One by one E - Mail';
+                    $_['text_notify_type'] = 'Notify type:';
+                    $_['text_send_to_all'] = 'Send to all';
+                    $_['text_send_onebyone'] = 'Send one by one';
+                    $_['entry_scheduled_time'] = 'Scheduled time:';
+                    $_['entry_subject_costumer_onebyone']= 'Costumer mail subject:';
+                    $_['entry_subject_admin_onebyone']= 'Admin mail subject:';
+                
+                    $_['tip_notify_type'] = ' <span class="help">In send to all option, system will send notifications to all customers at the same time. Using one by one option, system will send mails one by one by signed order till stock goes out every scheduled time. </span>';
+                    $_['tip_notify_scheduled_time'] = ' <span class="help">Set time between each notification mail in hours</span>';
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="replace"><![CDATA[<b>{store_name}</b> for store name<br/>]]></search>
+            <add><![CDATA[
+                    <b>{store_name}</b> for store name<br/>
+                    <b>{decline_link}</b> for decline link<br/>
+                ]]>
+            </add>
+        </operation>
+    </file>
+    <file name="admin/language/finnish/module/notify_when_arrives.php">
+        <operation>
+            <search position="before"><![CDATA[// Error]]></search>
+            <add><![CDATA[
+                    #One by one mail---------------------------------------------------------------------------
+                    $_['default_onebyone_subject']  = '{store_name}  - Product {product_name} arrived in our store!';
+
+                    $_['default_onebyone_body'] = 
+                    'Hi {user_name}!<br/> <br/> 
+                    You asked us to notify you when the product {product_name} arrives in our store.
+                    <br/><br/> 
+                    You can check it out now by clicking here: {product_link}
+                    <br/><br/> 
+                    <b>Remenber, you have got 24 hour to check it out. Afterward, we will send this offer to next interested customer in our list.</b>
+                    <br/> <br/>
+                    If you are not interested in this product, please click on next link to decline this offer. {decline_link}
+                    <br/> <br/>
+                    Thanks for your interest in our products.
+                    <br/> <br/>
+                    Best Regards
+                    <br/> <br/>
+                    {store_name}';
+ 
+                    #One by one mail admin--------------------------------------------------------------------
+
+                    $_['default_onebyone_mail_subject_admin'] = '{store_name} -  Notices of available product {product_name} delivered to {user_name}.';
+
+                    $_['default_onebyone_mail_body_admin'] =
+                    'Hello!
+                    <br/> <br/> 
+                    Notices of product {product_name} availability were delivered to {user_name}.
+                    <br/> <br/> 
+                    Best Regards,
+                    <br/> <br/>
+                    {store_name}';
+                
+                    $_['tab_mail_onebyone'] = 'One by one E - Mail';
+                    $_['text_notify_type'] = 'Notify type:';
+                    $_['text_send_to_all'] = 'Send to all';
+                    $_['text_send_onebyone'] = 'Send one by one';
+                    $_['entry_scheduled_time'] = 'Scheduled time:';
+                    $_['entry_subject_costumer_onebyone']= 'Costumer mail subject:';
+                    $_['entry_subject_admin_onebyone']= 'Admin mail subject:';
+                
+                    $_['tip_notify_type'] = ' <span class="help">In send to all option, system will send notifications to all customers at the same time. Using one by one option, system will send mails one by one by signed order till stock goes out every scheduled time. </span>';
+                    $_['tip_notify_scheduled_time'] = ' <span class="help">Set time between each notification mail in hours</span>';
+                ]]>
+            </add>
+        </operation>
+    </file>
+    
+    <!-- ADMIN CONTROLLER -->
+    <file name="admin/controller/common/home.php">
+        <operation>
+            <search position="replace"><![CDATA[if(isset($this->request->get['nwa_cron_key']) &&  $this->request->get['nwa_cron_key'] && $this->request->get['nwa_cron_key'] === $this->config->get('nwa_cron_key')){]]></search>
+            <add><![CDATA[
+                if((isset($this->request->get['nwa_cron_key']) &&  $this->request->get['nwa_cron_key'] && $this->request->get['nwa_cron_key'] === $this->config->get('nwa_cron_key'))||(isset($this->request->get['nwa_id']))){
+                ]]>
+            </add>
+        </operation>
+    </file>
+    <file name="admin/controller/module/notify_when_arrives.php">
+        <operation>
+            <search position="after"><![CDATA[$this->model_setting_setting->editSetting('notify_when_arrives', $this->request->post);]]></search>
+            <add><![CDATA[
+                    if($this->request->post['nwa_notify_type']==1){
+                        $this->replace_cron_job(html_entity_decode(html_entity_decode($this->request->post['nwa_cronjob_string'])));
+                    } else{
+                        $this->replace_cron_job('');
+                    }
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$this->data['entry_notify_button'] = $this->language->get('entry_notify_button');]]></search>
+            <add><![CDATA[
+                    $this->data['tab_mail_onebyone'] = $this->language->get('tab_mail_onebyone');
+                    $this->data['text_notify_type'] = $this->language->get('text_notify_type');
+                    $this->data['text_send_to_all'] = $this->language->get('text_send_to_all');
+                    $this->data['text_send_onebyone'] = $this->language->get('text_send_onebyone');
+                    $this->data['entry_scheduled_time'] = $this->language->get('entry_scheduled_time');
+                    $this->data['entry_subject_costumer_onebyone']=$this->language->get('entry_subject_costumer_onebyone');
+                    $this->data['entry_subject_admin_onebyone']=$this->language->get('entry_subject_admin_onebyone');
+                    $this->data['tip_notify_type'] = $this->language->get('tip_notify_type');
+                    $this->data['tip_notify_scheduled_time'] = $this->language->get('tip_notify_scheduled_time');
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[$this->data['breadcrumbs'] = array();]]></search>
+            <add><![CDATA[
+                    if (isset($this->request->post['nwa_notify_type'])) {
+                        $this->data['nwa_notify_type'] = $this->request->post['nwa_notify_type'];
+                    } else { 
+                        $this->data['nwa_notify_type'] = $this->config->get('nwa_notify_type');
+                    }
+                
+                    if (isset($this->request->post['nwa_scheduled_time'])) {
+                        $this->data['nwa_scheduled_time'] = $this->request->post['nwa_scheduled_time'];
+                    } else {
+                        $this->data['nwa_scheduled_time'] = $this->config->get('nwa_scheduled_time');
+                    }
+                    
+                    if (isset($this->request->post['nwa_cronjob_string'])) {
+                        $this->data['nwa_cronjob_string'] = $this->request->post['nwa_cronjob_string'];
+                    } else {
+                        $this->data['nwa_cronjob_string'] = $this->config->get('nwa_cronjob_string');
+                    }
+                    
+                    if(isset($this->request->post['nwa_image_width_onebyone'])){
+                        $this->data['nwa_image_width_onebyone'] = $this->request->post['nwa_image_width_onebyone'];
+                    } else {
+                        $this->data['nwa_image_width_onebyone'] = $this->config->get('nwa_image_width_onebyone');
+                    }
+                
+                    if(isset($this->request->post['nwa_image_height_onebyone'])){
+                        $this->data['nwa_image_height_onebyone'] = $this->request->post['nwa_image_height_onebyone'];
+                    } else {
+                        $this->data['nwa_image_height_onebyone'] = $this->config->get('nwa_image_height_onebyone');
+                    }
+                    
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[if(isset($this->request->post['notify_when_arrives_subject_'.$language['language_id'].'_costumer'])){]]></search>
+            <add><![CDATA[
+                    if(isset($this->request->post['notify_when_arrives_subject_'.$language['language_id'].'_costumer_onebyone'])){
+		
+                        $this->data['notify_when_arrives_subject'][$language['language_id']]['costumer_onebyone'] = $this->request->post['notify_when_arrives_subject_'.$language['language_id'].'_costumer_onebyone'];
+
+                        $this->data['notify_when_arrives_mail'][$language['language_id']]['costumer_onebyone'] = $this->request->post['notify_when_arrives_mail_'.$language['language_id'].'_costumer_onebyone'];
+
+                    }else{
+
+                        if ($this->config->get('notify_when_arrives_subject_'.$language['language_id'].'_costumer_onebyone')){
+
+                            $this->data['notify_when_arrives_subject'][$language['language_id']]['costumer_onebyone'] = $this->config->get('notify_when_arrives_subject_'.$language['language_id'].'_costumer_onebyone');
+
+                        }else{
+
+
+                            $this->data['notify_when_arrives_subject'][$language['language_id']]['costumer_onebyone'] = $this->language->get('default_onebyone_subject');
+
+                        }
+
+                        if ($this->config->get('notify_when_arrives_mail_'.$language['language_id'].'_costumer_onebyone')){
+
+                            $this->data['notify_when_arrives_mail'][$language['language_id']]['costumer_onebyone'] = $this->config->get('notify_when_arrives_mail_'.$language['language_id'].'_costumer_onebyone');
+
+                        }else{
+
+                            $this->data['notify_when_arrives_mail'][$language['language_id']]['costumer_onebyone'] =$this->language->get('default_onebyone_body');
+
+                        }
+
+                    }
+                    
+                    if(isset($this->request->post['notify_when_arrives_subject_'.$language['language_id'].'_admin_onebyone'])){
+ 
+                        $this->data['notify_when_arrives_subject'][$language['language_id']]['admin_onebyone'] = $this->request->post['notify_when_arrives_subject_'.$language['language_id'].'_admin_onebyone'];
+
+                        $this->data['notify_when_arrives_mail'][$language['language_id']]['admin_onebyone'] = $this->request->post['notify_when_arrives_mail_'.$language['language_id'].'_admin_onebyone'];
+
+                    }else{
+
+                        if ($this->config->get('notify_when_arrives_subject_'.$language['language_id'].'_admin_onebyone')){
+
+                            $this->data['notify_when_arrives_subject'][$language['language_id']]['admin_onebyone'] = $this->config->get('notify_when_arrives_subject_'.$language['language_id'].'_admin_onebyone');
+
+                        }else{
+
+                            $this->data['notify_when_arrives_subject'][$language['language_id']]['admin_onebyone'] = $this->language->get('default_onebyone_mail_subject_admin');
+
+                        }
+
+                        if ( $this->config->get('notify_when_arrives_mail_'.$language['language_id'].'_admin_onebyone')){
+
+                            $this->data['notify_when_arrives_mail'][$language['language_id']]['admin_onebyone'] = $this->config->get('notify_when_arrives_mail_'.$language['language_id'].'_admin_onebyone');
+
+                        }else{
+
+                            $this->data['notify_when_arrives_mail'][$language['language_id']]['admin_onebyone'] = $this->language->get('default_onebyone_mail_body_admin');
+
+                        }
+
+                    }
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$sent = 0;]]></search>
+            <add><![CDATA[
+                if(isset($this->request->get['nwa_id'])){
+                    $this->decline_offer($this->request->get['nwa_id']);
+                } else if($this->config->get('nwa_notify_type')){
+                    $this->notify_one_by_one();
+                } else {
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[public function get_list() {]]></search>
+            <add><![CDATA[
+                }
+                
+                public function replace_cron_job($string){
+                    if ($string!=''){
+                        $file=fopen('crontab.txt', 'w');
+                        fwrite($file, $string . "\n");
+                        fclose($file);
+                        shell_exec('crontab crontab.txt');
+                    }else{
+                        shell_exec('crontab -r');
+                    }
+                }
+                
+                public function notify_one_by_one() {
+                    $this->load->language('module/notify_when_arrives');
+
+                    $this->load->model('module/notify_when_arrives');
+                    $ids_sent=array();
+
+                    $sent = 0;
+                    $pos=0;
+
+                    $requests = $this->model_module_notify_when_arrives->getList(true);
+
+                    if ($requests) {
+                        if(count($requests['ids'])>0){
+
+                            $stores = array();
+
+                            $stores[0] = array('url' => HTTP_CATALOG, 'name' => $this->config->get('config_name'), 'email' => $this->config->get('config_email'));
+
+                            $this->load->model('setting/store');
+                            $this->load->model('setting/setting');
+
+                            foreach ($this->model_setting_store->getStores() as $result) {
+
+                                $store_config = $this->model_setting_setting->getSetting('config', $result['store_id']);
+
+                                $stores[$result['store_id']] = array('url' => $store_config['config_url'], 'name' => $store_config['config_name'], 'email' => $store_config['config_email']);
+                            }
+
+                            foreach ($requests['statistics'] as $store_id => $store_requests) {
+                                foreach ($store_requests as $language_id => $language_request) {
+
+                                    $mail_subject = $this->config->get('notify_when_arrives_subject_'.$language_id.'_costumer_onebyone');
+                                    $mail_admin_subject = $this->config->get('notify_when_arrives_subject_'.$language_id.'_admin_onebyone');
+                                    $mail_message = html_entity_decode($this->config->get('notify_when_arrives_mail_'.$language_id.'_costumer_onebyone'), ENT_QUOTES, 'UTF-8');
+                                    $mail_admin_message = html_entity_decode($this->config->get('notify_when_arrives_mail_'.$language_id.'_admin_onebyone'), ENT_QUOTES, 'UTF-8');
+
+                                    foreach ($language_request as $request_id => $request) {
+                                        $id = $request['product_id'];
+                                        $name = $request['name'];
+                                        $keyword = $request['keyword'];
+                                        $mails = $request['mails'];
+                                        $image = '<img src="'.$request['image'].'" alt="'.$name.' image" />';
+                                        $image_href = $request['image'];
+
+
+                                        if (!$keyword || !$this->config->get('config_seo_url')){
+
+                                              $link = '<a href="' . $stores[$store_id]['url'] . 'index.php?route=product/product&amp;product_id=' . $id . '">' . $stores[$store_id]['url'] . 'index.php?route=product/product&amp;product_id=' . $id . '</a>';
+                                              $link_href =  $stores[$store_id]['url'] . 'index.php?route=product/product&amp;product_id=' . $id;
+
+                                        }else{
+
+
+                                              $link = '<a href="' . $stores[$store_id]['url'] . $keyword.'">'. $stores[$store_id]['url'] . $keyword. '</a>';
+                                              $link_href = $stores[$store_id]['url'] . $keyword;
+
+                                        }
+
+                                        $decline_link='<a href="' . $stores[$store_id]['url']. '/admin/index.php?route=module/notify_when_arrives/notify&nwa_cron_key='.$this->config->get('nwa_cron_key').'&id='.$requests['ids'][$pos].'">Decline this offer.</a>';
+
+                                        $store_name = $stores[$store_id]['name'];
+
+                                        $subject = str_replace(array('{store_name}', '{product_name}', '{product_link}','{product_image}', '{product_href}','{product_image_href}','{decline_link}'), array($store_name, $name, $link, $image,$link_href,$image_href,$decline_link), $mail_subject);
+                                        $message = str_replace(array('{store_name}', '{product_name}', '{product_link}','{product_image}', '{product_href}','{product_image_href}','{decline_link}'), array($store_name, $name, $link, $image,$link_href,$image_href,$decline_link), $mail_message);
+
+                                        //We get only the first record
+                                        $user_info=$mails[0]; 
+                                        $user_message = str_replace(array('{user_name}', '{user_phone}', '{user_custom}'), array($user_info['user'],$user_info['phone'],$user_info['custom']), $message);
+
+                                        $this->sendEmail($stores[$store_id], $user_info['email'], $subject, $user_message);
+                                        $this->log->write('Notify when arrives mail:[' . $requests['ids'][$pos] . '] ' . $user_info['email']);
+                                        $sent ++;
+
+
+                                        $admin_subject = str_replace(array('{store_name}', '{product_name}', '{product_link}','{product_image}'), array($store_name, $name, $link, $image), $mail_admin_subject);
+                                        $admin_message = str_replace(array('{store_name}', '{product_name}', '{product_link}','{product_image}'), array($store_name, $name, $link, $image), $mail_admin_message);
+
+                                        //  $this->sendEmail($stores[$store_id], $stores[$store_id]['email'], $admin_subject, $admin_message);
+                                    }
+                                }
+                            $ids_sent[]=$requests['ids'][$pos];
+                            $pos++;
+                            }
+
+                                $this->model_module_notify_when_arrives->updateStatistics($ids_sent);
+
+                        }
+                    }
+                }
+                
+                public function decline_offer($id) {
+                    $this->load->model('module/notify_when_arrives');
+                    $this->model_module_notify_when_arrives->decline_offer($id);
+                    
+                    if($this->config->get('nwa_notify_type')){
+                        $this->notify_one_by_one();
+                    } else {
+                        $this->notify();
+                    }
+                }
+                ]]>
+            </add>
+        </operation>
+    </file>
+    
+    <!-- ADMIN MODEL --> 
+    <file name="admin/model/module/notify_when_arrives.php">
+        <operation>
+            <search position="before"><![CDATA[public function deleteStatistic($products_id) {]]></search>
+            <add><![CDATA[
+                    public function decline_offer($id){
+                        $sql="update notify_when_arrives set declined=1 where id='" . $id . "';";
+                        $query=$this->db->query($sql);
+                    }
+                ]]>
+            </add>
+        </operation>
+    </file>
+    <!-- ADMIN VIEW -->
+    <file name="admin/view/template/module/notify_when_arrives.tpl">
+        <operation>
+            <search position="after"><![CDATA[<a href="#tab-mail"><?php echo $tab_mail; ?></a>]]></search>
+            <add><![CDATA[
+                    <a href="#tab-mail-onebyone" class="notify_schedule"><?php echo $tab_mail_onebyone; ?></a>
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<div id="tab-statistics">]]></search>
+            <add><![CDATA[
+                    <div id="tab-mail-onebyone">
+                        <table class="form">
+                            <tr>
+                                <td><span class="required">*</span> <?php echo $entry_nwa_image_size; ?></td>
+                                <td><input type="text" name="nwa_image_width_onebyone" value="<?php echo $nwa_image_width_onebyone ? $nwa_image_width_onebyone : '80'; ?>" size="3" />
+                                    x
+                                    <input type="text" name="nwa_image_height_onebyone" value="<?php echo $nwa_image_height_onebyone ? $nwa_image_height_onebyone : '80'; ?>" size="3" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div id="languages_onebyone" class="htabs">
+                                        <?php foreach ($languages as $language) { ?>
+                                            <a href="#language_onebyone<?php echo $language['language_id']; ?>"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a>
+                                        <?php } ?>
+                                    </div> 
+                                    <?php foreach ($languages as $language) { ?>
+                                        <div id="language_onebyone<?php echo $language['language_id']; ?>">
+                                            <table class="form">
+                                                <tr>
+                                                    <td style="width: 280px;"><?php echo $entry_subject_costumer_onebyone; ?></td>
+                                                    <td><input size="100" name="notify_when_arrives_subject_<?php echo $language['language_id']; ?>_costumer_onebyone" value="<?php echo isset($notify_when_arrives_subject[$language['language_id']]['costumer_onebyone']) ? $notify_when_arrives_subject[$language['language_id']]['costumer_onebyone'] : ''; ?>"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="line-height:180%"><?php echo $entry_mail_costumer; ?></td>
+                                                    <td><textarea name="notify_when_arrives_mail_<?php echo $language['language_id']; ?>_costumer_onebyone" cols="100" rows="10"><?php echo isset($notify_when_arrives_mail[$language['language_id']]['costumer_onebyone']) ? $notify_when_arrives_mail[$language['language_id']]['costumer_onebyone'] : ''; ?></textarea></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><?php echo $entry_subject_admin_onebyone; ?></td>
+                                                    <td><input size="100" name="notify_when_arrives_subject_<?php echo $language['language_id']; ?>_admin_onebyone" value="<?php echo isset($notify_when_arrives_subject[$language['language_id']]['admin_onebyone']) ? $notify_when_arrives_subject[$language['language_id']]['admin_onebyone'] : ''; ?>"/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="line-height:180%"><?php echo $entry_mail_admin; ?></td>
+                                                    <td><textarea name="notify_when_arrives_mail_<?php echo $language['language_id']; ?>_admin_onebyone" cols="100" rows="10"><?php echo isset($notify_when_arrives_mail[$language['language_id']]['admin_onebyone']) ? $notify_when_arrives_mail[$language['language_id']]['admin_onebyone'] : ''; ?></textarea></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    <?php } ?>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                ]]>
+            </add>
+        </operation>
+        
+        <operation>
+            <search position="before" offset="2"><![CDATA[<td><?php echo $entry_notify_admin; ?></td>]]></search>
+            <add><![CDATA[
+                <tbody id="notify_type">
+                    <tr>
+                        <td><?php echo $text_notify_type; ?><?php echo $tip_notify_type; ?></td>
+                        <td>
+                            <?php if ($nwa_notify_type) { ?>
+                                <input type="radio"  name="nwa_notify_type" value="0" id="nf1"/><label for="nf1"><?php echo $text_send_to_all; ?></label>
+                                <input type="radio" checked="checked" name="nwa_notify_type" value="1" id="nf2"/><label for="nf2"><?php echo $text_send_onebyone; ?></label>
+                            <?php } else { ?>
+                                <input type="radio" checked="checked" name="nwa_notify_type" value="0" id="nf1"/><label for="nf1"><?php echo $text_send_to_all; ?></label>
+                                <input type="radio"  name="nwa_notify_type" value="1" id="nf2"/><label for="nf2"><?php echo $text_send_onebyone; ?></label>
+                            <?php } ?>
+                        </td>
+                        
+                            <td><div class="notify_schedule"><?php echo $entry_scheduled_time; ?><?php echo $tip_notify_scheduled_time; ?></div></td>
+                            <td>
+                                <div class="notify_schedule">
+                                    <?php if ($nwa_scheduled_time) { ?>
+                                        <input type="text" name="nwa_scheduled_time" value="<?php echo $nwa_scheduled_time; ?>" />
+                                        <span class="help" name="nwa_scheduled_time_help"><br>You can use next string to create your cron job on your server  <br> <br> 0 0 * * * lynx "<?php echo $this->url->link('module/notify_when_arrives/notify','nwa_cron_key=' . ($nwa_cron_key!=''?$nwa_cron_key:'YOUR_DEFINED_KEY') . '" > /dev/null 2>&1') ?></span>
+                                        <input type="hidden" name="nwa_cronjob_string" value="<?php echo $nwa_cronjob_string; ?>"/>
+                                    <?php } else { ?>
+                                        <input type="text" name="nwa_scheduled_time" value="<?php echo '24'; ?>" />
+                                        <span class="help" name="nwa_scheduled_time_help"><br> You can use next string to create your cron job on your server  <br> <br> 0 0 * * * lynx "<?php echo $this->url->link('module/notify_when_arrives/notify','nwa_cron_key=' . ($nwa_cron_key!=''?$nwa_cron_key:'YOUR_DEFINED_KEY'). '" > /dev/null 2>&1') ?></span>
+                                        <input type="hidden" name="nwa_cronjob_string" value='0 0 * * *  lnyx "<?php echo $this->url->link('module/notify_when_arrives/notify','nwa_cron_key=' . ($nwa_cron_key!=''?$nwa_cron_key:'YOUR_DEFINED_KEY') . '" > /dev/null 2>&1') ?>'/>
+                                    <?php } ?>
+                                    
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                  </tbody>
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+            <add><![CDATA[
+                    <script type="text/javascript"><!--
+                    $('#languages_onebyone a').tabs();
+                    <?php foreach ($languages as $language) { ?>
+                                                                    CKEDITOR.replace('notify_when_arrives_mail_<?php echo $language['language_id']; ?>_costumer_onebyone', {
+                                                                        filebrowserBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserImageBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserFlashBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserImageUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserFlashUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>'
+                                                                    });
+                                                                    CKEDITOR.replace('notify_when_arrives_mail_<?php echo $language['language_id']; ?>_admin_onebyone', {
+                                                                        filebrowserBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserImageBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserFlashBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserImageUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                                                                        filebrowserFlashUploadUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>'
+                                                                    });
+                    <?php } ?>
+                    //--></script> 
+                    <script type="text/javascript"><!--
+                        $(document).ready(function() {
+                                $('input[name=notify_mode]').bind('click', function() {
+                                        checkChangeMode();
+                                    });
+                                $('input[name=nwa_notify_type]').bind('click', function() {
+                                        checkChangeType();
+                                    });
+                                $('input[name=nwa_scheduled_time]').change(function(){
+                                        getCronTabString();
+                                    });
+                                checkChangeMode();
+                                checkChangeType();
+                        });
+                        
+                        function getCronTabString(){
+                            var hours=$('input[name=nwa_scheduled_time]').val();
+                            var strCron= "";
+                            var re = /<br> .* "http/;
+                            var str=$('span[name=nwa_scheduled_time_help]').html();
+                            if (hours == 1){
+                                strCron='<br> <br> 0 * * * * lynx "http';
+                            } else if (hours == 24) {
+                                strCron= '<br> <br> 0 0 * * * lynx "http';
+                            } else if (hours < 24){
+                                strCron='<br> <br> * */' + hours + ' * * * lynx "http';
+                            } else if (hours > 24){
+                                strCron='<br> <br> 0 0 */' + Math.ceil(hours/24) + ' * * lynx "http';
+                            }
+                            var result=str.replace(re,strCron);
+                            $('span[name=nwa_scheduled_time_help]').html(result);
+                            $('input[name=nwa_cronjob_string]').val(result.replace(/.* <br> /,''));
+                            
+                        };
+                
+                        function checkChangeMode() {
+                            if ($('input[name=notify_mode]:checked').val() == 1)
+                            {
+                                $('#notify_type').show();
+                                checkChangeType();
+                            }
+                            else
+                            {
+                                $('#notify_type').hide();
+                                $('.notify_schedule').hide();
+                            }
+                        }
+                        
+                        function checkChangeType() {
+                            if ($('input[name=nwa_notify_type]:checked').val() == 1)
+                            {
+                                $('.notify_schedule').show();
+                            }
+                            else
+                            {
+                                $('.notify_schedule').hide();
+                            }
+                        }
+                
+
+                        
+
+                        //--></script> 
+                ]]>
+            </add>
+        </operation>
+    </file>
+</modification>

@@ -1,0 +1,37 @@
+<modification>
+    <id>Customers group name unlimited length</id>
+    <version>1.0</version>
+    <vqmver>2.1</vqmver>
+    <author>@filipf50</author>
+    <!-- ADMIN LANGUAGE -->
+    <file name="admin/language/english/sale/customer_group.php">
+        <operation>
+            <search position="replace"><![CDATA[$_['error_name']                = 'Customer Group Name must be between 3 and 32 characters!';]]></search>
+            <add><![CDATA[
+                    $_['error_name']                = 'Customer Group Name must be between 3 and 999 characters!';
+                ]]>
+            </add>
+        </operation>        
+    </file>
+    <file name="admin/language/finnish/sale/customer_group.php">
+        <operation>
+            <search position="replace"><![CDATA[$_['error_name'] = 'Asiakasryhm&auml;n nimen on oltava 3-64 merkki&auml; pitk&auml;!';]]></search>
+            <add><![CDATA[
+                    $_['error_name'] = 'Asiakasryhm&auml;n nimen on oltava 3-999 merkki&auml; pitk&auml;!';
+                ]]>
+            </add>
+        </operation>        
+    </file>
+    <!-- ADMIN CONTROLLER -->
+    <file name="admin/controller/sale/customer_group.php">
+        <operation>
+            <search position="replace"><![CDATA[if ((utf8_strlen($value['name']) < 3) || (utf8_strlen($value['name']) > 32)) {]]></search>
+            <add><![CDATA[
+                    if ((utf8_strlen($value['name']) < 3) || (utf8_strlen($value['name']) > 999)) {
+                ]]>
+            </add>
+        </operation>        
+    </file>    
+</modification>
+
+

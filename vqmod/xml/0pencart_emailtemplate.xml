@@ -1,0 +1,422 @@
+<modification>
+	<id>Opencart fixes/missing features - extension independent</id>
+	<version>4.5.1.7</version>
+	<vqmver>2.4.0</vqmver>
+	<author>opencart-templates.co.uk</author>
+
+	<file name="system/library/template.php">
+        <operation error="skip" info="allow template inherit added in: 1.5.1.3.1">
+            <search position="replace"><![CDATA[ 
+            final class Template ]]></search>
+            <add trim="true"><![CDATA[ 
+            class Template ]]></add>
+        </operation>
+		<operation info="Add ability to load catalog template from admin">
+            <search position="replace"><![CDATA[ 
+            public function fetch($filename) ]]></search>
+            <ignoreif><![CDATA[ 
+            public function fetch($filename, $prefix_dir = true) ]]></ignoreif>
+            <add trim="true"><![CDATA[
+			public function fetch($filename, $prefix_dir = true) ]]></add>
+        </operation>
+		<operation>
+            <search position="replace"><![CDATA[ 
+            $file = DIR_TEMPLATE . $filename; ]]></search>
+            <ignoreif><![CDATA[ 
+            $file = ($prefix_dir ? DIR_TEMPLATE : '') . $filename; ]]></ignoreif>
+            <add trim="true"><![CDATA[
+			$file = ($prefix_dir ? DIR_TEMPLATE : '') . $filename; ]]></add>
+        </operation>
+	</file>
+
+	<file name="system/library/language.php" error="skio">
+        <operation info="Add ability to load catalog language from admin">
+            <search position="replace"><![CDATA[
+            DIR_LANGUAGE . $this->directory ]]></search>
+            <add trim="true"><![CDATA[
+            $this->path . $this->directory ]]></add>
+        </operation>
+        <operation error="skip" info="Missing from OC:1.5.1">
+            <search position="replace"><![CDATA[
+            DIR_LANGUAGE . $this->default ]]></search>
+            <add trim="true"><![CDATA[
+            $this->path . $this->default ]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[
+            private $directory; ]]></search>
+            <ignoreif><![CDATA[ 
+            private $path = DIR_LANGUAGE; ]]></ignoreif>
+            <add><![CDATA[	private $path = DIR_LANGUAGE; ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[
+            public function get($key ]]></search>
+            <ignoreif><![CDATA[ 
+            public function setPath($path) ]]></ignoreif>
+            <add><![CDATA[   /**
+	* Set language directory path
+	* - ability to load catalog language from admin
+	*/
+	public function setPath($path) 
+	{
+		if(!is_dir($path)){
+			trigger_error('Error: check path exists: '.$path);
+			exit;
+		}
+		$this->path = $path;
+	} 
+	]]></add>
+        </operation>
+        <operation info="Language file with underscore">
+            <search position="replace" index="1"><![CDATA[
+            public function load($filename) ]]></search>
+            <add><![CDATA[	
+	/**
+	 * Load Language File
+	 *
+	 * @param string $filename
+	 * @param bool $defaultOnly - load underscore language file.
+     */
+     public function load($filename, $loadOverwrite = true)]]></add>
+        </operation>
+        <operation info="Language file with underscore">
+            <search position="after" index="1"><![CDATA[
+            $this->data = array_merge($this->data, $_); ]]></search>
+            <ignoreif><![CDATA[ 
+            $file = $this->path . $this->directory . '/' . $filename . '_.php'; ]]></ignoreif>
+            <add><![CDATA[	
+            # Overwrite language file with underscore
+            if($loadOverwrite){
+				$file = $this->path . $this->directory . '/' . $filename . '_.php';
+				    	
+				if (file_exists($file)) {
+					$_ = array();
+		  		
+					require($file);
+			
+					$this->data = array_merge($this->data, $_);
+				}
+			}]]></add>
+        </operation>
+	</file>
+
+	<file name="system/library/mail.php">		
+		<operation>
+			<search position="before"><![CDATA[
+				protected $subject;]]></search>
+			<ignoreif><![CDATA[ 
+            protected $replyTo; ]]></ignoreif>
+			<add><![CDATA[	protected $replyTo;
+	protected $replyToName;]]></add>
+		</operation>
+		
+		<operation>
+			<search position="before"><![CDATA[
+				public function send( ]]></search>
+			<ignoreif><![CDATA[ 
+            public function setReplyTo( ]]></ignoreif>
+			<add><![CDATA[	/**
+	 * Set ReplyTo address if different from sender
+	 *
+	 * @param string email address
+	 * @param string sender name
+	 */
+	public function setReplyTo($address, $name = '') {
+		$this->replyTo = $address;
+		$this->replyToName = ($name != '') ? $name : $address;
+	}
+	]]></add>
+		</operation>
+        <operation>
+            <search position="after"><![CDATA[
+            $header .= 'Reply-To: ]]></search>
+            <ignoreif><![CDATA[ 
+            if($this->replyTo){ ]]></ignoreif>
+            <add><![CDATA[
+            } ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[
+            $header .= 'Reply-To: ]]></search>
+            <ignoreif><![CDATA[ 
+            if($this->replyTo){ ]]></ignoreif>
+            <add><![CDATA[
+            if($this->replyTo){
+            	$header .= 'Reply-To: ' . '=?UTF-8?B?' . base64_encode($this->replyToName) . '?=' . '<' . $this->replyTo . '>' . $this->newline;
+            } else { ]]></add>
+        </operation>
+	</file>
+	
+	
+
+	<file name="catalog/model/account/address.php">
+        <operation>
+            <search position="before"><![CDATA[
+            public function getAddress($address_id) { ]]></search>
+            <ignoreif><![CDATA[ 
+            public function getAddressNotLoggedIn( ]]></ignoreif>
+            <add><![CDATA[
+            /*
+             * If the customer is not logged in and we need a way to get the address.
+             */
+			public function getAddressNotLoggedIn($address_id, $customer_id)
+			{
+				$address_query = $this->db->query("SELECT DISTINCT * FROM " . DB_PREFIX . "address WHERE address_id = '" . (int)$address_id . "' AND customer_id = '" . (int)$customer_id . "'");
+
+				if ($address_query->num_rows) {
+					$country_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "country` WHERE country_id = '" . (int)$address_query->row['country_id'] . "'");
+
+					if ($country_query->num_rows) {
+						$country = $country_query->row['name'];
+						$iso_code_2 = $country_query->row['iso_code_2'];
+						$iso_code_3 = $country_query->row['iso_code_3'];
+						$address_format = $country_query->row['address_format'];
+					} else {
+						$country = '';
+						$iso_code_2 = '';
+						$iso_code_3 = '';
+						$address_format = '';
+					}
+
+					$zone_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "zone` WHERE zone_id = '" . (int)$address_query->row['zone_id'] . "'");
+
+					if ($zone_query->num_rows) {
+						$zone = $zone_query->row['name'];
+						$code = $zone_query->row['code'];
+					} else {
+						$zone = '';
+						$code = '';
+					}
+
+					$address_data = array(
+						'firstname'      => $address_query->row['firstname'],
+						'lastname'       => $address_query->row['lastname'],
+						'company'        => $address_query->row['company'],
+						'address_1'      => $address_query->row['address_1'],
+						'address_2'      => $address_query->row['address_2'],
+						'postcode'       => $address_query->row['postcode'],
+						'city'           => $address_query->row['city'],
+						'zone_id'        => $address_query->row['zone_id'],
+						'zone'           => $zone,
+						'zone_code'      => $code,
+						'country_id'     => $address_query->row['country_id'],
+						'country'        => $country,
+						'iso_code_2'     => $iso_code_2,
+						'iso_code_3'     => $iso_code_3,
+						'address_format' => $address_format
+					);
+
+					return $address_data;
+				} else {
+					return false;
+				}
+			} ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/model/tool/image.php">
+        <operation>
+            <search position="after"><![CDATA[
+            class ModelToolImage extends Model { ]]></search>
+            <ignoreif><![CDATA[ 
+            public function get( ]]></ignoreif>
+            <add><![CDATA[
+            /*
+             * Image Absolute URL, no resize
+             */
+            public function get($filename) 
+            {
+				if (!file_exists(DIR_IMAGE . $filename) || !is_file(DIR_IMAGE . $filename)) {
+					return;
+				}
+
+				if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
+					if($this->config->get('config_ssl')){
+						$url = $this->config->get('config_ssl') . 'image/';
+					} else {
+						$url = defined("HTTPS_IMAGE") ? HTTPS_IMAGE : HTTP_CATALOG . 'image/';
+					}
+				} else {
+					if($this->config->get('config_url')){
+						$url = $this->config->get('config_url') . 'image/';
+					} else {
+						$url = defined("HTTP_IMAGE") ? HTTP_IMAGE : HTTP_CATALOG . 'image/';
+					}
+				}
+
+				return $url . $filename;
+			} ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/model/account/customer_group.php" error="skip">
+        <operation error="skip" info="added OC:1.5.5">
+            <search position="replace"><![CDATA[
+            SELECT DISTINCT * FROM " . DB_PREFIX . "customer_group WHERE customer_group_id ]]></search>
+            <add trim="true"><![CDATA[
+			SELECT DISTINCT cg.*, cgd.* FROM " . DB_PREFIX . "customer_group cg LEFT JOIN " . DB_PREFIX . "customer_group_description cgd ON (cg.customer_group_id = cgd.customer_group_id) WHERE cg.customer_group_id ]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/controller/account/login.php">
+        <operation error="skip" info="Use GET request to pre-populate email address">
+            <search position="after"><![CDATA[
+            $this->data['email'] = $this->request->post['email']; ]]></search>
+            <ignoreif><![CDATA[ 
+            elseif(isset($this->request->get['email'])) ]]></ignoreif>
+            <add><![CDATA[
+			} elseif(isset($this->request->get['email'])) {
+				$this->data['email'] = $this->request->get['email']; ]]></add>
+        </operation>
+    </file>
+
+	<file name="catalog/model/account/customer.php">
+        <operation info="Add ability to find a language for registered customer">
+            <search position="replace"><![CDATA[
+            $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id = ]]></search>
+            <add trim="true"><![CDATA[
+            $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET language_id = '".intval($this->config->get('config_language_id'))."', store_id = ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/model/checkout/order.php">
+        <operation>
+            <search position="after"><![CDATA[ 
+            => $order_query->row['customer_id'], ]]></search>
+            <ignoreif><![CDATA[ 
+            'customer_group_id' => (isset($order_query->row['customer_group_id'])) ? $order_query->row['customer_group_id'] : '', ]]></ignoreif>
+            <add><![CDATA[
+            'customer_group_id' => (isset($order_query->row['customer_group_id'])) ? $order_query->row['customer_group_id'] : '',
+            'affiliate_id'      => (isset($order_query->row['affiliate_id'])) ? $order_query->row['affiliate_id'] : '',]]></add>
+        </operation>
+	</file>
+	
+	<file name="admin/controller/sale/contact.php">
+        <operation error="skip" info="Bug fix 1.5.2.1">
+            <search position="replace"><![CDATA[
+            'filter_customer_group_id' => $this->request->post['filter_customer_group_id'], ]]></search>
+            <add><![CDATA[
+            'filter_customer_group_id' => $this->request->post['customer_group_id'], ]]></add>
+        </operation>
+	</file>
+	
+	<file name="admin/model/setting/setting.php">
+        <operation error="skip" info="Bug fix 1.5.1.3.1">
+            <search position="replace"><![CDATA[ 
+            $data[$result['key']] = unserialize($setting['value']); ]]></search>
+            <add><![CDATA[ 
+            $data[$result['key']] = unserialize($result['value']); ]]></add>
+        </operation>
+	</file>
+			
+	<file name="admin/model/localisation/language.php">
+        <operation info="Add method to get language by code">
+            <search position="before"><![CDATA[ 
+            public function getLanguage($language_id) ]]></search>
+            <ignoreif><![CDATA[ 
+            public function getLanguageByCode($language_code) ]]></ignoreif>
+            <add><![CDATA[
+            /*
+             * Get Language by code
+             * - required because a store saves the language code
+             */
+            public function getLanguageByCode($language_code) 
+            {
+				$query = $this->db->query("SELECT DISTINCT * FROM " . DB_PREFIX . "language WHERE code = '" . $this->db->escape($language_code) . "' LIMIT 1");
+			
+				return $query->row;
+			} ]]></add>
+        </operation>
+	</file>
+				
+	<file name="catalog/model/catalog/product.php">
+        <operation info="method:getProducts add ability to get selected products by product_ids">
+            <search position="after" index="1"><![CDATA[ 
+            $sql .= " AND p.manufacturer_id = '" . (int)$data['filter_manufacturer_id'] . "'"; ]]></search>
+            <ignoreif><![CDATA[ 
+            $sql .= " AND p.product_id IN ('".implode("', '", $ids)."')"; ]]></ignoreif>
+            <add><![CDATA[		}
+            
+		if (isset($data['filter_product_id'])){
+			if (is_array($data['filter_product_id'])){
+				$ids = array();
+	           	foreach($data['filter_product_id'] as $id){
+	           		$ids[] = intval($id);
+	           	}
+	           	$sql .= " AND p.product_id IN ('".implode("', '", $ids)."')";
+           	} else {
+           		$sql .= " AND p.product_id = '".intval($data['filter_product_id'])."'";
+           	} ]]></add>
+        </operation>
+	</file>				
+	<file name="admin/model/catalog/product.php">
+        <operation info="method:getProducts add ability to get selected products by product_ids">
+            <search position="before" index="1"><![CDATA[ 
+            if (!empty($data['filter_name'])) { ]]></search>
+            <ignoreif><![CDATA[ 
+            $sql .= " AND p.product_id IN ('".implode("', '", $ids)."')"; ]]></ignoreif>
+            <add><![CDATA[
+            if (isset($data['filter_product_id']) && is_array($data['filter_product_id'])){
+           		$ids = array();
+           		foreach($data['filter_product_id'] as $id){
+           			$ids[] = intval($id);
+           		}
+           		
+				$sql .= " AND p.product_id IN ('".implode("', '", $ids)."')";
+			} ]]></add>
+        </operation>
+	</file>
+		
+	<file name="admin/model/sale/order.php">
+        <operation info="method:getEmailsByProductsOrdered add extra useful info, added OC:1.5.2.1" error="skip">
+            <search position="replace"><![CDATA[
+            "SELECT DISTINCT email FROM `" . DB_PREFIX . "order` o ]]></search>
+            <add><![CDATA[
+            "SELECT DISTINCT email, o.order_id, o.customer_id, o.store_id, o.language_id FROM `" . DB_PREFIX . "order` o ]]></add>
+        </operation>
+	</file>	
+	<file name="admin/model/sale/customer.php">
+        <operation info="method:getCustomersByProduct add order_id, less than OC:1.5.3.1" error="skip">
+            <search position="replace"><![CDATA[
+            "SELECT DISTINCT email FROM `" . DB_PREFIX . "order` o ]]></search>
+            <add><![CDATA[
+            "SELECT DISTINCT email, o.order_id, o.customer_id, o.store_id, o.language_id FROM `" . DB_PREFIX . "order` o ]]></add>
+        </operation>
+	</file>
+			
+	<file name="admin/model/tool/image.php">
+        <operation>
+            <search position="after"><![CDATA[ 
+            class ModelToolImage extends Model ]]></search>
+            <ignoreif><![CDATA[ 
+            public function get($filename) ]]></ignoreif>
+            <add><![CDATA[
+            /*
+             * Image Absolute URL, no resize
+             */
+            public function get($filename) 
+            {
+				if (!file_exists(DIR_IMAGE . $filename) || !is_file(DIR_IMAGE . $filename)) {
+					return;
+				}
+
+				if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
+					if($this->config->get('config_ssl')){
+						$url = $this->config->get('config_ssl') . 'image/';
+					} else {
+						$url = defined("HTTPS_IMAGE") ? HTTPS_IMAGE : HTTP_CATALOG . 'image/';
+					}
+				} else {
+					if($this->config->get('config_url')){
+						$url = $this->config->get('config_url') . 'image/';
+					} else {
+						$url = defined("HTTP_IMAGE") ? HTTP_IMAGE : HTTP_CATALOG . 'image/';
+					}
+				}
+
+				return $url . $filename;
+			} ]]></add>
+        </operation>
+	</file>
+</modification>

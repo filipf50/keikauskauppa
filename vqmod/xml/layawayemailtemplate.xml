@@ -1,0 +1,68 @@
+<modification>
+	<id>Email Template AND Abandoned Orders</id>
+	<version>1.5+</version>
+	<author>opencart-templates.co.uk</author>	
+	<vqmver>1.0.8</vqmver>
+				
+	<file name="admin/controller/sale/abandoned_order.php" error="skip">
+        <operation>
+            <search position="before"><![CDATA[
+            $mail = new Mail();
+            ]]></search>
+        	<add><![CDATA[
+        	$title = sprintf($language->get('email_header'),$order_info['firstname'] . ' ' . $order_info['lastname']);
+        	
+			$template = new EmailTemplate($this->request, $this->registry);			
+
+			// Overwrite config with store data
+			$this->load->model('setting/setting');
+			$this->load->model('setting/store');
+			$store_info = $this->model_setting_store->getStore($order_info['store_id']);
+			$store_settings_config = $this->model_setting_setting->getSetting("config", $order_info['store_id']);
+			$template->populateStoreData(array_merge($store_settings_config, $store_info));
+			
+			// Overwrite config with email data
+			$et_store = $this->model_setting_setting->getSetting("emailtemplate", $order_info['store_id']);
+			$template->populateEmailData($et_store);
+			
+			$template->setThemeDir('mail');            
+			
+			$template->setTitle($title);
+			
+			 $template->appendDataLanguage($language, array(
+            	'text_product',
+            	'text_model',
+            	'text_quantity'
+            ));
+            
+			$template->appendData(array(
+				'subject' 		=> $subject,
+				'title' 		=> $title,
+				'products' 		=> $product_data,
+				'footer' 		=> sprintf($language->get('email_footer'),$order_info['store_name'],$order_info['store_name'],$order_info['store_name'],$order_info['store_url'])
+			));								
+            ]]></add>
+        </operation>
+		<operation>
+            <search position="after"><![CDATA[
+            $mail->setText($message);
+            ]]></search>
+        	<add><![CDATA[
+			$mail->setHtml($template->fetch('order_abandoned.tpl', '_mail.tpl'));
+            ]]></add>
+        </operation>        
+	</file>				
+				
+	<file name="admin/language/*/sale/abandoned_order.php">
+        <operation>
+            <search position="before"><![CDATA[
+            ?>
+            ]]></search>
+        	<add><![CDATA[
+        	$_['text_product']         = 'Product';
+			$_['text_quantity']        = 'Quantity';
+			$_['text_model']           = 'Model';
+            ]]></add>
+        </operation>        
+	</file>				
+</modification>

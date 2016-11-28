@@ -1,0 +1,242 @@
+<modification>
+	<id>Customer Group Restrict</id>
+	<version>1.5.x</version>
+	<vqmver>2.X</vqmver>
+	<author>marsilea15@gmail.com</author>
+	
+	<!-- // BACKEND //////////////////////////////////////////////////////// -->
+	<!-- /////////////////////////////////////////////////////////////////// -->
+	
+	<!-- // PRODUCT, CATEGORY ////////////////////////////////////////////// -->
+	
+	<!-- // Views // -->
+	<file name="admin/view/template/catalog/product_form.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<?php echo $entry_download; ?>]]></search>
+			<add><![CDATA[
+					<?php echo $entry_customer_groups; ?>
+					<span class="help"><?php echo $entry_customer_groups_guide; ?></span>
+				</td>
+				<td>
+					<div id="customer-group-restrict" class="scrollbox">
+						<?php $class = 'odd'; ?>
+						<?php foreach( $customer_groups as $group ) { ?>
+							<?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
+							<div class="<?php echo $class; ?>"> 
+								<input 
+									type="checkbox" 
+									name="customer_group_restrict[]" 
+									value="<?php echo $group['customer_group_id']; ?>" 
+									<?php if( in_array( $group['customer_group_id'], $customer_groups_restrict ) ) { ?>
+										checked="checked"
+									<?php } ?>
+									/>
+								<?php echo $group['name']; ?>
+							</div>
+						<?php } ?>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $entry_download; ?>
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/view/template/catalog/category_form.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<?php echo $entry_image; ?>]]></search>
+			<add><![CDATA[
+					<?php echo $entry_customer_groups; ?>
+					<span class="help"><?php echo $entry_customer_groups_guide; ?></span>
+				</td>
+				<td>
+					<div id="customer-group-restrict" class="scrollbox">
+						<?php $class = 'odd'; ?>
+						<?php foreach( $customer_groups as $group ) { ?>
+							<?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
+							<div class="<?php echo $class; ?>"> 
+								<input 
+									type="checkbox" 
+									name="customer_group_restrict[]" 
+									value="<?php echo $group['customer_group_id']; ?>" 
+									<?php if( in_array( $group['customer_group_id'], $customer_groups_restrict ) ) { ?>
+										checked="checked"
+									<?php } ?>
+									/>
+								<?php echo $group['name']; ?>
+							</div>
+						<?php } ?>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php echo $entry_image; ?>
+			]]></add>
+		</operation>
+	</file>
+	
+	<!-- // Languages // -->
+	<file name="admin/language/*/catalog/product.php,admin/language/*/catalog/category.php">
+		<operation>
+			<search position="after"><![CDATA[<?php]]></search>
+			<add><![CDATA[
+				$_['entry_customer_groups'] = 'Customer Groups Restricts:';
+				$_['entry_customer_groups_guide'] = 'If empty its available for all.';				
+				$_['text_customer_groups_mode_available']	= 'Available only for selected groups';
+				$_['text_customer_groups_mode_unavailable']	= 'Unavailable only for selected groups';
+			]]></add>
+		</operation>
+	</file>
+	
+	<!-- // Model/Product // -->
+	<file name="admin/model/catalog/product.php">
+		<operation>
+			<search position="before"><![CDATA[if (isset($data['product_download'])) {]]></search>
+			<add><![CDATA[
+				$this->db->query("
+					UPDATE
+						" . DB_PREFIX . "product
+					SET
+						mod_customer_group_restrict = " . ( ! empty( $data['customer_group_restrict'] ) ? "'" . implode( ',', array_unique( $data['customer_group_restrict'] ) ) . "'" : 'NULL' ) . "
+					WHERE
+						product_id = " . (int) $product_id . "
+				");
+			]]></add>
+		</operation>
+	</file>
+	
+	<!-- // Model/Category -->
+	<file name="admin/model/catalog/category.php">
+		<operation>
+			<search position="before"><![CDATA[if (isset($data['category_layout'])) {]]></search>
+			<add><![CDATA[
+				$this->db->query("
+					UPDATE
+						" . DB_PREFIX . "category
+					SET
+						mod_customer_group_restrict = " . ( ! empty( $data['customer_group_restrict'] ) ? "'" . implode( ',', array_unique( $data['customer_group_restrict'] ) ) . "'" : 'NULL' ) . "
+					WHERE
+						category_id = " . (int) $category_id . "
+				");
+			]]></add>
+		</operation>
+	</file>
+	
+	<!-- // Controllers // -->
+	<file name="admin/controller/catalog/product.php,admin/controller/catalog/category.php">
+		<operation>
+			<search position="after"><![CDATA[$this->data['tab_general'] = $this->language->get('tab_general');]]></search>
+			<add><![CDATA[
+				$this->data['entry_customer_groups']		= $this->language->get('entry_customer_groups');
+				
+				$this->data['entry_customer_groups_guide']	= $this->language->get('text_customer_groups_mode_' . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_'.(strpos($this->request->get['route'],'catalog/product')!==false?'product':'category')] == 'unavailable' ? 'unavailable' : 'available' )).'.';
+				$this->data['entry_customer_groups_guide']	.= '<br>' . $this->language->get('entry_customer_groups_guide');
+				
+				$this->load->model( 'sale/customer_group' );
+				
+				$this->data['customer_groups'] = $this->model_sale_customer_group->getCustomerGroups(array());
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/catalog/product.php">
+		<operation>
+			<search position="after"><![CDATA[$this->load->model('catalog/category');]]></search>
+			<add><![CDATA[
+				$this->load->model('module/customer_group_restrict');
+		
+				if (isset($this->request->post['customer_groups_restrict'])) {
+					$customer_groups_restrict = $this->request->post['customer_groups_restrict'];
+				} elseif (isset($this->request->get['product_id'])) {
+					$customer_groups_restrict = $this->model_module_customer_group_restrict->getByProductId( $this->request->get['product_id'] );
+				} else {
+					$customer_groups_restrict = array();
+				}
+
+				$this->data['customer_groups_restrict'] = array();
+				
+				foreach( $customer_groups_restrict as $row )
+					$this->data['customer_groups_restrict'][] = $row['customer_group_id'];
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/controller/catalog/category.php">
+		<operation>
+			<search position="after"><![CDATA[$this->load->model('localisation/language');]]></search>
+			<add><![CDATA[
+				$this->load->model('module/customer_group_restrict');
+		
+				if (isset($this->request->post['customer_groups_restrict'])) {
+					$customer_groups_restrict = $this->request->post['customer_groups_restrict'];
+				} elseif (isset($this->request->get['category_id'])) {
+					$customer_groups_restrict = $this->model_module_customer_group_restrict->getByCategoryId( $this->request->get['category_id'] );
+				} else {
+					$customer_groups_restrict = array();
+				}
+
+				$this->data['customer_groups_restrict'] = array();
+				
+				foreach( $customer_groups_restrict as $row )
+					$this->data['customer_groups_restrict'][] = $row['customer_group_id'];
+			]]></add>
+		</operation>
+	</file>
+	
+	<!-- // FRONTEND /////////////////////////////////////////////////////// -->
+	<!-- /////////////////////////////////////////////////////////////////// -->
+	
+	<!-- // Model/Product // -->
+	<file name="catalog/model/catalog/product.php">
+		<operation>
+			<search position="replace"><![CDATA[p.status = '1']]></search>
+			<add><![CDATA[p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getCustomerGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict ))]]></add>
+		</operation>
+	</file>
+	
+	<!-- // Model/Category // -->
+	<file name="catalog/model/catalog/category.php">
+		<operation>
+			<search position="replace"><![CDATA[c.status = '1']]></search>
+			<add><![CDATA[c.status = '1' AND ( c.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_category'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getCustomerGroupId() : $this->config->get('config_customer_group_id') ) . ", c.mod_customer_group_restrict ))]]></add>
+		</operation>
+	</file>
+	
+	<!-- // AUTOSUGGEST SEARCH ///////////////////////////////////////////// -->
+	<!-- /////////////////////////////////////////////////////////////////// -->
+	
+	<file name="catalog/model/module/autosuggest_search.php" error="skip">
+		<operation error="skip">
+			<search position="replace"><![CDATA[p.status = '1']]></search>
+			<add><![CDATA[p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getCustomerGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict ))]]></add>
+		</operation>
+	</file>
+	
+	<!-- // JOURNAL2 /////////////////////////////////////////////////////// -->
+	<!-- /////////////////////////////////////////////////////////////////// -->
+	
+	<file name="catalog/model/journal2/search.php" error="skip">
+		<operation error="skip">
+			<search position="replace"><![CDATA[p.status = '1']]></search>
+			<add><![CDATA[p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getCustomerGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict ))]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/model/journal2/product.php" error="skip">
+		<operation error="skip">
+			<search position="replace"><![CDATA[p.status = '1']]></search>
+			<add><![CDATA[p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getCustomerGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict ))]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/model/journal2/super_filter.php" error="skip">
+		<operation error="skip">
+			<search position="replace"><![CDATA[p.status = '1']]></search>
+			<add><![CDATA[p.status = '1' AND ( p.mod_customer_group_restrict IS NULL OR " . ( NULL != ( $cgrS = $this->config->get( 'customer_group_restrict' ) ) && $cgrS['mode_product'] == 'unavailable' ? 'NOT' : '' ) . " FIND_IN_SET( " . ( $this->customer->isLogged() ? (int) $this->customer->getCustomerGroupId() : $this->config->get('config_customer_group_id') ) . ", p.mod_customer_group_restrict ))]]></add>
+		</operation>
+	</file>
+
+</modification>

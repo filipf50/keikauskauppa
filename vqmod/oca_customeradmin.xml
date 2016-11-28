@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<modification>
+<id>Customer Admin Form Tunning </id>
+	<version>1.5.x</version>
+	<vqmver>1.0.0</vqmver>
+	<author>Felipe Alvarez</author>
+	<comment> Añadida la posibilidad de poder cambiar o asignar la tienda para la que estará habilitado el cliente </comment>
+
+	<file name="admin/controller/sale/customer.php">
+		<!--getForm-->
+		<operation>
+			<search position="before" index="2" ><![CDATA[$this->load->model('sale/customer_group');]]></search>
+			<add><![CDATA[
+				$this->data['entry_customer_store'] = $this->language->get('entry_customer_store');
+				$this->data['stores'] = array();
+			
+				$this->load->model('setting/store');
+				
+				$this->data['stores'] = $this->model_setting_store->getStores();
+				
+				if (isset($this->request->post['customer_store_id'])) {
+					$this->data['customer_store_id'] = $this->request->post['customer_store_id'];
+				} elseif (!empty($customer_info)) { 
+					$this->data['customer_store_id'] = $customer_info['store_id'];
+				} else {
+					$this->data['customer_store_id'] = 0;
+				}				
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/model/sale/customer.php">
+		<operation>
+			<search position="replace"><![CDATA[$this->db->query("UPDATE " . DB_PREFIX . "customer SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', newsletter = '" . (int)$data['newsletter'] . "', customer_group_id = '" . (int)$data['customer_group_id'] . "', status = '" . (int)$data['status'] . "' WHERE customer_id = '" . (int)$customer_id . "'");]]></search>
+			<add><![CDATA[
+				$this->db->query("UPDATE " . DB_PREFIX . "customer SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', newsletter = '" . (int)$data['newsletter'] . "', customer_group_id = '" . (int)$data['customer_group_id'] . "', store_id=" . (int)$data['customer_store_id'] . ", status = '" . (int)$data['status'] . "' WHERE customer_id = '" . (int)$customer_id . "'");
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "customer SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', newsletter = '" . (int)$data['newsletter'] . "', customer_group_id = '" . (int)$data['customer_group_id'] . "', password = '" . $this->db->escape(md5($data['password'])) . "', status = '" . (int)$data['status'] . "', date_added = NOW()");]]></search>
+			<add><![CDATA[$this->db->query("INSERT INTO " . DB_PREFIX . "customer SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) . "', fax = '" . $this->db->escape($data['fax']) . "', newsletter = '" . (int)$data['newsletter'] . "', customer_group_id = '" . (int)$data['customer_group_id'] . "', password = '" . $this->db->escape(md5($data['password'])) . "', store_id=" . (int)$data['customer_store_id'] . ", status = '" . (int)$data['status'] . "', date_added = NOW()");
+			]]></add>
+
+		</operation>
+	</file>
+	
+	<file name="admin/language/english/sale/customer.php">
+		<operation>
+			<search position="before"><![CDATA[$_['entry_customer_group']  = 'Customer Group:';]]></search>
+			<add><![CDATA[
+				$_['entry_customer_store']  = 'Store:';
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/language/spanish/sale/customer.php">
+		<operation>
+			<search position="before"><![CDATA[$_['column_customer_group'] = 'Grupo clientes';]]></search>
+			<add><![CDATA[
+				$_['entry_customer_store']  = 'Tienda:';
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/view/template/sale/customer_form.tpl">
+		<operation>
+			<search position="before" offset="2"><![CDATA[<td><?php echo $entry_newsletter; ?></td>]]></search>
+			<add><![CDATA[
+				<tr>
+					<td><?php echo $entry_customer_store; ?></td>
+					<td><select name="customer_store_id">
+						<?php foreach ($stores as $store) { ?>
+						<?php if ($store['store_id'] == $customer_store_id) { ?>
+						<option value="<?php echo $store['store_id']; ?>" selected="selected"><?php echo $store['name']; ?></option>
+						<?php } else { ?>
+						<option value="<?php echo $store['store_id']; ?>"><?php echo $store['name']; ?></option>
+						<?php } ?>
+						<?php } ?>
+					  </select></td>
+				 </tr>	
+			]]></add>
+		</operation>
+	</file>
+	
+	
+</modification>
+

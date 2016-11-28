@@ -1,0 +1,89 @@
+<modification>
+    <id>Payment System Extension by SID-Alicante</id>
+    <version>20150210</version>
+    <vqmver>1.0.0</vqmver>
+    <author>SID-Alicante @filipf50</author>
+    <!-- CATALOG LANGUAGE -->
+    <file name="catalog/language/english/account/order.php">
+            <operation>
+                    <search position="after"><![CDATA[
+                            // Text
+                    ]]></search>
+                    <add><![CDATA[
+                            $_['text_layaway_pending_amount']	= 'Pending amount:';
+                            $_['button_layaway_pay_now']	= 'Pay Noy';
+                    ]]></add>
+            </operation>
+    </file>
+    <file name="catalog/language/finnish/account/order.php">
+        <operation>
+                <search position="after"><![CDATA[
+                        // Text
+                ]]></search>
+                <add><![CDATA[
+                        $_['text_layaway_pending_amount']	= 'Maksamatta:';
+                        $_['button_layaway_pay_now']            = 'MAKSA LOPPUMAKSU';
+                ]]></add>
+        </operation>
+    </file>
+    <!-- CATALOG CONTROLLER -->
+    <file name="catalog/controller/account/order.php">
+        <operation>
+            <search position="after"><![CDATA[
+                $this->data['text_empty'] = $this->language->get('text_empty');
+            ]]></search>
+            <add><![CDATA[
+                $this->data['text_layaway_pending_amount'] = $this->language->get('text_layaway_pending_amount');
+                $this->data['button_layaway_pay_now'] = $this->language->get('button_layaway_pay_now');
+            ]]></add>
+        </operation>
+        <operation>
+                <search position="after"><![CDATA[
+                    $voucher_total = $this->model_account_order->getTotalOrderVouchersByOrderId($result['order_id']);
+                ]]></search>
+                <add><![CDATA[
+                    $layawayData = $this->model_account_order->getLayawayByOrderId($result['order_id']);
+                    $balance = $result['total'];
+                    foreach ($layawayData as $data) {
+                            $balance -= $data['deposit'];
+                            if (!empty($data['payments'])) {
+                                    foreach (unserialize($data['payments']) as $payment) {
+                                            $balance -= $payment['payment_amount'];
+                                    }
+                            }
+                    }
+                    $balance = number_format($balance, 2, ".", "");
+                    $layaway_action = $this->url->link('account/order/layaway_payment', '&order_id=' . $result['order_id'], 'SSL');
+                ]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[
+               'total'      => $this->currency->format($result['total'], $result['currency_code'], $result['currency_value']),                         
+            ]]></search>
+            <add><![CDATA[
+               'balance'    =>$balance,
+               'currency_balance' => $this->currency->format($balance, $result['currency_code'], $result['currency_value']),
+               'layaway_action'=>$layaway_action,
+            ]]></add>
+        </operation>
+    </file>
+    
+    <!-- CATALOG VIEW -->
+    <file name="catalog/view/theme/*/template/account/order_list.tpl">
+        <operation>
+                <search position="after"><![CDATA[
+                    <div class="order-info">
+                ]]></search>
+                <add><![CDATA[
+                    <?php if ($order['balance']!=0 && $order['currency_balance']!=$order['total']) { ?>
+                        <div style="padding-top: 1em;">
+                            <form enctype="multipart/form-data" id="layaway" method="post" action=<?php echo $order['layaway_action']; ?>>
+                                <?php echo $text_layaway_pending_amount . ' ' . $order['currency_balance']; ?> <a class="button" onclick="$('#layaway').submit();"><?php echo $button_layaway_pay_now ;?></a>
+                                <input type="hidden" name="payment_amount" value="<?php echo $order['balance']; ?>">
+                            </form>
+                        </div>
+                   <?php } ?>
+                ]]></add>
+        </operation>
+    </file>
+</modification>

@@ -1,0 +1,249 @@
+<modification>
+    <id>Newsletter Enhancements SID Extension</id>
+    <version>1.0</version>
+    <vqmver>1.2.3</vqmver>
+    <author>www.sid-alicante.es @filipf50</author>
+    
+    <!-- ADMIN LANGUAGE -->
+    <file name="admin/language/english/ne/newsletter.php">
+        <operation>
+            <search position="after"><![CDATA[$_['entry_text_message_products']]]></search>
+            <add><![CDATA[
+                    $_['entry_text_order_status']			= 'Order Status:';
+                    $_['entry_text_start_date']			= 'Start Date:';
+                    $_['entry_text_end_date']			= 'End Date:';
+                    $_['entry_text_change_order_status']			= 'Change Status:';
+                    $_['entry_text_new_order_status']			= 'New Order Status:';
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$_['text_rewards_all']]]></search>
+            <add><![CDATA[
+                    $_['text_by_order_status']						= 'By Order Status';
+                ]]>
+            </add>
+        </operation>
+    </file>
+    <file name="admin/language/finnish/ne/newsletter.php">
+        <operation>
+            <search position="after"><![CDATA[$_['entry_text_message_products']]]></search>
+            <add><![CDATA[
+                    $_['entry_text_order_status']			= 'Order Status:';
+                    $_['entry_text_start_date']			= 'Start Date:';
+                    $_['entry_text_end_date']			= 'End Date:';
+                    $_['entry_text_change_order_status']			= 'Change Status:';
+                    $_['entry_text_new_order_status']			= 'New Order Status:';
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$_['text_rewards_all']]]></search>
+            <add><![CDATA[
+                    $_['text_by_order_status']						= 'By Order Status';
+                ]]>
+            </add>
+        </operation>
+    </file>
+    
+    <!-- ADMIN CONTROLLER -->
+    <file name="admin/controller/ne/newsletter.php">
+        <operation>
+            <search position="after"><![CDATA[$this->data['entry_text_message_products'] = $this->language->get('entry_text_message_products');]]></search>
+            <add><![CDATA[
+                    $this->data['entry_text_order_status'] = $this->language->get('entry_text_order_status');
+                    $this->data['entry_text_start_date'] = $this->language->get('entry_text_start_date');
+                    $this->data['entry_text_end_date'] = $this->language->get('entry_text_end_date');
+                    $this->data['entry_text_change_order_status'] = $this->language->get('entry_text_change_order_status');
+                    $this->data['entry_text_new_order_status'] = $this->language->get('entry_text_new_order_status');
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[$this->data['text_rewards_all'] = $this->language->get('text_rewards_all');]]></search>
+            <add><![CDATA[
+                    $this->data['text_by_order_status'] = $this->language->get('text_by_order_status');
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[case 'rewards':]]></search>
+            <add><![CDATA[
+                    case 'byOrderStatus':
+                        if (isset($this->request->post['change_order_status']) && $this->request->post['change_order_status']){
+                            $new_status=$this->request->post['new_order_status_id'];
+                        }else{
+                            $new_status=$this->request->post['order_status_id'];
+                        }
+
+                        $results = $this->model_ne_newsletter->getEmailsByOrderStatus($this->request->post['order_status_id'],$this->request->post['start_date'],$this->request->post['end_date']);
+
+                        foreach ($results as $result) {
+                            if (isset($this->request->post['only_selected_language']) && (($language['code'] != $result['language_code'] && $result['language_code']) || (!$result['language_code'] && $language['code'] != $this->config->get('config_language_id')))) {
+                                $json['error']['subject']='Result: ' . $result['language_code'] . ' Selected: ' . $language['code'] ;
+                                continue;
+
+                            }
+
+                            if ($result['store_id'] == $this->request->post['store_id']) {
+                                $emails[$result['email'] .'#'.$result['order_id']] = array(
+                                    'firstname' => $result['firstname'],
+                                    'lastname' => $result['lastname'],
+                                    'order_id' => $result['order_id'],
+                                    'new_order_status' => $new_status
+                                );
+                            }
+                        }
+                        break;
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[$this->load->model('catalog/category');]]></search>
+            <add><![CDATA[
+                    $this->load->model('localisation/order_status');
+                    $this->data['order_statuses'] = $this->model_localisation_order_status->getOrderStatuses();
+                ]]>                
+            </add>
+        </operation>
+    </file>
+    
+    <!-- ADMIN MODEL --> 
+    <file name="admin/model/ne/newsletter.php">
+        <operation>
+            <search position="before"><![CDATA[$mail = new Mail_NE();]]></search>
+            <add><![CDATA[
+                $arrAux=explode('#',$email);
+                $email=$arrAux[0];
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[public function getEmailsByProductsOrdered($products) {]]></search>
+            <add><![CDATA[
+                public function getEmailsByOrderStatus($order_status_id,$start_date,$end_date) {
+                    $sql="SELECT *,l.code language_code FROM `" . DB_PREFIX . "order` o INNER JOIN `" . DB_PREFIX . "language` l on l.language_id=o.language_id";
+                    
+                    if (!empty($order_status_id)) {
+			$sql .= " WHERE o.order_status_id = '" . (int)$order_status_id . "'";
+                    } else {
+                            $sql .= " WHERE o.order_status_id > '0'";
+                    }
+
+                    if (!empty($start_date)) {
+                            $sql .= " AND DATE(o.date_added) >= '" . $this->db->escape($start_date) . "'";
+                    }
+
+                    if (!empty($end_date)) {
+                            $sql .= " AND DATE(o.date_added) <= '" . $this->db->escape($end_date) . "'";
+                    }
+                    $query = $this->db->query($sql);
+
+                    return $query->rows;
+                }
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="replace"><![CDATA[if (!$send_ok) {]]></search>
+            <add><![CDATA[                
+                if ($send_ok){                    
+                    if (isset($info['order_id']) && isset($info['new_order_status'])){
+                        $this->db->query("UPDATE `" . DB_PREFIX . "order` set order_status_id='" . $info['new_order_status'] . "' WHERE order_id='" . $info['order_id'] . "'");
+                    }
+               }else{
+                ]]>
+            </add>
+        </operation>
+    </file>
+    
+    <!-- ADMIN VIEW -->
+    <file name="admin/view/template/ne/newsletter.tpl">
+        <operation>
+            <search position="before"><![CDATA[<?php if ($to == 'rewards_all') { ?>]]></search>
+            <add><![CDATA[
+                    <?php if ($to == 'byOrderStatus') { ?>
+                        <option value="byOrderStatus" selected="selected"><?php echo $text_by_order_status; ?></option>
+                    <?php } else { ?>
+                        <option value="byOrderStatus"><?php echo $text_by_order_status; ?></option>
+                    <?php } ?>
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<tbody id="to-product" class="to">]]></search>
+            <add><![CDATA[
+                <tbody id="to-byOrderStatus" class="to">
+                    <tr>
+                      <td><?php echo $entry_text_order_status; ?></td>
+                      <td><select name="order_status_id">
+                                    <?php foreach ($order_statuses as $order_status) { ?>
+                                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
+                                    <?php } ?>
+                            </select>
+                       </td>
+                    </tr>
+                    <tr>
+                      <td><?php echo $entry_text_start_date; ?></td>
+                      <td><input type="text" name="start_date" value="" id="start_date" size="12" /></td>
+                    </tr>
+                    <tr>
+                      <td><?php echo $entry_text_end_date; ?></td>
+                      <td><input type="text" name="end_date" value="" id="end_date" size="12" /></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $entry_text_change_order_status ?></td>
+                        <td>
+                            <label for="change_order_status_1"><?php echo $entry_yes; ?></label>
+                            <input type="radio" id="change_order_status_1" name="change_order_status" value="1" />
+                            <label for="change_order_status_0"><?php echo $entry_no; ?></label>
+                            <input type="radio" checked="checked" id="change_order_status_0" name="change_order_status" value="0" />
+                        </td>
+                    </tr>
+                    <tbody id="new-status" class="to">
+                        <tr>
+                            <td><?php echo $entry_text_new_order_status; ?></td>
+                            <td><select name="new_order_status_id">
+                                          <?php foreach ($order_statuses as $order_status) { ?>
+                                          <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
+                                          <?php } ?>
+                                  </select>
+                             </td>
+                        </tr>
+                     </tbody>
+                  </tbody>
+                ]]>
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+            <add><![CDATA[
+                    
+                    <script type="text/javascript"><!--
+                        $(document).ready(function() {
+                                $('#start_date').datepicker({dateFormat: 'yy-mm-dd'});
+
+                                $('#end_date').datepicker({dateFormat: 'yy-mm-dd'});
+                                    
+                                $('input[name=change_order_status]').bind('click', function() {
+                                        checkChangeStatus();
+                                    });
+                        });
+                        
+                        function checkChangeStatus() {
+                            if ($('input[name=change_order_status]:checked').val() == 1)
+                            {
+                                $('#new-status').show();
+                            }
+                            else
+                            {
+                                $('#new-status').hide();
+                            }
+                            getTemplate();
+                        }
+                        //--></script> 
+                ]]>
+            </add>
+        </operation>
+    </file>
+</modification>

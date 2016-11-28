@@ -1,0 +1,4 @@
+[03-Sep-2014 08:58:56 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/play/product.php on line 3
+[04-Sep-2014 06:44:55 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/play/order.php on line 2
+[30-Oct-2014 01:10:24 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/play/customer.php on line 2
+[07-Dec-2014 21:25:34 UTC] PHP Fatal error:  Class 'Model' not found in /home/keika509/public_html/catalog/model/play/order.php on line 2

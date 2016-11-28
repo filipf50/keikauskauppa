@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id>delete quantity on product - Aquacart enhanced!</id>
+	<version>0.1.2.sallie</version>
+	<vqmver>2.0.0</vqmver>
+	<author>MichelePeggion</author>
+<file name="catalog/view/theme/*/template/product/product.tpl">
+<operation>
+           <search position="replace">
+           <![CDATA[echo $text_qty;]]>
+           </search>
+          <add> 
+           <![CDATA[echo '';]]>
+          </add>
+</operation>
+<operation>
+          <search position="replace">
+          <![CDATA[<input type="text" name="quantity" size="2" class="i-d-quantity input-mini" value="<?php echo $minimum; ?>" />" />]]>
+          </search>
+          <add>
+           <![CDATA[<input type="hidden" name="quantity" size="2" value="<?php echo '1'; ?>" />]]>
+          </add>
+</operation> 
+</file>
+<file name="catalog/view/theme/*/template/checkout/cart.tpl">
+<operation>
+<search position="replace">
+<![CDATA[<input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" />]]>
+</search>
+<add>
+<![CDATA[
+&nbsp
+]]>
+</add>
+</operation>
+<operation>
+<search position="replace">
+<![CDATA[ <input type="image" src="catalog/view/theme/sellya/image/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />]]>
+</search>
+<add>
+<![CDATA[<?php echo $product['quantity']; ?><?php echo ' > Delete';?>]]>
+</add>
+</operation>
+</file>
+</modification>
