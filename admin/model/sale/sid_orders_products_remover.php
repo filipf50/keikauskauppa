@@ -66,16 +66,16 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                         FROM (SELECT o.order_id, 
                                         CONCAT(o.firstname, ' ', o.lastname) AS customer, 
                                         o.order_status_id as status_id,
-                                        (SELECT os.name FROM oc_order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
                                         o.date_added, 
                                         o.date_modified, 
-                                        (SELECT COUNT(*) orderProducts FROM `oc_order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(*) orderProducts FROM `" . DB_PREFIX . "order_product` WHERE order_id=o.order_id) AS totalproducts,
                                         (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
-                                FROM  " . DB_PREFIX . "order od
+                                FROM  `" . DB_PREFIX . "order` od
                                   INNER JOIN " . DB_PREFIX . "order_product op ON op.order_id=od.order_id
                                 WHERE od.order_id =o.order_id ~strProductFilter~
                                 ) AS productsToDelete
-                                FROM " . DB_PREFIX . "order o
+                                FROM `" . DB_PREFIX . "order` o
                                 WHERE o.order_status_id > '0') v
                         WHERE v.productsToDelete>0";
 
@@ -193,7 +193,7 @@ class ModelSaleSidOrdersProductsRemover extends Model {
             return $query->rows;
         }
         
-        public function getProductOptions($product_id){
+        public function getProductOptionsWithOtp($product_id){
             $sql="SELECT DISTINCT otp.parent_option_id option_id, otp.parent_option_value_id option_value_id, od.name optionName,ovd.name valueName
                             FROM oc_otp_option_value otp
                             INNER JOIN oc_option_description od ON od.option_id=otp.parent_option_id AND od.language_id=1
@@ -216,6 +216,17 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                             FROM oc_product_option_value po
                             INNER JOIN oc_option_description od ON po.option_id=od.option_id AND od.language_id=1
                             INNER JOIN oc_option_value_description ovd ON ovd.option_value_id=po.option_value_id
+                            WHERE po.product_id=" . $product_id . ";";
+            $query = $this->db->query($sql);
+
+            return $query->rows;
+        }
+        
+        public function getProductOptions($product_id){
+            $sql="SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM " . DB_PREFIX . "product_option_value po
+                            INNER JOIN " . DB_PREFIX . "option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN " . DB_PREFIX . "option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
                             WHERE po.product_id=" . $product_id . ";";
             $query = $this->db->query($sql);
 

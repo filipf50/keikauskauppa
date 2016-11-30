@@ -88,13 +88,13 @@
                             <?php } ?>
                         <?php } ?>
                     </select>-->
-                    <input type="text" name="product_to_delete" id="product_to_delete" size="50">
-                    <input type="hidden" name="product_to_delete_id" id ="product_to_delete_id">
+                    <input type="text" name="product_to_delete" id="product_to_delete" size="50" value="<?php echo $product_to_delete; ?>">
+                    <input type="hidden" name="product_to_delete_id" id ="product_to_delete_id" value="<?php echo $product_to_delete_id; ?>">
                 </td>
                 <td><?php echo $entry_product_dest; ?></td>
                 <td>
-                    <input type="text" name="product_to_add" id="product_to_add" size="50">
-                    <input type="hidden" name="product_to_add_id" id ="product_to_add_id">
+                    <input type="text" name="product_to_add" id="product_to_add" size="50" value="<?php echo $product_to_add; ?>">
+                    <input type="hidden" name="product_to_add_id" id ="product_to_add_id" value="<?php echo $product_to_add_id; ?>">
                 </td>
               </tr>
             <!--<tr id="option"></tr>!-->
@@ -417,7 +417,7 @@ $('input[name=\'product_to_delete\']').autocomplete({
 		if (ui.item['option'] != '') {
 			html = '';
 
-			html=getOptionsHtml(ui,'optionOri');
+			html=getOptionsHtml(ui,'filter_options_to_delete');
 			                        
 			//$('#option').html('<td class="left"><?php echo $entry_option; ?></td><td class="left">' + html + '</td>');
                         $('#options').show();
@@ -469,7 +469,7 @@ $('input[name=\'product_to_add\']').autocomplete({
 		if (ui.item['option'] != '') {
 			html = '';
 
-			html=getOptionsHtml(ui,'optionDest');
+			html=getOptionsHtml(ui,'filter_options_to_add');
                         
 			//$('#option').html('<td class="left"><?php echo $entry_option; ?></td><td class="left">' + html + '</td>');
                         $('#options').show();
