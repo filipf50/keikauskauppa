@@ -1100,3 +1100,299 @@
 2016-11-29 23:50:50 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
 2016-11-29 23:50:50 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
 2016-11-29 23:50:50 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-11-30 21:25:47 - PHP Notice:  Undefined variable: product_to_delete_id in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 224
+2016-11-30 21:25:47 - PHP Notice:  Undefined variable: product_to_add_id in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 227
+2016-11-30 21:25:47 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:25:47 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:25:47 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-11-30 21:43:24 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ranne,2010)
+                                ) AS productsToDelete
+              ' at line 12<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-11-30') AND op.product_id = '121' AND op.otp_id in (140,Missa Ranne,2010)
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 21:44:34 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ranne,2010)
+                                ) AS productsToDelete
+              ' at line 12<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-11-30') AND op.product_id = '121' AND op.otp_id in (140,Missa Ranne,2010)
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 21:45:51 - PHP Notice:  Undefined variable: product_to_delete_id in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 224
+2016-11-30 21:45:51 - PHP Notice:  Undefined variable: product_to_add_id in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 227
+2016-11-30 21:45:52 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:45:52 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:45:52 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-11-30 21:47:07 - PHP Notice:  Undefined variable: product_to_add_id in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 226
+2016-11-30 21:47:07 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:47:07 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:47:07 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-11-30 21:48:03 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:48:03 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:48:03 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-11-30 21:48:41 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 21:49:01 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:49:01 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 21:49:01 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-11-30 22:17:06 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:17:06 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:17:06 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:17:06 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:17:47 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 22:19:00 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:19:00 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:19:00 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:19:00 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:20:00 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 22:31:25 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:31:25 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:31:25 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:31:25 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:31:48 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 22:32:34 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 22:33:18 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:33:18 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:33:18 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:33:18 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:34:25 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:34:25 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:34:25 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:34:25 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:34:43 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 22:43:17 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:43:17 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:43:17 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:43:17 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:43:58 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 22:44:14 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:44:14 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:44:14 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:44:14 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:46:02 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:46:02 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:46:02 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:46:02 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:46:21 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 22:51:02 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:51:02 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 22:51:02 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 22:51:02 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 22:51:47 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ranne,2010)
+                                ) AS productsToDelete
+              ' at line 12<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-11-30') AND op.product_id = '121' AND op.otp_id in (140,Missa Ranne,2010)
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 23:10:57 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:10:57 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:10:57 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:10:57 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ranne,2010) AND oo.product_option_value_id IN(,,) 
+                             ' at line 13<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  LEFT JOIN order_option oo ON oo.order_id=op.order_id and oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-11-30') AND op.product_id = '121' AND oo.product_option_id IN (140,Missa Ranne,2010) AND oo.product_option_value_id IN(,,) 
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 23:18:47 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:18:47 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:18:47 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 23:18:47 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 23:19:45 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:19:45 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:19:45 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:19:45 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ranne,2010) AND oo.product_option_value_id IN(,,) 
+                             ' at line 13<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  LEFT JOIN order_option oo ON oo.order_id=op.order_id and oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-11-30') AND op.product_id = '121' AND oo.product_option_id IN (140,Missa Ranne,2010) AND oo.product_option_value_id IN(,,) 
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 23:24:49 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:24:49 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:24:49 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 23:24:49 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 23:26:49 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:26:49 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:26:49 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:26:49 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ranne,2010) AND oo.product_option_value_id IN(,,) 
+                             ' at line 13<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  LEFT JOIN order_option oo ON oo.order_id=op.order_id and oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-11-30') AND op.product_id = '121' AND oo.product_option_id IN (140,Missa Ranne,2010) AND oo.product_option_value_id IN(,,) 
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 23:29:06 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:29:06 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:29:06 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 23:29:06 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 23:37:04 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:37:04 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:37:04 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 23:37:04 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 23:39:07 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:39:07 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:39:07 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 23:39:07 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 23:40:42 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:40:42 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:40:42 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\model\sale\sid_orders_products_remover.php on line 119
+2016-11-30 23:41:01 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:41:01 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:41:01 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 23:41:01 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 23:50:19 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:50:19 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:50:19 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 23:50:19 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-11-30 23:51:25 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 5<br />Error No: 1064<br />SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
+                            FROM product_option_value po
+                            INNER JOIN option_description od ON po.option_id=od.option_id AND od.language_id=1
+                            INNER JOIN option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
+                            WHERE po.product_id=; in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-11-30 23:53:40 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:53:40 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-11-30 23:53:40 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-11-30 23:53:40 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-12-01 21:45:13 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-01 21:45:13 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-01 21:45:13 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-12-01 21:45:13 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-12-01 21:59:33 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ranne,2010) 
+                                ) AS productsToDelete
+             ' at line 13<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  LEFT JOIN order_option oo ON oo.order_id=op.order_id and oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-12-01') AND op.product_id = '121' AND oo.product_option_id IN (411,409,410) AND oo.product_option_value_id IN(140,Missa Ranne,2010) 
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-12-01 22:38:59 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-01 22:38:59 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-01 22:38:59 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-12-01 22:38:59 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-12-02 0:28:36 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:28:36 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:28:36 - PHP Notice:  Undefined variable: filter_product_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 93
+2016-12-02 0:28:36 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-12-02 0:31:23 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:31:23 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:31:23 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-02 0:31:37 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:31:37 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:31:37 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-02 0:32:50 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:32:50 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:32:50 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-02 0:41:15 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:41:15 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-02 0:41:15 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346

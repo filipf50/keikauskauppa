@@ -73,12 +73,54 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                                         (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
                                 FROM  `" . DB_PREFIX . "order` od
                                   INNER JOIN " . DB_PREFIX . "order_product op ON op.order_id=od.order_id
+                                  ~strProductOptionsFilter~
                                 WHERE od.order_id =o.order_id ~strProductFilter~
                                 ) AS productsToDelete
                                 FROM `" . DB_PREFIX . "order` o
                                 WHERE o.order_status_id > '0') v
                         WHERE v.productsToDelete>0";
-
+                $strProductOptionsFilter="";
+                $strFilter="";
+                if(!empty($data['filter_product_options'])){
+                    $strFilterOptions="";
+                    $strFilterValues="";
+                    $strFilterOptionsValuesId="";
+                    $delimiter="";
+                    $delimiter2="";
+                    foreach($data['filter_product_options'] as $key=>$value){
+                        if(strlen($strFilterOptions)>0){
+                            $delimiter=",";
+                        }
+                        $aux=explode('~',$key);
+                        $strFilterOptions.=$delimiter . $aux[0];
+                        if ($aux[1]==0){
+                            $strFilterValues.=$delimiter . "'" . $value . "'";
+                        } else { 
+                            if(strlen($strFilterOptionsValuesId)>0){
+                                $delimiter2=",";
+                            }
+                            $strFilterOptionsValuesId.=$delimiter2 . $aux[1];
+                        }
+                    }
+                    if(strlen($strFilterOptions)>0){
+                        $strFilter .= " product_option_id IN (" .$strFilterOptions . ") AND ";
+                        if (strlen($strFilterOptionsValuesId)==0){
+                            $strFilter .= "`value` IN(" . $strFilterValues . ") ";
+                        } else {
+                            $strFilter .= "(`value` IN(" . $strFilterValues . ") OR product_option_value_id IN (". $strFilterOptionsValuesId . ") ";
+                        }                            
+                    }                       
+                    
+                    $strProductOptionsFilter="INNER JOIN (
+                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
+                                                        WHERE  " . $strFilter . 
+                                                        "GROUP BY order_id, order_product_id
+                                                        HAVING COUNT(*)=" . count($data['filter_product_options']) .
+                                                ") oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id";
+                }
+                $sql=str_replace("~strProductOptionsFilter~", $strProductOptionsFilter, $sql);
+                
+                //Reset strFilter string
 		$strFilter="";
                 if (isset($data['filter_date_start']) && !is_null($data['filter_date_start'])) {
 			$strFilter .= " AND DATE(od.date_added) >= DATE('" . $this->db->escape($data['filter_date_start']) . "')";
@@ -106,23 +148,6 @@ class ModelSaleSidOrdersProductsRemover extends Model {
 		}
                 
                 /*if(!empty($data['filter_product_options'])){
-                        $strFilterOptions="";
-                        $strFilterValues="";
-                        $delimiter="";
-                        foreach($data['filter_product_options'] as $filter){
-                            $arrAux=explode('~',$filter);
-                            if(strlen($strFilterOptions)>0){
-                                $delimiter=",";
-                            }
-                            $strFilterOptions.=$delimiter . $arrAux[0];
-                            $strFilterValues.=$delimiter . $arrAux[1];
-                        }
-                        if(strlen($strFilterOptions)>0){
-                            $strFilter .= " AND oo.product_option_id IN (" .$strFilterOptions . ") AND oo.product_option_value_id IN(" . $strFilterValues . ") ";
-                        }                       
-                }*/
-                
-                if(!empty($data['filter_product_options'])){
                         $strOptions="";
                         $delimiter="";
                         foreach($data['filter_product_options'] as $filter){
@@ -134,7 +159,7 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                             if(strlen($strOptions)>0){
                             $strFilter .= " AND op.otp_id in (" .$strOptions . ")";
                         }                       
-                }
+                }*/
 
 		$sort_data = array(
 			'o.order_id',

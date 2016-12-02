@@ -199,14 +199,14 @@ function getOptionsHtml(ui,fieldID){
         option = ui.item['option'][i];
 
         if (option['type'] == 'select') {
-                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '">';
+                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '~'+option['product_option_value_id'] + '">';
 
                 if (option['required']) {
                         html += '<span class="required">*</span> ';
                 }
 
                 html += option['name'] + '<br />';
-                html += '<select name="' + fieldID + '[' + option['product_option_id'] + ']">';
+                html += '<select name="' + fieldID + '[' + option['product_option_id'] + '~'+option['product_option_value_id'] + ']">';
                 html += '<option value=""><?php echo $text_select; ?></option>';
 
                 for (j = 0; j < option['option_value'].length; j++) {
@@ -310,14 +310,14 @@ function getOptionsHtml(ui,fieldID){
         }
 
         if (option['type'] == 'text') {
-                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '">';
+                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '~'+option['product_option_value_id'] + '">';
 
                 if (option['required']) {
                         html += '<span class="required">*</span> ';
                 }
 
                 html += option['name'] + '<br />';
-                html += '<input type="text" name="' + fieldID + '[' + option['product_option_id'] + ']" value="' + option['option_value'] + '" />';
+                html += '<input type="text" name="' + fieldID + '[' + option['product_option_id'] + '~'+option["product_option_value['product_option_value_id']"]+']" value="' + option['option_value'] + '" />';
                 html += '</div>';
                 html += '<br />';
         }

@@ -53,13 +53,13 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                 if (isset($this->request->post['product_to_delete'])) {
                         $product_to_delete= $this->request->post['product_to_delete'];
                         $product_to_delete_id=$this->request->post['product_to_delete_id'];
-                        $this->load->model('sale/sid_orders_products_remover');
+                        //$this->load->model('sale/sid_orders_products_remover');
                     
-                        $product_to_delete_options=$this->model_sale_sid_orders_products_remover->getProductOptions($product_to_delete_id);
+                        //$product_to_delete_options=$this->model_sale_sid_orders_products_remover->getProductOptions($product_to_delete_id);
                         //$product_options=$this->model_sale_sid_orders_products_remover->getOtpProductOptions($product_to_delete);
                 } else {
                         $product_to_delete = "";
-                        $produt_to_delete_id="";
+                        $product_to_delete_id="";
                         $product_to_delete_options=array();
                 }
                 
@@ -72,13 +72,12 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                 if (isset($this->request->post['product_to_add'])) {
                         $product_to_add= $this->request->post['product_to_add'];
                         $product_to_add_id=$this->request->post['product_to_add_id'];
-                        $this->load->model('sale/sid_orders_products_remover');
+                        //$this->load->model('sale/sid_orders_products_remover');
                     
-                        $product_to_add_options=$this->model_sale_sid_orders_products_remover->getProductOptions($product_to_add_id);
-                        //$product_options=$this->model_sale_sid_orders_products_remover->getOtpProductOptions($product_to_delete);
+                        //$product_to_add_options=$this->model_sale_sid_orders_products_remover->getProductOptions($product_to_add_id);
                 } else {
                         $product_to_add = "";
-                        $produt_to_add_id="";
+                        $product_to_add_id="";
                         $product_to_add_options=array();
                 }
                 
