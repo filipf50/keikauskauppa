@@ -85,21 +85,25 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                     $strFilterOptions="";
                     $strFilterValues="";
                     $strFilterOptionsValuesId="";
-                    $delimiter="";
-                    $delimiter2="";
+                    $delimiterOp="";
+                    $delimiterVal="";
+                    $delimiterValID="";
                     foreach($data['filter_product_options'] as $key=>$value){
                         if(strlen($strFilterOptions)>0){
-                            $delimiter=",";
+                            $delimiterOp=",";
                         }
                         $aux=explode('~',$key);
-                        $strFilterOptions.=$delimiter . $aux[0];
+                        $strFilterOptions.=$delimiterOp . $aux[0];
                         if ($aux[1]==0){
-                            $strFilterValues.=$delimiter . "'" . $value . "'";
+                            if(strlen($strFilterValues)>0){
+                                $delimiterVal=",";
+                            }
+                            $strFilterValues.=$delimiterVal . "'" . $value . "'";
                         } else { 
                             if(strlen($strFilterOptionsValuesId)>0){
-                                $delimiter2=",";
+                                $delimiterValID=",";
                             }
-                            $strFilterOptionsValuesId.=$delimiter2 . $aux[1];
+                            $strFilterOptionsValuesId.=$delimiterValID . $value;
                         }
                     }
                     if(strlen($strFilterOptions)>0){
@@ -107,7 +111,7 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                         if (strlen($strFilterOptionsValuesId)==0){
                             $strFilter .= "`value` IN(" . $strFilterValues . ") ";
                         } else {
-                            $strFilter .= "(`value` IN(" . $strFilterValues . ") OR product_option_value_id IN (". $strFilterOptionsValuesId . ") ";
+                            $strFilter .= "(`value` IN(" . $strFilterValues . ") OR product_option_value_id IN (". $strFilterOptionsValuesId . ")) ";
                         }                            
                     }                       
                     
@@ -195,6 +199,7 @@ class ModelSaleSidOrdersProductsRemover extends Model {
 		}
 
                 $sql=str_replace("~strProductFilter~",$strFilter,$sql);
+                //$this->log->write($sql);
                 $query = $this->db->query($sql);
 
 		return $query->rows;
@@ -248,14 +253,55 @@ class ModelSaleSidOrdersProductsRemover extends Model {
         }
         
         public function getProductOptions($product_id){
-            $sql="SELECT DISTINCT po.option_id,po.option_value_id,od.name optionName,ovd.name valueName
-                            FROM " . DB_PREFIX . "product_option_value po
-                            INNER JOIN " . DB_PREFIX . "option_description od ON po.option_id=od.option_id AND od.language_id=1
-                            INNER JOIN " . DB_PREFIX . "option_value_description ovd ON ovd.option_value_id=po.option_value_id AND ovd.language_id=1
-                            WHERE po.product_id=" . $product_id . ";";
-            $query = $this->db->query($sql);
+            $this->load->model('catalog/product');
+            $this->load->model('catalog/option');
+            $option_data = array();
+				
+            $product_options = $this->model_catalog_product->getProductOptions($product_id);	
 
-            return $query->rows;
+            foreach ($product_options as $product_option) {
+                    $option_info = $this->model_catalog_option->getOption($product_option['option_id']);
+
+                    if ($option_info) {				
+                            if ($option_info['type'] == 'select' || $option_info['type'] == 'radio' || $option_info['type'] == 'checkbox' || $option_info['type'] == 'image') {
+                                    $option_value_data = array();
+
+                                    foreach ($product_option['product_option_value'] as $product_option_value) {
+                                            $option_value_info = $this->model_catalog_option->getOptionValue($product_option_value['option_value_id']);
+
+                                            if ($option_value_info) {
+                                                    $option_value_data[] = array(
+                                                            'product_option_value_id' => $product_option_value['product_option_value_id'],
+                                                            'option_value_id'         => $product_option_value['option_value_id'],
+                                                            'name'                    => $option_value_info['name'],
+                                                            'price'                   => (float)$product_option_value['price'] ? $this->currency->format($product_option_value['price'], $this->config->get('config_currency')) : false,
+                                                            'price_prefix'            => $product_option_value['price_prefix']
+                                                    );
+                                            }
+                                    }
+
+                                    $option_data[] = array(
+                                            'product_option_id' => $product_option['product_option_id'],
+                                            'option_id'         => $product_option['option_id'],
+                                            'name'              => $option_info['name'],
+                                            'type'              => $option_info['type'],
+                                            'option_value'      => $option_value_data,
+                                            'required'          => $product_option['required']
+                                    );	
+                            } else {
+                                    $option_data[] = array(
+                                            'product_option_id' => $product_option['product_option_id'],
+                                            'option_id'         => $product_option['option_id'],
+                                            'name'              => $option_info['name'],
+                                            'type'              => $option_info['type'],
+                                            'option_value'      => $product_option['option_value'],
+                                            'required'          => $product_option['required']
+                                    );				
+                            }
+                    }
+            }
+
+            return $option_data;
         }
         
         public function updateTotals($order_id,$totals=array()){

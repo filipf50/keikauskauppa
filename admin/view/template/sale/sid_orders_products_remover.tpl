@@ -1,3 +1,199 @@
+<?php function getOptionsHTML($arrOptions, $fieldID){
+    $html='';
+    for ($i = 0; $i < $arrOptions.length; i++) {
+        $option = $arrOptions[i];
+
+        if ($option['type'] == 'select') {
+                $html += '<div id="' + $fieldID . '-' . $option['product_option_id'] . '~1">';
+
+                if ($option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= $option['name'] . '<br />';
+                $html .= '<select name="' . fieldID . '[' . $option['product_option_id'] . '~1]">';
+                $html .= '<option value="">$text_select</option>';
+
+                for (j = 0; j < $option['option_value'].length; j..) {
+                        $option_value = $option['option_value'][j];
+
+                        $html .= '<option value="' . option_value['product_option_value_id'] . '">' . option_value['name'];
+
+                        if (option_value['price']) {
+                                $html .= ' (' . option_value['price_prefix'] . option_value['price'] . ')';
+                        }
+
+                        $html .= '</option>';
+                }
+
+                $html .= '</select>';
+                $html .= '</div>';
+                $html .= '<br />';
+        }
+
+        if (option['type'] == 'radio') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+                $html .= '<select name="' . fieldID . '[' . option['product_option_id'] . ']">';
+                $html .= '<option value=""><?php echo $text_select; ?></option>';
+
+                for (j = 0; j < option['option_value'].length; j..) {
+                        option_value = option['option_value'][j];
+
+                        $html .= '<option value="' . option_value['product_option_value_id'] . '">' . option_value['name'];
+
+                        if (option_value['price']) {
+                                $html .= ' (' . option_value['price_prefix'] . option_value['price'] . ')';
+                        }
+
+                        $html .= '</option>';
+                }
+
+                $html .= '</select>';
+                $html .= '</div>';
+                $html .= '<br />';
+        }
+
+        if (option['type'] == 'checkbox') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+
+                for (j = 0; j < option['option_value'].length; j..) {
+                        option_value = option['option_value'][j];
+
+                        $html .= '<input type="checkbox" name="' . fieldID . '[' . option['product_option_id'] . '][]" value="' . option_value['product_option_value_id'] . '" id="' . fieldID . '-value-' . option_value['product_option_value_id'] . '" />';
+                        $html .= '<label for="' . fieldID . '-value-' . option_value['product_option_value_id'] . '">' . option_value['name'];
+
+                        if (option_value['price']) {
+                                $html .= ' (' . option_value['price_prefix'] . option_value['price'] . ')';
+                        }
+
+                        $html .= '</label>';
+                        $html .= '<br />';
+                }
+
+                $html .= '</div>';
+                $html .= '<br />';
+        }
+
+        if (option['type'] == 'image') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+                $html .= '<select name="' . fieldID . '[' . option['product_option_id'] . ']">';
+                $html .= '<option value=""><?php echo $text_select; ?></option>';
+
+                for (j = 0; j < option['option_value'].length; j..) {
+                        option_value = option['option_value'][j];
+
+                        $html .= '<option value="' . option_value['product_option_value_id'] . '">' . option_value['name'];
+
+                        if (option_value['price']) {
+                                $html .= ' (' . option_value['price_prefix'] . option_value['price'] . ')';
+                        }
+
+                        $html .= '</option>';
+                }
+
+                $html .= '</select>';
+                $html .= '</div>';
+                $html .= '<br />';
+        }
+
+        if (option['type'] == 'text') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '~0">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+                $html .= '<input type="text" name="' . fieldID . '[' . option['product_option_id'] . '~0]" value="' . option['option_value'] . '" />';
+                $html .= '</div>';
+                $html .= '<br />';
+        }
+
+        if (option['type'] == 'textarea') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+                $html .= '<textarea name="' . fieldID . '[' . option['product_option_id'] . ']" cols="40" rows="5">' . option['option_value'] . '</textarea>';
+                $html .= '</div>';
+                $html .= '<br />';
+        }
+
+        if (option['type'] == 'file') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+                $html .= '<a id="button-' . fieldID . '-' . option['product_option_id'] . '" class="button"><?php echo $button_upload; ?></a>';
+                $html .= '<input type="hidden" name="' . fieldID . '[' . option['product_option_id'] . ']" value="' . option['option_value'] . '" />';
+                $html .= '</div>';
+                $html .= '<br />';
+        }
+
+        if (option['type'] == 'date') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+                $html .= '<input type="text" name="' . fieldID . '[' . option['product_option_id'] . ']" value="' . option['option_value'] . '" class="date" />';
+                $html .= '</div>';
+                $html .= '<br />';
+        }
+
+        if (option['type'] == 'datetime') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+                $html .= '<input type="text" name="' . fieldID . '[' . option['product_option_id'] . ']" value="' . option['option_value'] . '" class="datetime" />';
+                $html .= '</div>';
+                $html .= '<br />';						
+        }
+
+        if (option['type'] == 'time') {
+                $html .= '<div id="' . fieldID . '-' . option['product_option_id'] . '">';
+
+                if (option['required']) {
+                        $html .= '<span class="required">*</span> ';
+                }
+
+                $html .= option['name'] . '<br />';
+                $html .= '<input type="text" name="' . fieldID . '[' . option['product_option_id'] . ']" value="' . option['option_value'] . '" class="time" />';
+                $html .= '</div>';
+                $html .= '<br />';						
+        }
+    }
+}?>
 <?php echo $header; ?>
 <div id="content">
   <div class="breadcrumb">
@@ -99,6 +295,11 @@
               </tr>
             <!--<tr id="option"></tr>!-->
             <tr id="options">
+                <?php var_dump($filter_options_to_delete); ?>
+                <?php var_dump($product_to_delete_options); ?>
+                <?php if($product_to_delete_options){ 
+                    
+                <?php } ?>
                 <td id="option_ori_lbl" class="left"></td>
                 <td id="option_ori_val" class="left"></td>
                 <td id="option_dest_lbl" class="left"></td>
@@ -199,14 +400,14 @@ function getOptionsHtml(ui,fieldID){
         option = ui.item['option'][i];
 
         if (option['type'] == 'select') {
-                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '~'+option['product_option_value_id'] + '">';
+                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '~1">';
 
                 if (option['required']) {
                         html += '<span class="required">*</span> ';
                 }
 
                 html += option['name'] + '<br />';
-                html += '<select name="' + fieldID + '[' + option['product_option_id'] + '~'+option['product_option_value_id'] + ']">';
+                html += '<select name="' + fieldID + '[' + option['product_option_id'] + '~1]">';
                 html += '<option value=""><?php echo $text_select; ?></option>';
 
                 for (j = 0; j < option['option_value'].length; j++) {
@@ -310,14 +511,14 @@ function getOptionsHtml(ui,fieldID){
         }
 
         if (option['type'] == 'text') {
-                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '~'+option['product_option_value_id'] + '">';
+                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '~0">';
 
                 if (option['required']) {
                         html += '<span class="required">*</span> ';
                 }
 
                 html += option['name'] + '<br />';
-                html += '<input type="text" name="' + fieldID + '[' + option['product_option_id'] + '~'+option["product_option_value['product_option_value_id']"]+']" value="' + option['option_value'] + '" />';
+                html += '<input type="text" name="' + fieldID + '[' + option['product_option_id'] + '~0]" value="' + option['option_value'] + '" />';
                 html += '</div>';
                 html += '<br />';
         }

@@ -53,9 +53,9 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                 if (isset($this->request->post['product_to_delete'])) {
                         $product_to_delete= $this->request->post['product_to_delete'];
                         $product_to_delete_id=$this->request->post['product_to_delete_id'];
-                        //$this->load->model('sale/sid_orders_products_remover');
+                        $this->load->model('sale/sid_orders_products_remover');
                     
-                        //$product_to_delete_options=$this->model_sale_sid_orders_products_remover->getProductOptions($product_to_delete_id);
+                        $product_to_delete_options=$this->model_sale_sid_orders_products_remover->getProductOptions($product_to_delete_id);
                         //$product_options=$this->model_sale_sid_orders_products_remover->getOtpProductOptions($product_to_delete);
                 } else {
                         $product_to_delete = "";
@@ -221,10 +221,10 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                 $this->data['filter_options_to_delete'] = $filter_options_to_delete;
                 $this->data['product_to_delete']=$product_to_delete;
                 $this->data['product_to_delete_id']=$product_to_delete_id;
-                $this->data['$product_to_delete_options']=$product_to_delete_options;
+                $this->data['product_to_delete_options']=$product_to_delete_options;
                 $this->data['product_to_add']=$product_to_add;
                 $this->data['product_to_add_id']=$product_to_add_id;
-                $this->data['$product_to_add_options']=$product_to_add_options;
+                //$this->data['$product_to_add_options']=$product_to_add_options;
                 
 		$this->template = 'sale/sid_orders_products_remover.tpl';
 		$this->children = array(

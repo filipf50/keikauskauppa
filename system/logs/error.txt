@@ -1396,3 +1396,223 @@
 2016-12-02 0:41:15 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
 2016-12-02 0:41:15 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
 2016-12-02 0:41:15 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:11:38 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:11:38 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:11:38 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:12:54 - PHP Notice:  Undefined variable: product_to_delete_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 224
+2016-12-06 22:12:54 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 227
+2016-12-06 22:12:55 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:12:55 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:12:55 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:22:02 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:22:02 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:22:02 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:22:43 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:22:43 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:22:43 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:23:40 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:23:40 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:23:40 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:26:15 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:26:15 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:26:15 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:27:06 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:27:06 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:27:06 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:27:34 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:27:34 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:27:34 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:28:23 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:28:23 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:28:23 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:29:15 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:29:15 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:29:15 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:35:31 - SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  INNER JOIN (
+                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
+                                                        WHERE   product_option_id IN (411,409,410) AND `value` IN('140','Miisa Ranne','') GROUP BY order_id, order_product_id
+                                                        HAVING COUNT(*)=3) oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-12-06') AND op.product_id = '121'
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20
+2016-12-06 22:35:49 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:35:49 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:35:49 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 22:52:41 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:52:41 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 22:52:41 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:03:49 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:03:49 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:03:49 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:04:25 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:04:25 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:04:25 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:05:48 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:05:48 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:05:48 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:06:29 - SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  INNER JOIN (
+                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
+                                                        WHERE   product_option_id IN (411,409,410) AND (`value` IN(,'Miisa Ranne','2010') OR product_option_value_id IN (140) GROUP BY order_id, order_product_id
+                                                        HAVING COUNT(*)=3) oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-12-01') AND DATE(od.date_added) <= DATE('2016-12-06') AND op.product_id = '121'
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20
+2016-12-06 23:06:29 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Miisa Ranne','2010') OR product_option_value_id IN (140) GROUP BY order_id, ord' at line 14<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  INNER JOIN (
+                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
+                                                        WHERE   product_option_id IN (411,409,410) AND (`value` IN(,'Miisa Ranne','2010') OR product_option_value_id IN (140) GROUP BY order_id, order_product_id
+                                                        HAVING COUNT(*)=3) oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-12-01') AND DATE(od.date_added) <= DATE('2016-12-06') AND op.product_id = '121'
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-12-06 23:07:02 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:07:02 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:07:02 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:07:58 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:07:58 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:07:58 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:08:22 - SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  INNER JOIN (
+                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
+                                                        WHERE   product_option_id IN (411,409,410) AND (`value` IN(,'Miisa Ranne','2010') OR product_option_value_id IN (140)) GROUP BY order_id, order_product_id
+                                                        HAVING COUNT(*)=3) oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-12-06') AND op.product_id = '121'
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20
+2016-12-06 23:08:22 - PHP Notice:  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Miisa Ranne','2010') OR product_option_value_id IN (140)) GROUP BY order_id, or' at line 14<br />Error No: 1064<br />SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  INNER JOIN (
+                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
+                                                        WHERE   product_option_id IN (411,409,410) AND (`value` IN(,'Miisa Ranne','2010') OR product_option_value_id IN (140)) GROUP BY order_id, order_product_id
+                                                        HAVING COUNT(*)=3) oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-12-06') AND op.product_id = '121'
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20 in E:\Backup\WEBS\wampserver\www\keikauskauppa\system\database\mysql.php on line 50
+2016-12-06 23:08:38 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:08:38 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:08:38 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:08:44 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:08:44 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:08:44 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:14:59 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:14:59 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:14:59 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:15:22 - SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  INNER JOIN (
+                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
+                                                        WHERE   product_option_id IN (411,409,410) AND (`value` IN('Miisa Ranne','2010') OR product_option_value_id IN (140)) GROUP BY order_id, order_product_id
+                                                        HAVING COUNT(*)=3) oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-12-01') AND DATE(od.date_added) <= DATE('2016-12-06') AND op.product_id = '121'
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20
+2016-12-06 23:15:40 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:15:40 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:15:40 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:17:11 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:17:11 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:17:11 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:24:10 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:24:10 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:24:10 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:24:30 - SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+                        FROM (SELECT o.order_id, 
+                                        CONCAT(o.firstname, ' ', o.lastname) AS customer, 
+                                        o.order_status_id as status_id,
+                                        (SELECT os.name FROM order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
+                                        o.date_added, 
+                                        o.date_modified, 
+                                        (SELECT COUNT(*) orderProducts FROM `order_product` WHERE order_id=o.order_id) AS totalproducts,
+                                        (SELECT COUNT(DISTINCT op.order_product_id) AS productsToDelete
+                                FROM  `order` od
+                                  INNER JOIN order_product op ON op.order_id=od.order_id
+                                  INNER JOIN (
+                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
+                                                        WHERE   product_option_id IN (411,409,410) AND (`value` IN('Miisa Ranne','2010') OR product_option_value_id IN (140)) GROUP BY order_id, order_product_id
+                                                        HAVING COUNT(*)=3) oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id
+                                WHERE od.order_id =o.order_id  AND DATE(od.date_added) >= DATE('2016-11-01') AND DATE(od.date_added) <= DATE('2016-12-06') AND op.product_id = '121'
+                                ) AS productsToDelete
+                                FROM `order` o
+                                WHERE o.order_status_id > '0') v
+                        WHERE v.productsToDelete>0 ORDER BY v.order_id ASC LIMIT 0,20
+2016-12-06 23:24:48 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:24:48 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:24:48 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 346
+2016-12-06 23:42:44 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:42:44 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:42:44 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 347
+2016-12-06 23:59:55 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:59:55 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
+2016-12-06 23:59:55 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 348
