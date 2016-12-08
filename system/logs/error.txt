@@ -1616,3 +1616,219 @@
 2016-12-06 23:59:55 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
 2016-12-06 23:59:55 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 83
 2016-12-06 23:59:55 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 348
+2016-12-07 21:41:37 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:41:37 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:41:37 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 547
+2016-12-07 21:42:22 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:42:22 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:42:22 - PHP Notice:  Undefined variable: html in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 304
+2016-12-07 21:42:22 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 547
+2016-12-07 21:43:18 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:43:18 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:43:18 - PHP Warning:  Missing argument 2 for getOptionsHTML(), called in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 301 and defined in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 1
+2016-12-07 21:43:18 - PHP Notice:  Use of undefined constant length - assumed 'length' in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 3
+2016-12-07 21:43:18 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 547
+2016-12-07 21:46:42 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:46:42 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:46:42 - PHP Notice:  Use of undefined constant length - assumed 'length' in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 3
+2016-12-07 21:46:42 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 547
+2016-12-07 21:47:47 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:47:47 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:49:49 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:49:49 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:49:49 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 547
+2016-12-07 21:51:04 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:51:04 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:51:04 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 547
+2016-12-07 21:53:08 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:53:08 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 279
+2016-12-07 21:53:08 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 548
+2016-12-07 21:55:22 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 280
+2016-12-07 21:55:22 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 280
+2016-12-07 21:55:22 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 549
+2016-12-07 21:59:06 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 280
+2016-12-07 21:59:06 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 280
+2016-12-07 21:59:06 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 548
+2016-12-07 22:08:33 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:08:33 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:08:33 - PHP Notice:  Undefined variable: text_select in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 15
+2016-12-07 22:08:33 - PHP Notice:  Undefined variable: filter_options_to_delete in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-07 22:08:33 - PHP Notice:  Undefined variable: filter_options_to_delete in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-07 22:08:33 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 552
+2016-12-07 22:12:29 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:12:29 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:12:29 - PHP Warning:  Missing argument 3 for getOptionsHTML(), called in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 306 and defined in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 1
+2016-12-07 22:12:29 - PHP Notice:  Undefined variable: fieldID in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 7
+2016-12-07 22:12:29 - PHP Notice:  Undefined variable: fieldID in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 14
+2016-12-07 22:12:29 - PHP Notice:  Uninitialized string offset: 411 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-07 22:12:29 - PHP Notice:  Uninitialized string offset: 411 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-07 22:12:29 - PHP Notice:  Undefined variable: fieldID in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 122
+2016-12-07 22:12:29 - PHP Notice:  Undefined variable: fieldID in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-07 22:12:29 - PHP Notice:  Undefined variable: fieldID in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 122
+2016-12-07 22:12:29 - PHP Notice:  Undefined variable: fieldID in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-07 22:12:29 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 552
+2016-12-07 22:13:45 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:13:45 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:13:45 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 552
+2016-12-07 22:21:22 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:21:22 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:21:22 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 552
+2016-12-07 22:26:52 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:26:52 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:26:52 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 550
+2016-12-07 22:48:05 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:48:05 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:48:05 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 550
+2016-12-07 22:48:44 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:48:44 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:48:44 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 550
+2016-12-07 22:49:30 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:49:30 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:49:30 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 550
+2016-12-07 22:50:12 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:50:12 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:50:12 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 550
+2016-12-07 22:53:08 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:53:08 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:53:08 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 551
+2016-12-07 22:55:15 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:55:15 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:55:15 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 551
+2016-12-07 22:56:45 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:56:45 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:56:45 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 551
+2016-12-07 22:57:21 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:57:21 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 22:57:21 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 551
+2016-12-07 23:23:44 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:23:44 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:23:44 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 318
+2016-12-07 23:23:44 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 323
+2016-12-07 23:23:44 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:27:50 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:27:50 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:27:50 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 318
+2016-12-07 23:27:50 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 323
+2016-12-07 23:27:50 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:31:17 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:31:17 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:31:17 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 318
+2016-12-07 23:31:17 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 323
+2016-12-07 23:31:17 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:35:42 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:35:42 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:35:42 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 318
+2016-12-07 23:35:42 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 323
+2016-12-07 23:35:42 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:37:00 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:37:00 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:37:00 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 318
+2016-12-07 23:37:00 - PHP Notice:  Undefined variable: product_to_add_options in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 323
+2016-12-07 23:37:00 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:38:11 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:38:11 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:38:11 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:39:08 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:39:08 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:39:08 - PHP Notice:  Undefined variable: filter_options_to_add in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 326
+2016-12-07 23:39:08 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:42:39 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:42:39 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:42:39 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:54:10 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:54:10 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:54:10 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:55:51 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:55:51 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:55:51 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-07 23:57:13 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:57:13 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-07 23:57:13 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-07 23:57:13 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-07 23:57:13 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-07 23:57:13 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-07 23:57:13 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-08 0:02:18 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:02:18 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:02:18 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:02:18 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:02:18 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:02:18 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:02:18 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-08 0:03:41 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:03:41 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:03:41 - PHP Notice:  Undefined variable: product_to_add_option in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 318
+2016-12-08 0:03:41 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:03:41 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:03:41 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:03:41 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:03:41 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:04:29 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:04:29 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:04:29 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:04:29 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:04:29 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:04:29 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:04:29 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:05:57 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:05:57 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:05:57 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:05:57 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:05:57 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:05:57 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:05:57 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:10:53 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:10:53 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:10:53 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:10:53 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:10:53 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:10:53 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:10:53 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:14:19 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:14:19 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:14:19 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:14:19 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:14:19 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:14:19 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:14:19 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:14:36 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:14:36 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:14:36 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:15:51 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:15:51 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:15:51 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:17:46 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:17:46 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:17:46 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:18:52 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:18:52 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:18:52 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:18:52 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:18:52 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:18:52 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:18:52 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 574
+2016-12-08 0:23:18 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:23:18 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:23:18 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-08 0:25:36 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:25:36 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:25:36 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-08 0:26:09 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:26:09 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:26:09 - PHP Notice:  Undefined index: 357~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:26:09 - PHP Notice:  Undefined index: 358~0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 129
+2016-12-08 0:26:09 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:26:09 - PHP Notice:  Undefined index: 389~1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 21
+2016-12-08 0:26:09 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-08 0:27:31 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:27:31 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:27:31 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-08 0:27:56 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:27:56 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:27:56 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-08 0:28:32 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:28:32 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:28:32 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
+2016-12-08 0:29:53 - PHP Notice:  Undefined variable: products in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:29:53 - PHP Warning:  Invalid argument supplied for foreach() in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 284
+2016-12-08 0:29:53 - PHP Notice:  Undefined variable: button_upload in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 573
