@@ -1,7 +1,7 @@
 <?php
 class ModelSaleSidOrdersProductsRemover extends Model {
 	
-	public function deleteOrder($order_id) {
+        public function deleteOrder($order_id) {
 		$order_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "order` WHERE order_status_id > '0' AND order_id = '" . (int)$order_id . "'");
 
 		if ($order_query->num_rows) {
@@ -35,17 +35,17 @@ class ModelSaleSidOrdersProductsRemover extends Model {
         public function removeProducts($order_id, $data=array()){
 
             if(!empty($data['filter_product_options'])){
-                $strWhereOption= " AND otp_id in (" . implode(',', $data['filter_product_options']) . ")";
+                $strFilterOptions= $this->getstrProductOptionsFilter($data);
+                
 
                 //Delete order_product and options
                 $this->db->query("DELETE op,oo FROM  " . DB_PREFIX . "order_product op INNER JOIN " . DB_PREFIX . "order_option oo ON
-                 op.order_product_id=oo.order_product_id AND op.order_id=oo.order_id
-                WHERE op.order_id=" . (int)$order_id . " AND op.product_id=" . (int)$data['product_to_delete']  . $strWhereOption);
+                 op.order_product_id=oo.order_product_id AND op.order_id=oo.order_id " . $strFilterOptions .                  
+                " WHERE op.order_id=" . (int)$order_id . " AND op.product_id=" . (int)$data['product_to_delete']);
 
                 $this->log->write("DELETE op,oo FROM  " . DB_PREFIX . "order_product op INNER JOIN " . DB_PREFIX . "order_option oo ON
-                 op.order_product_id=oo.order_product_id AND op.order_id=oo.order_id
-                WHERE op.order_id=" . (int)$order_id . " AND op.product_id=" . (int)$data['product_to_delete']  . $strWhereOption);
-
+                 op.order_product_id=oo.order_product_id AND op.order_id=oo.order_id " . $strFilterOptions .                  
+                " WHERE op.order_id=" . (int)$order_id . " AND op.product_id=" . (int)$data['product_to_delete']);
             }
             else{
                 //Delete order_product
@@ -61,6 +61,23 @@ class ModelSaleSidOrdersProductsRemover extends Model {
             return true;
         }
 
+        public function addProduct($order_id,$order_product){
+            //Insert into order_product
+            $sql="INSERT INTO " . DB_PREFIX . "order_product (order_id,product_id,name,model,quantity,price,total,tax,reward) ".
+                 "VALUES (" . $order_id . "," . $order_product['product_id'] . ",'" . $order_product['name'] . "','" . $order_product['model'] . "'," . $order_product['quantity'] . "," . $order_product['price'] . "," . $order_product['total'] . "," . $order_product["tax"] . "," . $order_product["reward"] . ")";
+            $this->db->query($sql);
+            $this->log->write($sql);
+            if (!empty($order_product['option'])){
+                //Insert into order_option
+                $order_product_id=$this->db->getLastId();
+                foreach($order_product['option'] as $option){
+                        $sql="INSERT INTO " . DB_PREFIX . "order_option (order_id, order_product_id, product_option_id, product_option_value_id, name, value, type) " . 
+                             "VALUES (" . $order_id . "," . $order_product_id . "," . $option['product_option_id'] . "," . ($option['product_option_value_id']==''?0:$option['product_option_value_id']) . ",'" . $option['name'] . "','" . $option['value'] . "','" . $option['type'] . "')";
+                        $this->db->query($sql);
+                        $this->log->write($sql);
+                }                
+            }
+        }
 	public function getOrders($data = array()) {
 		$sql = "SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
                         FROM (SELECT o.order_id, 
@@ -82,45 +99,7 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                 $strProductOptionsFilter="";
                 $strFilter="";
                 if(!empty($data['filter_product_options'])){
-                    $strFilterOptions="";
-                    $strFilterValues="";
-                    $strFilterOptionsValuesId="";
-                    $delimiterOp="";
-                    $delimiterVal="";
-                    $delimiterValID="";
-                    foreach($data['filter_product_options'] as $key=>$value){
-                        if(strlen($strFilterOptions)>0){
-                            $delimiterOp=",";
-                        }
-                        $aux=explode('~',$key);
-                        $strFilterOptions.=$delimiterOp . $aux[0];
-                        if ($aux[1]==0){
-                            if(strlen($strFilterValues)>0){
-                                $delimiterVal=",";
-                            }
-                            $strFilterValues.=$delimiterVal . "'" . $value . "'";
-                        } else { 
-                            if(strlen($strFilterOptionsValuesId)>0){
-                                $delimiterValID=",";
-                            }
-                            $strFilterOptionsValuesId.=$delimiterValID . $value;
-                        }
-                    }
-                    if(strlen($strFilterOptions)>0){
-                        $strFilter .= " product_option_id IN (" .$strFilterOptions . ") AND ";
-                        if (strlen($strFilterOptionsValuesId)==0){
-                            $strFilter .= "`value` IN(" . $strFilterValues . ") ";
-                        } else {
-                            $strFilter .= "(`value` IN(" . $strFilterValues . ") OR product_option_value_id IN (". $strFilterOptionsValuesId . ")) ";
-                        }                            
-                    }                       
-                    
-                    $strProductOptionsFilter="INNER JOIN (
-                                                        SELECT order_id, order_product_id,COUNT(*) FROM order_option 
-                                                        WHERE  " . $strFilter . 
-                                                        "GROUP BY order_id, order_product_id
-                                                        HAVING COUNT(*)=" . count($data['filter_product_options']) .
-                                                ") oo ON oo.order_id=op.order_id AND oo.order_product_id=op.order_product_id";
+                    $strProductOptionsFilter=$this->getstrProductOptionsFilter($data);
                 }
                 $sql=str_replace("~strProductOptionsFilter~", $strProductOptionsFilter, $sql);
                 
@@ -306,10 +285,55 @@ class ModelSaleSidOrdersProductsRemover extends Model {
         
         public function updateTotals($order_id,$totals=array()){
             foreach($totals as $total){
-                $query="UPDATE " . DB_PREFIX . "order_total set text='" . $total->text . "',value='" . $total->value . "' WHERE order_id=" . (int)$order_id . " and code='" . $total->code . "'";
+                $query="UPDATE " . DB_PREFIX . "order_total set text='" . $total['text'] . "',value='" . $total['value'] . "' WHERE order_id=" . (int)$order_id . " and code='" . $total['code'] . "'";
                 $this->db->query($query);
-                $query="UPDATE " . DB_PREFIX . "order set total=" . $total->value . " WHERE order_id=" . (int)$order_id;
+                $query="UPDATE `" . DB_PREFIX . "order` set total=" . $total['value'] . " WHERE order_id=" . (int)$order_id;
                 $this->db->query($query);
             }
         }
+        
+        public function getstrProductOptionsFilter($data){
+            $strFilter="";
+            $strFilterOptions="";
+            $strFilterValues="";
+            $strFilterOptionsValuesId="";
+            $delimiterOp="";
+            $delimiterVal="";
+            $delimiterValID="";
+            foreach($data['filter_product_options'] as $key=>$value){
+                if(strlen($strFilterOptions)>0){
+                    $delimiterOp=",";
+                }
+                $aux=explode('~',$key);
+                $strFilterOptions.=$delimiterOp . $aux[0];
+                if ($aux[1]==0){
+                    if(strlen($strFilterValues)>0){
+                        $delimiterVal=",";
+                    }
+                    $strFilterValues.=$delimiterVal . "'" . $value . "'";
+                } else { 
+                    if(strlen($strFilterOptionsValuesId)>0){
+                        $delimiterValID=",";
+                    }
+                    $strFilterOptionsValuesId.=$delimiterValID . $value;
+                }
+            }
+            if(strlen($strFilterOptions)>0){
+                $strFilter .= " product_option_id IN (" .$strFilterOptions . ") AND ";
+                if (strlen($strFilterOptionsValuesId)==0){
+                    $strFilter .= "`value` IN(" . $strFilterValues . ") ";
+                } else {
+                    $strFilter .= "(`value` IN(" . $strFilterValues . ") OR product_option_value_id IN (". $strFilterOptionsValuesId . ")) ";
+                }                            
+            }                       
+
+            $strProductOptionsFilter="INNER JOIN (
+                                                SELECT order_id, order_product_id,COUNT(*) FROM " . DB_PREFIX . "order_option 
+                                                WHERE  " . $strFilter . 
+                                                "GROUP BY order_id, order_product_id
+                                                HAVING COUNT(*)=" . count($data['filter_product_options']) .
+                                        ") v ON v.order_id=op.order_id AND v.order_product_id=op.order_product_id";            
+            return $strProductOptionsFilter;
+        }
+        
 }

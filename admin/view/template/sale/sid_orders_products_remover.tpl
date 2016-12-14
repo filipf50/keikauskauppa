@@ -144,20 +144,6 @@
                 $html .= '<br />';
         }
 
-        if ($option['type'] == 'file') {
-                $html .= '<div id="' . $fieldID . '-' . $option['product_option_id'] . '">';
-
-                if ($option['required']) {
-                        $html .= '<span class="required">*</span> ';
-                }
-
-                $html .= $option['name'] . '<br />';
-                $html .= '<a id="button-' . $fieldID . '-' . $option['product_option_id'] . '" class="button">' + $button_upload + '</a>';
-                $html .= '<input type="hidden" name="' . $fieldID . '[' . $option['product_option_id'] . ']" value="' . $option['option_value'] . '" />';
-                $html .= '</div>';
-                $html .= '<br />';
-        }
-
         if ($option['type'] == 'date') {
                 $html .= '<div id="' . $fieldID . '-' . $option['product_option_id'] . '">';
 
@@ -280,15 +266,6 @@
             <tr>
                 <td><?php echo $entry_product; ?></td>
                 <td>
-                    <!--<select id="product_to_delete" name="product_to_delete">
-                        <?php foreach ($products as $product){ 
-                            if ($product['product_id']==$product_to_delete){ ?>
-                                <option value="<?php echo $product['product_id']; ?>" selected="true" ><?php echo $product['name']; ?></option>
-                            <?php } else { ?>
-                                <option value="<?php echo $product['product_id']; ?>"><?php echo $product['name']; ?></option>
-                            <?php } ?>
-                        <?php } ?>
-                    </select>-->
                     <input type="text" name="product_to_delete" id="product_to_delete" size="50" value="<?php echo $product_to_delete; ?>">
                     <input type="hidden" name="product_to_delete_id" id ="product_to_delete_id" value="<?php echo $product_to_delete_id; ?>">
                 </td>
@@ -562,20 +539,6 @@ function getOptionsHtml(ui,fieldID){
                 html += '<br />';
         }
 
-        if (option['type'] == 'file') {
-                html += '<div id="' + fieldID + '-' + option['product_option_id'] + '">';
-
-                if (option['required']) {
-                        html += '<span class="required">*</span> ';
-                }
-
-                html += option['name'] + '<br />';
-                html += '<a id="button-' + fieldID + '-' + option['product_option_id'] + '" class="button"><?php echo $button_upload; ?></a>';
-                html += '<input type="hidden" name="' + fieldID + '[' + option['product_option_id'] + ']" value="' + option['option_value'] + '" />';
-                html += '</div>';
-                html += '<br />';
-        }
-
         if (option['type'] == 'date') {
                 html += '<div id="' + fieldID + '-' + option['product_option_id'] + '">';
 
@@ -722,6 +685,14 @@ $('input[name=\'product_to_add\']').autocomplete({
    	}
 });
 
+function removeProducts(){
+    if (confirm('<?php echo $text_removeMsg; ?>')){
+        $('#form').attr('action', '<?php echo html_entity_decode($delete); ?>'); 
+        $('#form').attr('target', '_self'); 
+        $('#form').submit();
+    }
+}
+
 $(document).ready(function() {
 	$('#filter_date-start').datepicker({dateFormat: 'yy-mm-dd'});
 	
@@ -779,13 +750,6 @@ $('select[name=\'product_to_delete\']').bind('change', function() {
 
 $('select[name=\'country_id\']').trigger('change');
 
-function removeProducts(){
-    if (confirm('<?php echo $text_removeMsg; ?>')){
-        $('#form').attr('action', '<?php echo html_entity_decode($delete); ?>'); 
-        $('#form').attr('target', '_self'); 
-        $('#form').submit();
-    }
-}
 //</script> 
 -->
 <?php echo $footer; ?>

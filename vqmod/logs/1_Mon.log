@@ -1,7 +1,7 @@
----------- Date: 2016-05-30 16:29:39 ~ IP : 84.120.29.169 ----------
-REQUEST URI : /
+---------- Date: 2016-12-12 23:01:01 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=tool/error_log/clear&amp;token=fe0a4747c043cc90165141c409a18d7b
 MOD DETAILS:
-   modFile   : /home/keika509/public_html/vqmod/xml/opencart_emailtemplate.xml
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
    id        : Opencart fixes/missing features - extension independent
    version   : 4.5.1.6
    vqmver    : 2.4.0
@@ -12,10 +12,38 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->d
 ----------------------------------------------------------------------
 
 
----------- Date: 2016-05-30 16:43:39 ~ IP : 84.231.23.71 ----------
-REQUEST URI : /index.php?route=account/login&amp;utm_campaign=Keikauskauppa.fi&amp;utm_medium=email&amp;utm_source=account%2Fforgotten+Keikauskauppa.fi&amp;utm_content=customer_login
+---------- Date: 2016-12-12 23:08:00 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=tool/error_log/clear&amp;token=fe0a4747c043cc90165141c409a18d7b
 MOD DETAILS:
-   modFile   : /home/keika509/public_html/vqmod/xml/opencart_emailtemplate.xml
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : system/library/language.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-12 23:13:29 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=tool/error_log&amp;token=fe0a4747c043cc90165141c409a18d7b
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : system/library/language.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-12 23:22:48 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/index.php?route=checkout/manual&amp;token=fe0a4747c043cc90165141c409a18d7b&amp;customer_group_id=1&amp;order_language_id=2
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
    id        : Opencart fixes/missing features - extension independent
    version   : 4.5.1.6
    vqmver    : 2.4.0
@@ -23,6 +51,34 @@ MOD DETAILS:
 
 File Name    : catalog/model/account/customer.php(0)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id =
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-12 23:32:19 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=tool/error_log/clear&amp;token=fe0a4747c043cc90165141c409a18d7b
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : system/library/language.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-12 23:36:54 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=tool/error_log/clear&amp;token=fe0a4747c043cc90165141c409a18d7b
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : system/library/language.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
 ----------------------------------------------------------------------
 
 

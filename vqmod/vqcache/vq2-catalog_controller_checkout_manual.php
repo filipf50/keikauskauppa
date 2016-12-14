@@ -97,10 +97,7 @@ class ControllerCheckoutManual extends Controller {
 						}
 						array_multisort($sort_order, SORT_ASC, $results);
 						foreach ($results as $result) {
-							
-                    if ($this->config->get($result['code'] . '_status')|| isset($this->request->post['fromMassiveRemover'])) {
-                                
-            
+							if ($this->config->get($result['code'] . '_status')) {
 								$this->load->model('total/' . $result['code']);
 								$this->{'model_total_' . $result['code']}->getTotal($order_total, $total, $taxes);
 							}
@@ -187,6 +184,12 @@ class ControllerCheckoutManual extends Controller {
 	
 			// Product
 			$this->load->model('catalog/product');
+
+                    $this->log->write($this->config->get('config_language_id'));                    
+                    $this->config->set('config_language_id',$this->request->post['language_id']);
+                    $this->log->write($this->config->get('config_language_id'));                    
+                                
+            
 			
 			if (isset($this->request->post['order_product'])) {
 				foreach ($this->request->post['order_product'] as $order_product) {
@@ -483,10 +486,7 @@ class ControllerCheckoutManual extends Controller {
 					$results = $this->model_setting_extension->getExtensions('shipping');
 					
 					foreach ($results as $result) {
-						
-                    if ($this->config->get($result['code'] . '_status')|| isset($this->request->post['fromMassiveRemover'])) {
-                                
-            
+						if ($this->config->get($result['code'] . '_status')) {
 							$this->load->model('shipping/' . $result['code']);
 							
 							$quote = $this->{'model_shipping_' . $result['code']}->getQuote($address_data); 
@@ -593,10 +593,7 @@ class ControllerCheckoutManual extends Controller {
 			array_multisort($sort_order, SORT_ASC, $results);
 			
 			foreach ($results as $result) {
-				
-                    if ($this->config->get($result['code'] . '_status')|| isset($this->request->post['fromMassiveRemover'])) {
-                                
-            
+				if ($this->config->get($result['code'] . '_status')) {
 					$this->load->model('total/' . $result['code']);
 		
 					$this->{'model_total_' . $result['code']}->getTotal($json['order_total'], $total, $taxes);
@@ -679,17 +676,27 @@ class ControllerCheckoutManual extends Controller {
 		
 				foreach ($results as $result) {
 					
-                    if ($this->config->get($result['code'] . '_status')|| isset($this->request->post['fromMassiveRemover'])) {
+                    if ($this->config->get($result['code'] . '_status')|| isset($this->request->post['fromMassiveRemover'])){ 
+                        if ($result['code']!='layaway'){
+                            $this->load->model('payment/' . $result['code']);
+
+                            $method = $this->{'model_payment_' . $result['code']}->getMethod($address_data, $total); 
+
+                            if ($method) {
+                                    $json['payment_method'][$result['code']] = $method;
+                            }
+                        }
+                    }
                                 
             
-						$this->load->model('payment/' . $result['code']);
-						
-						$method = $this->{'model_payment_' . $result['code']}->getMethod($address_data, $total); 
-						
-						if ($method) {
-							$json['payment_method'][$result['code']] = $method;
-						}
-					}
+
+
+
+
+
+
+
+
 				}
 							 
 				$sort_order = array(); 

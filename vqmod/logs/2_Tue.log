@@ -1,5 +1,5 @@
----------- Date: 2016-11-22 21:37:21 ~ IP : ::1 ----------
-REQUEST URI : /keikauskauppa/
+---------- Date: 2016-12-13 00:30:38 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=tool/error_log/clear&amp;token=fe0a4747c043cc90165141c409a18d7b
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
    id        : Opencart fixes/missing features - extension independent
@@ -9,6 +9,20 @@ MOD DETAILS:
 
 File Name    : system/library/language.php(0)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-13 00:32:57 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/index.php?route=checkout/manual&amp;token=fe0a4747c043cc90165141c409a18d7b&amp;customer_group_id=1&amp;order_language_id=2
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : catalog/model/account/customer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id =
 ----------------------------------------------------------------------
 
 

@@ -285,15 +285,30 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
 
                     if (isset($this->request->post['product_to_delete'])) {
                             $product_to_delete= $this->request->post['product_to_delete'];
-
+                            $product_to_delete_id=$this->request->post['product_to_delete_id'];
                     } else {
-                            $product_to_delete = 0;
+                            $product_to_delete = "";
+                            $product_to_delete_id="";
                     }
 
-                    if (isset($this->request->post['filter_product_options'])) {
-                            $filter_product_options = $this->request->post['filter_product_options'];
+                    if (isset($this->request->post['filter_options_to_delete'])) {
+                            $filter_options_to_delete = $this->request->post['filter_options_to_delete'];
                     } else {
-                            $filter_product_options = array();
+                            $filter_options_to_delete = array();
+                    }
+
+                    if (isset($this->request->post['product_to_add'])) {
+                            $product_to_add= $this->request->post['product_to_add'];
+                            $product_to_add_id=$this->request->post['product_to_add_id'];
+                    } else {
+                            $product_to_add = "";
+                            $product_to_add_id="";
+                    }
+
+                    if (isset($this->request->post['filter_options_to_add'])) {
+                            $filter_options_to_add = $this->request->post['filter_options_to_add'];
+                    } else {
+                            $filter_options_to_add = array();
                     }
 
                     //Cargamos las variables en el array de datos
@@ -302,8 +317,10 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                             'filter_date_end'	     => $filter_date_end, 
                             'filter_order_statuses_ids'  => $filter_order_statuses_ids,
                             'filter_order_stores_ids'    => $filter_order_stores_ids,
-                            'product_to_delete'         => $product_to_delete,
-                            'filter_product_options'    => $filter_product_options
+                            'product_to_delete'         => $product_to_delete_id,
+                            'filter_product_options'    => array_filter($filter_options_to_delete),
+                            'product_to_add'            => $product_to_add_id,
+                            'filter_product_options_to_add' => array_filter($filter_options_to_add)
                     );
                     
                     //Obtenemos los pedidos afectados
@@ -312,7 +329,7 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                     //Recorremos el array de resultados
                     foreach($orders as $order){
                         $this->load->model('sale/order');
-                        if((int)$order['pendingProducts']==0){
+                        if((int)$order['pendingProducts']==0 && $product_to_add_id=""){
                             //Si el pedido se queda sin artículos, lo marcamos como cancelado por falta de stock
                             //y lo notificamos al cliente
                             $status_data=array('order_status_id'=>17,
@@ -328,7 +345,7 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                                 $descriptions=$this->model_catalog_product->getProductDescriptions($product_to_delete);
                                 $product_info=' - ' .$product_to_delete . ':' . $descriptions[$this->config->get('config_language_id')]["name"];
 
-                                if(!empty($filter_product_options)){
+                                /*if(!empty($filter_product_options)){
                                     $product_otps=$this->model_sale_sid_orders_products_remover->getOtpProductOptions($product_to_delete);
                                     $product_info.=":";
                                     foreach($product_otps as $option){
@@ -336,7 +353,7 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                                             $product_info.= "\n&nbsp;&nbsp;- " . $option['otp_id'] . ':' . $option['description'];
                                         }
                                     }
-                                }
+                                }*/
 
                                 $comment=$this->language->get('text_removed_products_comment') . "\n" . $product_info;
                                 $history_data=array('order_status_id'=>$order['status_id'],
@@ -345,11 +362,21 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                                 $this->model_sale_order->addOrderHistory($order['order_id'],$history_data);
                                 
                                 //Recalculo el pedido
-                                $json=$this->recalculateOrder($order['order_id']);
+                                $json=$this->recalculateOrder($order['order_id'],$product_to_add_id, $filter_options_to_add);
                                 //Actualizo los totales
-                                $response=json_decode($json);
+                                $response=json_decode($json,true);
                                 if (isset($response)){
-                                    $this->model_sale_sid_orders_products_remover->updateTotals($order['order_id'],$response->order_total);
+                                    $this->log->write('Response OK');
+                                    if ($product_to_add_id!=""){
+                                        //Si hemos indicado un artículo para añadir, procedemos a añadirlo
+                                        $products=$response['order_product'];
+                                        foreach($products as $order_product){
+                                                if ($order_product['product_id']==$product_to_add_id){
+                                                $this->model_sale_sid_orders_products_remover->addProduct($order['order_id'],$order_product);
+                                            }
+                                        }
+                                    }
+                                $this->model_sale_sid_orders_products_remover->updateTotals($order['order_id'],$response['order_total']);
                                 }
                                 
                             } else {
@@ -456,7 +483,7 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
 		$this->response->setOutput(json_encode($json));
 	}
         
-        private function recalculateOrder($order_id){
+        private function recalculateOrder($order_id,$product_to_add_id="",$product_to_add_options=array()){
             //Cargo los datos del pedido
             $this->load->model('sale/order');
             $order_data=$this->model_sale_order->getOrder($order_id);
@@ -477,7 +504,6 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
 
                     $order_product[] = array(
                             'order_product_id' => $product['order_product_id'],
-                            'otp_id'           => $product['otp_id'],
                             'product_id'       => $product['product_id'],
                             'name'             => $product['name'],
                             'model'            => $product['model'],
@@ -509,11 +535,19 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                 );
             }
             
+            //Asignamos las opciones del articulos que estamos añadiendo si corresponde
+            $option=array();
+            if (!empty($product_to_add_options)){
+                foreach($product_to_add_options as $key=>$value){
+                    $aux=explode('~',$key);
+                    $option[$aux[0]]=$value;
+                }
+            }
+            
             //Lo asigno a un array
             $data=array(
                 'token' => $this->session->data['token'],
                 'store_id' => $order_data['store_id'],
-                'season_id' => $order_data['season_id'],
                 'customer_id' => $order_data['customer_id'],
                 'customer_group_id' => $order_data['customer_group_id'],
                 'payment_firstname'       => $order_data['payment_firstname'],
@@ -546,8 +580,11 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                 'shipping_address_format' => $order_data['shipping_address_format'],
                 'shipping_method'         => $order_data['shipping_method'],
                 'shipping_code'           => $order_data['shipping_code'],
+                'language_id'             => $order_data['language_id'],
                 'order_product' => $order_product,
                 'order_voucher' => $order_voucher,
+                'product_id' => $product_to_add_id,
+                'option' => $option,
                 'fromMassiveRemover' => 1
             );
             

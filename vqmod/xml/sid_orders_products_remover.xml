@@ -91,12 +91,32 @@
             </add>
         </operation>
         <operation>
-            <search position="replace"><![CDATA[if ($this->config->get($result['code'] . '_status')) {]]></search>
+            <search position="replace" offset="8" index="4"><![CDATA[if ($this->config->get($result['code'] . '_status')) {]]></search>
             <add><![CDATA[
-                    if ($this->config->get($result['code'] . '_status')|| isset($this->request->post['fromMassiveRemover'])) {
+                    if ($this->config->get($result['code'] . '_status')|| isset($this->request->post['fromMassiveRemover'])){ 
+                        if ($result['code']!='layaway'){
+                            $this->load->model('payment/' . $result['code']);
+
+                            $method = $this->{'model_payment_' . $result['code']}->getMethod($address_data, $total); 
+
+                            if ($method) {
+                                    $json['payment_method'][$result['code']] = $method;
+                            }
+                        }
+                    }
                 ]]>                
             </add>
         </operation>
+        <operation>
+            <search position="after" index="2"><![CDATA[$this->load->model('catalog/product');]]></search>
+            <add><![CDATA[
+                    $this->log->write($this->config->get('config_language_id'));                    
+                    $this->config->set('config_language_id')=$this->request->post['language_id'];
+                    $this->log->write($this->config->get('config_language_id'));                    
+                ]]>                
+            </add>
+        </operation>
+        
     </file>
     
     <!-- SYSTEM -->
