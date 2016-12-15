@@ -185,9 +185,7 @@ class ControllerCheckoutManual extends Controller {
 			// Product
 			$this->load->model('catalog/product');
 
-                    $this->log->write($this->config->get('config_language_id'));                    
-                    $this->config->set('config_language_id',$this->request->post['language_id']);
-                    $this->log->write($this->config->get('config_language_id'));                    
+                    $this->config->set('config_language_id')=$this->request->post['language_id'];
                                 
             
 			

@@ -1,8 +1,6 @@
 <?php function getOptionsHTML($arrOptions,$arrValues, $fieldID){
     $html='';
-    for ($i = 0; $i < count($arrOptions); $i++) {
-        $option = $arrOptions[$i];
-
+    foreach ($arrOptions as $option){
         if ($option['type'] == 'select') {
                 $html .= '<div id="' . $fieldID . '-' . $option['product_option_id'] . '~1">';
 

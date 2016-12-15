@@ -1,31 +1,12 @@
-2016-12-14 0:59:30 - DELETE op,oo FROM  order_product op INNER JOIN order_option oo ON
-                 op.order_product_id=oo.order_product_id AND op.order_id=oo.order_id INNER JOIN (
-                                                SELECT order_id, order_product_id,COUNT(*) FROM order_option 
-                                                WHERE   product_option_id IN (385,347) AND (`value` IN('2008') OR product_option_value_id IN (88)) GROUP BY order_id, order_product_id
-                                                HAVING COUNT(*)=2) v ON v.order_id=op.order_id AND v.order_product_id=op.order_product_id WHERE op.order_id=3038 AND op.product_id=99
-2016-12-14 0:59:30 - PHP Notice:  Undefined index: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 346
-2016-12-14 0:59:34 - 2
-2016-12-14 0:59:36 - Response OK
-2016-12-14 0:59:36 - INSERT INTO order_product (order_id,product_id,name,model,quantity,price,total,tax,reward) VALUES (3038,104,'Tuesday 6 - 10 years 17.45-18.30','Juva 6-10',1,190.9091,190.9091,19.09091,0)
-2016-12-14 0:59:36 - INSERT INTO order_option (order_id, order_product_id, product_option_id, product_option_value_id, name, value, type) VALUES (3038,3471,357,0,'Child','Ronja Mykkänen','text')
-2016-12-14 0:59:36 - INSERT INTO order_option (order_id, order_product_id, product_option_id, product_option_value_id, name, value, type) VALUES (3038,3471,358,0,'Born','2008','text')
-2016-12-14 0:59:36 - INSERT INTO order_option (order_id, order_product_id, product_option_id, product_option_value_id, name, value, type) VALUES (3038,3471,389,97,'Choose payment option','reservation 30 €','select')
-2016-12-14 1:05:52 - DELETE op,oo FROM  order_product op INNER JOIN order_option oo ON
+2016-12-15 0:59:44 - PHP Notice:  Undefined offset: 0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 4
+2016-12-15 0:59:44 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 4
+2016-12-15 0:59:44 - PHP Notice:  Undefined offset: 2 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 4
+2016-12-15 0:59:44 - PHP Notice:  Undefined offset: 0 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 4
+2016-12-15 0:59:44 - PHP Notice:  Undefined offset: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 4
+2016-12-15 0:59:44 - PHP Notice:  Undefined offset: 2 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\view\template\sale\sid_orders_products_remover.tpl on line 4
+2016-12-15 1:14:08 - DELETE op,oo FROM  order_product op INNER JOIN order_option oo ON
                  op.order_product_id=oo.order_product_id AND op.order_id=oo.order_id INNER JOIN (
                                                 SELECT order_id, order_product_id,COUNT(*) FROM order_option 
                                                 WHERE   product_option_id IN (357,358,389) AND (`value` IN('Ronja Mykkänen','2008') OR product_option_value_id IN (97)) GROUP BY order_id, order_product_id
                                                 HAVING COUNT(*)=3) v ON v.order_id=op.order_id AND v.order_product_id=op.order_product_id WHERE op.order_id=3038 AND op.product_id=104
-2016-12-14 1:05:52 - PHP Notice:  Undefined index: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 346
-2016-12-14 1:12:29 - DELETE op,oo FROM  order_product op INNER JOIN order_option oo ON
-                 op.order_product_id=oo.order_product_id AND op.order_id=oo.order_id INNER JOIN (
-                                                SELECT order_id, order_product_id,COUNT(*) FROM order_option 
-                                                WHERE   product_option_id IN (385,347) AND (`value` IN('2008') OR product_option_value_id IN (88)) GROUP BY order_id, order_product_id
-                                                HAVING COUNT(*)=2) v ON v.order_id=op.order_id AND v.order_product_id=op.order_product_id WHERE op.order_id=3038 AND op.product_id=99
-2016-12-14 1:12:29 - PHP Notice:  Undefined index: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 346
-2016-12-14 1:12:34 - 1
-2016-12-14 1:12:34 - 2
-2016-12-14 1:12:36 - Response OK
-2016-12-14 1:12:36 - INSERT INTO order_product (order_id,product_id,name,model,quantity,price,total,tax,reward) VALUES (3038,104,'Tiistai 6 - 10 -vuotiaat kello 17.45 - 18.30','Juva 6-10',1,190.9091,190.9091,19.09091,0)
-2016-12-14 1:12:36 - INSERT INTO order_option (order_id, order_product_id, product_option_id, product_option_value_id, name, value, type) VALUES (3038,3471,357,0,'Oppilas','Ronja Mykkänen','text')
-2016-12-14 1:12:36 - INSERT INTO order_option (order_id, order_product_id, product_option_id, product_option_value_id, name, value, type) VALUES (3038,3471,358,0,'Syntymävuosi','2008','text')
-2016-12-14 1:12:36 - INSERT INTO order_option (order_id, order_product_id, product_option_id, product_option_value_id, name, value, type) VALUES (3038,3471,389,97,'Valitse maksuvaihtoehto: joko koko kurssimaksu TAI varausmaksu','varausmaksu 30 €','select')
+2016-12-15 1:14:08 - PHP Notice:  Undefined index: 1 in E:\Backup\WEBS\wampserver\www\keikauskauppa\admin\controller\sale\sid_orders_products_remover.php on line 347

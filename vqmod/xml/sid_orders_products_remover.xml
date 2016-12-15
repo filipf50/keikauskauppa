@@ -110,9 +110,7 @@
         <operation>
             <search position="after" index="2"><![CDATA[$this->load->model('catalog/product');]]></search>
             <add><![CDATA[
-                    $this->log->write($this->config->get('config_language_id'));                    
                     $this->config->set('config_language_id')=$this->request->post['language_id'];
-                    $this->log->write($this->config->get('config_language_id'));                    
                 ]]>                
             </add>
         </operation>

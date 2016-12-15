@@ -11,6 +11,7 @@ $_['text_canceled_order_comment'] = 'Dear Customer,</br> Your order has been del
 $_['text_removed_products_comment'] ='Next product has been removed:';
 $_['text_added_products_comment'] ='Next product has been added:';
 
+
 // Column
 $_['column_order']              = 'Order';
 $_['column_date']               = 'Date';

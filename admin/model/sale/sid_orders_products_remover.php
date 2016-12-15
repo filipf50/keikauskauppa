@@ -79,10 +79,11 @@ class ModelSaleSidOrdersProductsRemover extends Model {
             }
         }
 	public function getOrders($data = array()) {
-		$sql = "SELECT v.order_id, v.customer,v.status_id, v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+		$sql = "SELECT v.order_id, v.customer,v.language_id, v.status_id,  v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
                         FROM (SELECT o.order_id, 
                                         CONCAT(o.firstname, ' ', o.lastname) AS customer, 
                                         o.order_status_id as status_id,
+                                        o.language_id,
                                         (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '1') AS status, 
                                         o.date_added, 
                                         o.date_modified, 
@@ -259,7 +260,7 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                                             }
                                     }
 
-                                    $option_data[] = array(
+                                    $option_data[$product_option['product_option_id']] = array(
                                             'product_option_id' => $product_option['product_option_id'],
                                             'option_id'         => $product_option['option_id'],
                                             'name'              => $option_info['name'],
@@ -268,7 +269,7 @@ class ModelSaleSidOrdersProductsRemover extends Model {
                                             'required'          => $product_option['required']
                                     );	
                             } else {
-                                    $option_data[] = array(
+                                    $option_data[$product_option['product_option_id']] = array(
                                             'product_option_id' => $product_option['product_option_id'],
                                             'option_id'         => $product_option['option_id'],
                                             'name'              => $option_info['name'],
