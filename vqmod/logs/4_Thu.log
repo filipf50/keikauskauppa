@@ -12,3 +12,31 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->d
 ----------------------------------------------------------------------
 
 
+---------- Date: 2016-12-15 23:17:31 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_remover&amp;token=6a199e68e10425443d790b290722e4fc
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : system/library/language.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-15 23:19:56 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/index.php?route=checkout/manual&amp;token=6a199e68e10425443d790b290722e4fc&amp;customer_group_id=1&amp;order_language_id=2
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : catalog/model/account/customer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id =
+----------------------------------------------------------------------
+
+

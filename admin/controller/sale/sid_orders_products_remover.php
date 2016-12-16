@@ -343,16 +343,16 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                                 $this->session->data['success'] = $this->language->get('text_success');
                                 //Cargo los datos del producto borrado para grabar la acción en el historial
                                 $this->load->model('catalog/product');
-                                $descriptions=$this->model_catalog_product->getProductDescriptions($product_to_delete);
-                                $product_info=$this->language->get('text_removed_products_comment') . "\n  - " .$product_to_delete . ':' . $descriptions[$this->config->get('config_language_id')]["name"];
-
-                                if(!empty($filter_product_options)){
-                                    $product_ops=$this->model_sale_sid_orders_products_remover->getProductOptions($product_to_delete);
+                                $descriptions=$this->model_catalog_product->getProductDescriptions($product_to_delete_id);
+                                $product_info=$this->language->get('text_removed_products_comment') . "<br/>  - " .$product_to_delete_id . ":" . $descriptions[$this->config->get('config_language_id')]["name"];
+                                if(!empty($filter_options_to_delete)){
+                                    $product_ops=$this->model_sale_sid_orders_products_remover->getProductOptions($product_to_delete_id);
                                     $product_info.=":";
                                     foreach($filter_options_to_delete as $key=>$value){
                                         $aux=explode("~",$key);
-                                        $product_info.= "\n&nbsp;&nbsp;- " . $product_ops[$aux[0]]['name'] . ':' . $product_ops[$aux[0]]['value'];
+                                        $product_info.= "<br/>&nbsp;&nbsp;- " . $product_ops[$aux[0]]['name'] . ":" . $value;
                                     }
+                                    $this->log->write($product_info);
                                     /*foreach($product_ops as $option){
                                         if (in_array($option['otp_id'], $filter_product_options)){
                                             $product_info.= "\n&nbsp;&nbsp;- " . $option['otp_id'] . ':' . $option['description'];
@@ -362,24 +362,22 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
 
                                 //Recalculo el pedido
                                 $json=$this->recalculateOrder($order['order_id'],$product_to_add_id, $filter_options_to_add);
-                                
+                                $this->log->write($json);
                                 //Añado el nuevo producto en caso de existir
                                 $response=json_decode($json,true);
                                 if (isset($response)){
+                                    $this->log->write("Response OK");
                                     if ($product_to_add_id!=""){
                                         //Si hemos indicado un artículo para añadir, procedemos a añadirlo
                                         $products=$response['order_product'];
-                                        foreach($products as $order_product){
-                                            if ($order_product['product_id']==$product_to_add_id){
-                                                $this->model_sale_sid_orders_products_remover->addProduct($order['order_id'],$order_product);
-                                                //Añado la información para añadirla al historial del pedido
-                                                $product_info.= "\n" . $this->language->get('text_added_products_comment') . "\n  - " .$order_product['product_id'] . ':' . $order_product["name"];
-                                                
-                                                if (!empty($order_product['option'])){
-                                                    foreach($order_product['option'] as $option){
-                                                        $product_info.= "\n&nbsp;&nbsp;- " . $option['name'] . ':' . $option['value'];
-                                                    }
-                                                }
+                                        $order_product=end($products);
+                                        $this->model_sale_sid_orders_products_remover->addProduct($order['order_id'],$order_product);
+                                        //Añado la información para añadirla al historial del pedido
+                                        $product_info.= "<br/>" . $this->language->get('text_added_products_comment') . "<br/>  - " .$order_product['product_id'] . ":" . $order_product['name'];
+
+                                        if (!empty($order_product['option'])){
+                                            foreach($order_product['option'] as $option){
+                                                $product_info.= "<br/>&nbsp;&nbsp;- " . $option['name'] . ":" . $option['value'];
                                             }
                                         }
                                     }
@@ -388,7 +386,7 @@ class ControllerSaleSidOrdersProductsRemover extends Controller {
                                     
                                     $comment= $product_info;
                                     $history_data=array('order_status_id'=>$order['status_id'],
-                                                        'notify'=>0,
+                                                        'notify'=>1,
                                                         'comment' =>$comment);
                                     $this->model_sale_order->addOrderHistory($order['order_id'],$history_data);
                                 }

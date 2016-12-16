@@ -238,10 +238,8 @@ class ModelSaleSidOrdersProductsRemover extends Model {
             $option_data = array();
 				
             $product_options = $this->model_catalog_product->getProductOptions($product_id);	
-
             foreach ($product_options as $product_option) {
                     $option_info = $this->model_catalog_option->getOption($product_option['option_id']);
-
                     if ($option_info) {				
                             if ($option_info['type'] == 'select' || $option_info['type'] == 'radio' || $option_info['type'] == 'checkbox' || $option_info['type'] == 'image') {
                                     $option_value_data = array();
