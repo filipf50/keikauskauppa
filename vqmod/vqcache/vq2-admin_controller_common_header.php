@@ -206,7 +206,7 @@ class ControllerCommonHeader extends Controller {
 		$this->data['text_paypal_express_search'] = $this->language->get('text_paypal_search');
 		$this->data['text_recurring_profile'] = $this->language->get('text_recurring_profile');
 
-                    $this->data['text_order_products_remover'] = $this->language->get('text_order_products_remover');
+                    $this->data['text_order_products_updater'] = $this->language->get('text_order_products_updater');
                                 
             
 
@@ -267,7 +267,7 @@ class ControllerCommonHeader extends Controller {
 			$this->data['option'] = $this->url->link('catalog/option', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['order'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'], 'SSL');
 
-                    $this->data['order_products_remover'] = $this->url->link('sale/sid_orders_products_remover', 'token=' . $this->session->data['token'], 'SSL');
+                    $this->data['order_products_updater'] = $this->url->link('sale/sid_orders_products_updater', 'token=' . $this->session->data['token'], 'SSL');
                                 
             
 			$this->data['order_status'] = $this->url->link('localisation/order_status', 'token=' . $this->session->data['token'], 'SSL');

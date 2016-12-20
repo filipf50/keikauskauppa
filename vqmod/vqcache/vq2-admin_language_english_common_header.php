@@ -114,7 +114,7 @@ $_['text_paypal_manage']               = 'PayPal';
 $_['text_paypal_search']               = 'Search';
 $_['text_recurring_profile']           = 'Recurring Profiles';
 
-                    $_['text_order_products_remover']    = 'Remove products from orders';
+                    $_['text_order_products_updater']    = 'Update products from orders';
                                 
             
 

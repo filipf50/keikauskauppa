@@ -171,12 +171,12 @@ $(document).ready(function(){
         <ul>
           
                 <?php 
-                $config=(array)$this->config->get('sid_orders_products_remover');
+                $config=(array)$this->config->get('sid_orders_products_updater');
                     if (isset($config['status']) && $config['status']!=0) { ?>
                     <li><a class="parent"><?php echo $text_order; ?></a>
                         <ul>
                             <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-                            <li><a href="<?php echo $order_products_remover; ?>"><?php echo $text_order_products_remover; ?></a></li>
+                            <li><a href="<?php echo $order_products_updater; ?>"><?php echo $text_order_products_updater; ?></a></li>
                         </ul>
                       </li>
                     <?php } else { ?>
