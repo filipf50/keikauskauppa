@@ -10,8 +10,13 @@ $_['text_success']			= 'Success: You have modified module Orders products massiv
 $_['entry_ext_version']			= 'Version:';
 $_['entry_author']			= 'Author:';
 $_['entry_status']                      = 'Status';
-$_['entry_canceled_order_status'] = 'Canceled Order Status';
-$_['entry_help_canceled_order_status'] = "Order's status when all order's products have been removed.";
+$_['entry_pending_refound_order_status'] = 'Pending Refound Order Status';
+$_['entry_help_pending_refound_order_status'] = "Order's status when previous products were cheaper than new.";
+$_['entry_pending_payment_order_status'] = 'Pending Payment Order Status';
+$_['entry_help_pending_payment_order_status'] = "Order's status when previous products were expensive than new.";
+$_['entry_payment_method'] = 'Peyment method';
+$_['entry_help_payment_method'] = "Payment method used when new order status is Pending Payment";
+
 
 $_['ext_author'] = '<a target="_blank"  href="http://www.sid-alicante.es">http://www.sid-alicante.es</a>';
 

@@ -1,98 +1,15 @@
----------- Date: 2016-12-14 00:35:56 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_remover&amp;token=fe0a4747c043cc90165141c409a18d7b
+---------- Date: 2016-12-21 00:50:38 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=e53f154f990ec93fecbd15e47ad74092
 MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
+   id        : Payment System
+   version   : 20140121
+   vqmver    : 2.4.1
+   author    : Digital Web Depot
 
-File Name    : system/library/language.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
-----------------------------------------------------------------------
+File Name    : admin/language/*/mail/order.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
 
-
----------- Date: 2016-12-14 00:44:55 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=catalog/product/autocomplete&amp;token=fe0a4747c043cc90165141c409a18d7b&amp;filter_name=wed
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : system/library/language.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-14 00:49:04 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=catalog/product/autocomplete&amp;token=fe0a4747c043cc90165141c409a18d7b&amp;filter_name=we
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : system/library/language.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-14 00:50:27 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/index.php?route=checkout/manual&amp;token=fe0a4747c043cc90165141c409a18d7b&amp;customer_group_id=1&amp;order_language_id=2
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : catalog/model/account/customer.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id =
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-14 01:03:08 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=catalog/product/autocomplete&amp;token=fe0a4747c043cc90165141c409a18d7b&amp;filter_name=tuesday
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : system/library/language.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-14 01:12:36 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/index.php?route=checkout/manual&amp;token=fe0a4747c043cc90165141c409a18d7b&amp;customer_group_id=1&amp;order_language_id=2
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : catalog/model/account/customer.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id =
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-14 22:43:04 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_remover&amp;token=fe0a4747c043cc90165141c409a18d7b
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : system/library/language.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
 ----------------------------------------------------------------------
 
 

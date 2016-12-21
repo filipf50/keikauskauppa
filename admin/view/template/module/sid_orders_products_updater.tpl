@@ -46,13 +46,29 @@
                                                 </td>
 					</tr>
                     <tr>
-                        <td class="left"><?php echo $entry_canceled_order_status; ?><br/>
-                        <span class="help"><?php echo $entry_help_canceled_order_status; ?></span>
+                        <td class="left"><?php echo $entry_pending_refound_order_status; ?><br/>
+                        <span class="help"><?php echo $entry_help_pending_refound_order_status; ?></span>
                         </td>
                         <td class="left">
-                            <select name="sid_orders_products_updater[canceled_order_status]">
+                            <select name="sid_orders_products_updater[pending_refound_order_status]">
                                 <?php foreach ($order_statuses as $order_status) { ?>
-                                <?php if ($order_status['order_status_id'] == $settings['canceled_order_status']) { ?>
+                                <?php if ($order_status['order_status_id'] == $settings['pending_refound_order_status']) { ?>
+                                    <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
+                                <?php } else { ?>
+                                    <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>
+                                <?php } ?>
+                                <?php } ?>
+                              </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left"><?php echo $entry_pending_payment_order_status; ?><br/>
+                        <span class="help"><?php echo $entry_help_pending_payment_order_status; ?></span>
+                        </td>
+                        <td class="left">
+                            <select name="sid_orders_products_updater[pending_payment_order_status]">
+                                <?php foreach ($order_statuses as $order_status) { ?>
+                                <?php if ($order_status['order_status_id'] == $settings['pending_payment_order_status']) { ?>
                                     <option value="<?php echo $order_status['order_status_id']; ?>" selected="selected"><?php echo $order_status['name']; ?></option>
                                 <?php } else { ?>
                                     <option value="<?php echo $order_status['order_status_id']; ?>"><?php echo $order_status['name']; ?></option>

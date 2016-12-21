@@ -384,9 +384,41 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                                             }
                                         }
                                         //Actualizo los totales
-                                        $this->model_sale_sid_orders_products_updater->updateTotals($order['order_id'],$response['order_total']);
+                                        $this->model_sale_sid_orders_products_updater->updateTotals($order['order_id'],$response['order_total'],$newTotal);
+                                        $comment="";
+                                        if ($order['order_total']!= $newTotal){
+                                            //Obtengo la configuración del módulo
+                                            $settings= (array) $this->config->get('sid_orders_products_updater');
+                                            
+                                            //Cargamos la información del lenguage del pedido
+                                            $this->load->model('localisation/language');
+			
+                                            $language_info = $this->model_localisation_language->getLanguage($order['language_id']);
 
-                                        $comment= $product_info;
+                                            if ($language_info) {
+                                                $language_directory=$language_info['language_directory'];
+                                            }else{
+                                                $language_directory='english';
+                                            }
+                                            
+                                            $language = new Language($order_info['language_directory']);
+                                            $language->load($order_info['language_filename']);
+                                            $language->load('sale/sid_orders_product_updater');
+                                            
+                                            if ($order['order_total']<$newTotal){
+                                                $order['status_id']=$settings['pending_payment_order_status'];
+                                                
+                                                $comment=  str_replace("{difference}", $newTotal-$order['order_total'], $language->get('text_pending_payment_comment'));
+                                            } else {
+                                                $order['status_id']=$settings['pending_refound_order_status'];
+                                                
+                                                $comment=str_replace("{difference}", $order['order_total']-$newTotal,$language->get('text_pending_refound_comment'));
+                                            }
+                                        }
+                                        
+                                        
+                                        
+                                        $comment.= $product_info;
                                         $history_data=array('order_status_id'=>$order['status_id'],
                                                             'notify'=>1,
                                                             'comment' =>$comment);
