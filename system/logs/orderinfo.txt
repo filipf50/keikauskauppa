@@ -1,28 +1,28 @@
 Array
 (
-    [order_id] => 3008
+    [order_id] => 3039
     [invoice_no] => 0
     [invoice_prefix] => INV-2013-00
     [store_id] => 0
     [store_name] => Keikauskauppa.fi
     [store_url] => http://www.keikauskauppa.fi/
-    [customer_id] => 936
-    [customer_group_id] => 1
+    [customer_id] => 37
+    [customer_group_id] => 28
     [affiliate_id] => 0
-    [firstname] => Erja
-    [lastname] => Vehmas
-    [telephone] => 0400242774
+    [firstname] => Osku
+    [lastname] => Kaijalainen
+    [telephone] => 0405166220
     [fax] => 
-    [email] => erja.vehmas@gmail.com
-    [payment_firstname] => Erja
-    [payment_lastname] => Vehmas
+    [email] => soporte@sid-alicante.es
+    [payment_firstname] => Osku
+    [payment_lastname] => Kaijalainen
     [payment_company] => 
     [payment_company_id] => 
     [payment_tax_id] => 
-    [payment_address_1] => Armas Launiksen katu 6 e 63
+    [payment_address_1] => Asgård 19
     [payment_address_2] => 
-    [payment_postcode] => Espoo
-    [payment_city] => 02650
+    [payment_postcode] => 02780
+    [payment_city] => Espoo
     [payment_zone_id] => 1086
     [payment_zone] => Etela-Suomen Laani
     [payment_zone_code] => ES
@@ -33,13 +33,13 @@ Array
     [payment_address_format] => 
     [payment_method] => VERKKOMAKSU PANKKINAPIT / VISA/MASTER (Checkout)
     [payment_code] => checkout
-    [shipping_firstname] => Erja
-    [shipping_lastname] => Vehmas
+    [shipping_firstname] => Osku
+    [shipping_lastname] => Kaijalainen
     [shipping_company] => 
-    [shipping_address_1] => Armas Launiksen katu 6 e 63
+    [shipping_address_1] => Asgård 19
     [shipping_address_2] => 
-    [shipping_postcode] => Espoo
-    [shipping_city] => 02650
+    [shipping_postcode] => 02780
+    [shipping_city] => Espoo
     [shipping_zone_id] => 1086
     [shipping_zone] => Etela-Suomen Laani
     [shipping_zone_code] => ES
@@ -48,12 +48,12 @@ Array
     [shipping_iso_code_2] => FI
     [shipping_iso_code_3] => FIN
     [shipping_address_format] => 
-    [shipping_method] => Kurssi ilmoittautuminen, ei postikuluja!<br /><span style="color: #999999;font-size: 11px;" class="x-shipping-desc">Kurssi ilmoi
+    [shipping_method] => Kurssi ilmoittautuminen, ei postikuluja!&lt;br /&gt;&lt;span style=
     [shipping_code] => xshippingpro.xshippingpro1
-    [comment] => siirtyy Ruusutorpan ryhmästä
-    [total] => 250.0000
-    [order_status_id] => 0
-    [order_status] => 
+    [comment] => 
+    [total] => 460.0000
+    [order_status_id] => 31
+    [order_status] => Odottava maksu
     [language_id] => 2
     [language_code] => fi
     [language_filename] => finnish
@@ -61,11 +61,11 @@ Array
     [currency_id] => 3
     [currency_code] => EUR
     [currency_value] => 1.00000000
-    [ip] => 82.181.68.134
+    [ip] => 91.159.83.25
     [forwarded_ip] => 
-    [user_agent] => Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36
-    [accept_language] => en-US,en;q=0.8,fi;q=0.6
-    [date_modified] => 2016-11-21 22:49:05
-    [date_added] => 2016-11-21 22:49:05
-    [layaway_deposit] => 30.0000
+    [user_agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+    [accept_language] => fi-FI,fi;q=0.8,en-US;q=0.6,en;q=0.4
+    [date_modified] => 2016-12-21 22:40:45
+    [date_added] => 2016-11-23 20:35:21
+    [layaway_deposit] => 60.0000
 )

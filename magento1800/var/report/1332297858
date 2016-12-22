@@ -1,9 +1,0 @@
-a:5:{i:0;s:260:"Error in file: "E:\Backup\WEBS\wampserver\www\magento1800\app\code\core\Mage\CatalogRule\sql\catalogrule_setup\mysql4-upgrade-1.5.9.9-1.6.0.0.php" - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'magento1800.catalogrule_product_price' doesn't exist";i:1;s:1102:"#0 E:\Backup\WEBS\wampserver\www\magento1800\app\code\core\Mage\Core\Model\Resource\Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
-#1 E:\Backup\WEBS\wampserver\www\magento1800\app\code\core\Mage\Core\Model\Resource\Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '0.7.5', '1.6.0.3')
-#2 E:\Backup\WEBS\wampserver\www\magento1800\app\code\core\Mage\Core\Model\Resource\Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('0.7.5', '1.6.0.3')
-#3 E:\Backup\WEBS\wampserver\www\magento1800\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
-#4 E:\Backup\WEBS\wampserver\www\magento1800\app\code\core\Mage\Core\Model\App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
-#5 E:\Backup\WEBS\wampserver\www\magento1800\app\code\core\Mage\Core\Model\App.php(343): Mage_Core_Model_App->_initModules()
-#6 E:\Backup\WEBS\wampserver\www\magento1800\app\Mage.php(683): Mage_Core_Model_App->run(Array)
-#7 E:\Backup\WEBS\wampserver\www\magento1800\index.php(87): Mage::run('', 'store')
-#8 {main}";s:3:"url";s:13:"/magento1800/";s:11:"script_name";s:22:"/magento1800/index.php";s:4:"skin";s:7:"default";}

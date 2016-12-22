@@ -79,8 +79,9 @@ class ModelSaleSidOrdersProductsUpdater extends Model {
             }
         }
 	public function getOrders($data = array()) {
-		$sql = "SELECT v.order_id, v.customer,v.language_id, v.total, v.status_id,  v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
+		$sql = "SELECT v.order_id,v.customer_id, v.customer,v.language_id, v.total, v.status_id,  v.status,v.date_added, v.date_modified,v.totalproducts,v.productsToDelete,(v.totalproducts-v.productsToDelete) AS pendingProducts
                         FROM (SELECT o.order_id, 
+                                        o.customer_id,
                                         CONCAT(o.firstname, ' ', o.lastname) AS customer, 
                                         o.order_status_id as status_id,
                                         o.language_id,

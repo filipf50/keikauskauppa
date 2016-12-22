@@ -386,7 +386,7 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                                         //Actualizo los totales
                                         $this->model_sale_sid_orders_products_updater->updateTotals($order['order_id'],$response['order_total'],$newTotal);
                                         $comment="";
-                                        if ($order['order_total']!= $newTotal){
+                                        if ($order['total']!= $newTotal){
                                             //Obtengo la configuración del módulo
                                             $settings= (array) $this->config->get('sid_orders_products_updater');
                                             
@@ -401,18 +401,44 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                                                 $language_directory='english';
                                             }
                                             
+                                            $layawayData = $this->model_sale_order->getLayaway($order['order_id']);
+                                            $balance = $order['total'];
+                                            foreach ($layawayData as $data) {
+                                                    $balance -= $data['deposit'];
+                                                    if (!empty($data['payments'])) {
+                                                            foreach (unserialize($data['payments']) as $payment) {
+                                                                    $balance -= $payment['payment_amount'];
+                                                            }
+                                                    }
+                                            }
+                                            $balance = number_format($balance, 2, ".", "");
+                                            
                                             $language = new Language($order_info['language_directory']);
                                             $language->load($order_info['language_filename']);
-                                            $language->load('sale/sid_orders_product_updater');
+                                            $language->load('sale/sid_orders_products_updater');
                                             
-                                            if ($order['order_total']<$newTotal){
+                                            if ($order['total']<$newTotal){
                                                 $order['status_id']=$settings['pending_payment_order_status'];
-                                                
-                                                $comment=  str_replace("{difference}", $newTotal-$order['order_total'], $language->get('text_pending_payment_comment'));
-                                            } else {
+                                                if($balance==number_format($order['total'],2,".","")){
+                                                    //Significa que no hay ni deposito ni pago con layaway por lo que tenemos que el pedido se pago completo
+                                                    //y ahora tenemos que crear un deposito por el total pagado previamente para que el pendiente sea la diferencia
+                                                    //que se pagará con layaway
+                                                    $this->model_sale_order->addLayawayDeposit($order['order_id'],$order['customer_id'],$order['total']);
+                                                    $balance=$newTotal-$order['total'];
+                                                } else {
+                                                    //Añadimos al importe pendiente la diferencia añadida.
+                                                    $balance+=$newTotal-$order['total'];
+                                                }
+                                                $comment=  str_replace("{difference}", number_format($balance,2,".",""), $language->get('text_pending_added_payment_comment')) + "<br/>";
+                                            } else if ($order['total']>$newTotal){
                                                 $order['status_id']=$settings['pending_refound_order_status'];
                                                 
-                                                $comment=str_replace("{difference}", $order['order_total']-$newTotal,$language->get('text_pending_refound_comment'));
+                                                if($balance<=0 || $balance==number_format($order['total'],2,".","")){
+                                                    //Si el pedido estaba pagado por completo solicitamos datos bancarios del cliente para reembolsar el dinero en cuenta
+                                                    $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_refound_comment')) + "<br/>";
+                                                } else {
+                                                    $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_discounted_payment_comment')) + "<br/>";
+                                                }
                                             }
                                         }
                                         
