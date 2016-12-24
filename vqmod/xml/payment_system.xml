@@ -444,7 +444,7 @@
 				}
                                 
                                 public function addLayawayDeposit($order_id,$customer_id,$deposit){
-                                    $date=timer();
+                                    $date=time();
                                     $this->db->query("INSERT INTO " . DB_PREFIX . "order_layaway SET customer_id = '" . (int)$customer_id . "', order_id = '" . (int)$order_id . "', deposit = '" . (float)$deposit . "', date_added = '" . $date . "'");
                                 }
                             

@@ -53,6 +53,7 @@ class ControllerCheckoutManual extends Controller {
 			$this->load->model('catalog/product');
 			
 			if (isset($this->request->post['order_product'])) {
+                            if (!empty($this->request->post['order_product'])){
 				foreach ($this->request->post['order_product'] as $order_product) {
 					$product_info = $this->model_catalog_product->getProduct($order_product['product_id']);
 				
@@ -74,8 +75,10 @@ class ControllerCheckoutManual extends Controller {
 						$this->cart->add($order_product['product_id'], $order_product['quantity'], $option_data);
 					}
 				}
+                            }
 			}
 			
+                        $this->log->write($this->request->post['product_id']);
 			if (isset($this->request->post['product_id'])) {
 				$product_info = $this->model_catalog_product->getProduct($this->request->post['product_id']);
 				

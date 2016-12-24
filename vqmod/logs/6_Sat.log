@@ -1,4 +1,4 @@
----------- Date: 2016-12-23 00:27:18 ~ IP : 127.0.0.1 ----------
+---------- Date: 2016-12-24 00:05:32 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
@@ -13,7 +13,7 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
 ----------------------------------------------------------------------
 
 
----------- Date: 2016-12-23 00:32:17 ~ IP : 127.0.0.1 ----------
+---------- Date: 2016-12-24 00:11:38 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
@@ -28,7 +28,7 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
 ----------------------------------------------------------------------
 
 
----------- Date: 2016-12-23 00:44:58 ~ IP : 127.0.0.1 ----------
+---------- Date: 2016-12-24 00:25:12 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
@@ -43,7 +43,7 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
 ----------------------------------------------------------------------
 
 
----------- Date: 2016-12-23 01:01:07 ~ IP : 127.0.0.1 ----------
+---------- Date: 2016-12-24 00:31:08 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
@@ -58,7 +58,7 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
 ----------------------------------------------------------------------
 
 
----------- Date: 2016-12-23 01:05:19 ~ IP : 127.0.0.1 ----------
+---------- Date: 2016-12-24 00:54:37 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
@@ -73,7 +73,7 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
 ----------------------------------------------------------------------
 
 
----------- Date: 2016-12-23 23:10:29 ~ IP : 127.0.0.1 ----------
+---------- Date: 2016-12-24 00:57:14 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
@@ -88,7 +88,60 @@ VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
 ----------------------------------------------------------------------
 
 
----------- Date: 2016-12-23 23:50:42 ~ IP : 127.0.0.1 ----------
+---------- Date: 2016-12-24 01:00:49 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
+   id        : Payment System
+   version   : 20140121
+   vqmver    : 2.4.1
+   author    : Digital Web Depot
+
+File Name    : admin/language/*/mail/order.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-24 01:28:38 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/index.php?route=checkout/manual&amp;token=598787fad3c7c6ea652101c9e757c5c3&amp;customer_group_id=1&amp;order_language_id=2
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : catalog/model/account/customer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id =
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-24 01:28:47 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : system/library/language.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
+   id        : Payment System
+   version   : 20140121
+   vqmver    : 2.4.1
+   author    : Digital Web Depot
+
+File Name    : admin/language/*/mail/order.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-12-24 01:46:59 ~ IP : 127.0.0.1 ----------
 REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=598787fad3c7c6ea652101c9e757c5c3
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml

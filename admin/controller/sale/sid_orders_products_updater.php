@@ -296,7 +296,7 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                     } else {
                             $filter_options_to_delete = array();
                     }
-
+                    //////$this->log->write($this->request->post['product_to_add_id']);
                     if (isset($this->request->post['product_to_add'])) {
                             $product_to_add= $this->request->post['product_to_add'];
                             $product_to_add_id=$this->request->post['product_to_add_id'];
@@ -304,6 +304,7 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                             $product_to_add = "";
                             $product_to_add_id="";
                     }
+                    ////$this->log->write($product_to_add_id);
 
                     if (isset($this->request->post['filter_options_to_add'])) {
                             $filter_options_to_add = $this->request->post['filter_options_to_add'];
@@ -332,7 +333,7 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                         foreach($orders as $order){
                             $this->load->model('sale/order');
 
-                            if((int)$order['pendingProducts']==0 && $product_to_add_id=""){
+                            if((int)$order['pendingProducts']==0 && $product_to_add_id==""){
                                 //Si el pedido se queda sin artículos, lo marcamos como cancelado por falta de stock
                                 //y lo notificamos al cliente
                                 $status_data=array('order_status_id'=>7, //Canceled
@@ -341,6 +342,7 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                                 $this->model_sale_order->addOrderHistory($order['order_id'],$status_data);
                             } else {
                                 //Borro los productos / opciones seleccionados
+                                ////$this->log->write($product_to_add_id);
                                 if ($this->model_sale_sid_orders_products_updater->removeProducts($order['order_id'], $data)){
                                     $this->session->data['success'] = $this->language->get('text_success');
                                     //Cargo los datos del producto borrado para grabar la acción en el historial
@@ -354,7 +356,7 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                                             $aux=explode("~",$key);
                                             $product_info.= "<br/>&nbsp;&nbsp;- " . $product_ops[$aux[0]]['name'] . ":" . $value;
                                         }
-                                        $this->log->write($product_info);
+                                        //$this->log->write($product_info);
                                         /*foreach($product_ops as $option){
                                             if (in_array($option['otp_id'], $filter_product_options)){
                                                 $product_info.= "\n&nbsp;&nbsp;- " . $option['otp_id'] . ':' . $option['description'];
@@ -364,11 +366,11 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
 
                                     //Recalculo el pedido
                                     $json=$this->recalculateOrder($order['order_id'],$product_to_add_id, $filter_options_to_add);
-                                    $this->log->write($json);
+                                    //$this->log->write($json);
                                     //Añado el nuevo producto en caso de existir
                                     $response=json_decode($json,true);
                                     if (isset($response)){
-                                        $this->log->write("Response OK");
+                                        //$this->log->write("Response OK");
                                         if ($product_to_add_id!=""){
                                             //Si hemos indicado un artículo para añadir, procedemos a añadirlo
                                             $products=$response['order_product'];
@@ -386,7 +388,7 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                                         //Actualizo los totales
                                         $this->model_sale_sid_orders_products_updater->updateTotals($order['order_id'],$response['order_total'],$newTotal);
                                         $comment="";
-                                        if ($order['total']!= $newTotal){
+                                        if (number_format($order['total'],2,".","")!= number_format($newTotal,2,".","")){
                                             //Obtengo la configuración del módulo
                                             $settings= (array) $this->config->get('sid_orders_products_updater');
                                             
@@ -396,7 +398,10 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                                             $language_info = $this->model_localisation_language->getLanguage($order['language_id']);
 
                                             if ($language_info) {
-                                                $language_directory=$language_info['language_directory'];
+                                                $language_directory=$language_info['directory'];
+                                                $language = new Language($language_directory);
+                                                $language->load($language_info['filename']);
+                                                $language->load('sale/sid_orders_products_updater');
                                             }else{
                                                 $language_directory='english';
                                             }
@@ -413,31 +418,27 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                                             }
                                             $balance = number_format($balance, 2, ".", "");
                                             
-                                            $language = new Language($order_info['language_directory']);
-                                            $language->load($order_info['language_filename']);
-                                            $language->load('sale/sid_orders_products_updater');
                                             
-                                            if ($order['total']<$newTotal){
+                                            //$this->log->write("Order_total:" . $order['total']);
+                                            //$this->log->write("New_total:" . $newTotal);
+                                            if (number_format($order['total'],2,".","")<number_format($newTotal,2,".","")){
                                                 $order['status_id']=$settings['pending_payment_order_status'];
                                                 if($balance==number_format($order['total'],2,".","")){
                                                     //Significa que no hay ni deposito ni pago con layaway por lo que tenemos que el pedido se pago completo
                                                     //y ahora tenemos que crear un deposito por el total pagado previamente para que el pendiente sea la diferencia
                                                     //que se pagará con layaway
                                                     $this->model_sale_order->addLayawayDeposit($order['order_id'],$order['customer_id'],$order['total']);
-                                                    $balance=$newTotal-$order['total'];
-                                                } else {
-                                                    //Añadimos al importe pendiente la diferencia añadida.
-                                                    $balance+=$newTotal-$order['total'];
                                                 }
-                                                $comment=  str_replace("{difference}", number_format($balance,2,".",""), $language->get('text_pending_added_payment_comment')) + "<br/>";
-                                            } else if ($order['total']>$newTotal){
+                                                
+                                                $comment=  str_replace("{difference}", number_format($newTotal-$order['total'],2,".",""), $language->get('text_pending_added_payment_comment')) . "<br/>";
+                                            } else if (number_format($order['total'],2,".","")>number_format($newTotal,2,".","")){
                                                 $order['status_id']=$settings['pending_refound_order_status'];
                                                 
                                                 if($balance<=0 || $balance==number_format($order['total'],2,".","")){
                                                     //Si el pedido estaba pagado por completo solicitamos datos bancarios del cliente para reembolsar el dinero en cuenta
-                                                    $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_refound_comment')) + "<br/>";
+                                                    $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_refound_comment')) . "<br/>";
                                                 } else {
-                                                    $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_discounted_payment_comment')) + "<br/>";
+                                                    $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_discounted_payment_comment')) . "<br/>";
                                                 }
                                             }
                                         }
@@ -564,6 +565,7 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
             //Cargo los datos relacionados con los artículos del pedido
             $order_products=$this->model_sale_order->getOrderProducts($order_id);
             $this->data['order_products'] = array();
+            $order_product=array();
             foreach ($order_products as $product) {
                     $order_option = $this->model_sale_order->getOrderOptions($order_id, $product['order_product_id']);
                     
