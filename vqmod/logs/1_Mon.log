@@ -1,5 +1,19 @@
----------- Date: 2016-12-19 22:36:40 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_remover/removeProducts&amp;token=73fb53e778df348be65e00f6284360a3
+---------- Date: 2017-01-16 22:28:03 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/index.php?route=checkout/manual&amp;token=1a5cb442981188e43ffb8fd25e338b28&amp;customer_group_id=29&amp;order_language_id=2
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : catalog/model/account/customer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->db->query("INSERT INTO " . DB_PREFIX . "customer SET store_id =
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-16 22:28:19 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_updater/removeProducts&amp;token=1a5cb442981188e43ffb8fd25e338b28
 MOD DETAILS:
    modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
    id        : Payment System
@@ -10,63 +24,6 @@ MOD DETAILS:
 File Name    : admin/language/*/mail/order.php(0)
 VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
 
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-19 23:12:33 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_remover/removeProducts&amp;token=4678ea59344ad47cb5ecb9067082c3d9
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/payment_system.xml
-   id        : Payment System
-   version   : 20140121
-   vqmver    : 2.4.1
-   author    : Digital Web Depot
-
-File Name    : admin/language/*/mail/order.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): // Text
-
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-19 23:52:48 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_remover&amp;token=4678ea59344ad47cb5ecb9067082c3d9
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : system/library/language.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-19 23:55:03 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=sale/sid_orders_products_remover&amp;token=4678ea59344ad47cb5ecb9067082c3d9
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : system/library/language.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
-----------------------------------------------------------------------
-
-
----------- Date: 2016-12-19 23:56:39 ~ IP : 127.0.0.1 ----------
-REQUEST URI : /keikauskauppa/admin/index.php?route=common/home&amp;token=4678ea59344ad47cb5ecb9067082c3d9
-MOD DETAILS:
-   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
-   id        : Opencart fixes/missing features - extension independent
-   version   : 4.5.1.6
-   vqmver    : 2.4.0
-   author    : opencart-templates.co.uk
-
-File Name    : system/library/language.php(0)
-VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
 ----------------------------------------------------------------------
 
 

@@ -700,7 +700,7 @@ class ModelSaleOrder extends Model {
 					$query = $this->db->query("SELECT SUM(amount) AS total FROM " . DB_PREFIX . "order_layaway WHERE order_id = '" . (int)$order_id . "'");
 					return $query->row['total'];
 				}
-                                
+
                                 public function addLayawayDeposit($order_id,$customer_id,$deposit){
                                     $date=time();
                                     $this->db->query("INSERT INTO " . DB_PREFIX . "order_layaway SET customer_id = '" . (int)$customer_id . "', order_id = '" . (int)$order_id . "', deposit = '" . (float)$deposit . "', date_added = '" . $date . "'");

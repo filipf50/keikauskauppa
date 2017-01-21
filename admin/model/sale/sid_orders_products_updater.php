@@ -114,7 +114,15 @@ class ModelSaleSidOrdersProductsUpdater extends Model {
                 
                 if (isset($data['filter_date_end']) && !is_null($data['filter_date_end'])) {
 			$strFilter .= " AND DATE(od.date_added) <= DATE('" . $this->db->escape($data['filter_date_end']) . "')";
+		}
+                
+                if (isset($data['filter_order_start']) && !is_null($data['filter_order_start'])) {
+			$strFilter .= " AND od.order_id >= " . $this->db->escape($data['filter_order_start']);
 		} 
+                
+                if (isset($data['filter_order_end']) && !is_null($data['filter_order_end'])) {
+			$strFilter .= " AND od.order_id <= " . $this->db->escape($data['filter_order_end']);
+		}
                 
 		if (isset($data['filter_order_statuses_ids']) && !empty($data['filter_order_statuses_ids'])) {
 			$strFilter .= " AND od.order_status_id in (" . implode(',',$data['filter_order_statuses_ids']) . ") ";

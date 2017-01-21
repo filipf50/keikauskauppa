@@ -78,7 +78,7 @@ class ControllerCheckoutManual extends Controller {
                             }
 			}
 			
-                        $this->log->write($this->request->post['product_id']);
+                        //$this->log->write($this->request->post['product_id']);
 			if (isset($this->request->post['product_id'])) {
 				$product_info = $this->model_catalog_product->getProduct($this->request->post['product_id']);
 				

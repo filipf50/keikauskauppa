@@ -215,6 +215,16 @@
               <td style="text-align: right;"><a onclick="$('#form').submit();" class="button"><?php echo $button_filter; ?></a></td>
             </tr>
             <tr>
+              <td><span class="required">*</span><?php echo $entry_order_start; ?></td>
+              <td>
+                <input type="text" name="filter_order_start" value="<?php echo $filter_order_start; ?>" id="filter_order-start" size="12" />
+              </td>
+              <td><span class="required">*</span><?php echo $entry_order_end; ?></td>
+              <td>      
+                <input type="text" name="filter_order_end" value="<?php echo $filter_order_end; ?>" id="filter_order-end" size="12" />
+              </td>
+            </tr>
+            <tr>
                 <td>
                     <?php echo $entry_status; ?>
                 </td>

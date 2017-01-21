@@ -37,7 +37,19 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                 } else {
                         $filter_date_end = date('Y-m-d');
                 }
+                
+                if (isset($this->request->post['filter_order_start'])) {
+                        $filter_order_start = $this->request->post['filter_order_start'];
+                } else {
+                        $filter_order_start = 1;
+                }
 
+                if (isset($this->request->post['filter_order_end'])) {
+                        $filter_order_end = $this->request->post['filter_order_end'];
+                } else {
+                        $filter_order_end = 99999999999;
+                }
+                
                 if (isset($this->request->post['filter_order_statuses_ids'])) {
                         $filter_order_statuses_ids = $this->request->post['filter_order_statuses_ids'];
                 } else {
@@ -105,6 +117,8 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                     $data = array(
                             'filter_date_start'	     => $filter_date_start, 
                             'filter_date_end'	     => $filter_date_end, 
+                            'filter_order_start'     => $filter_order_start, 
+                            'filter_order_end'	     => $filter_order_end, 
                             'filter_order_statuses_ids'  => $filter_order_statuses_ids,
                             'filter_order_stores_ids'    => $filter_order_stores_ids,
                             'product_to_delete'         => $product_to_delete_id,
@@ -168,6 +182,8 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
 
 		$this->data['entry_date_start'] = $this->language->get('entry_date_start');
 		$this->data['entry_date_end'] = $this->language->get('entry_date_end');
+                $this->data['entry_order_start'] = $this->language->get('entry_order_start');
+		$this->data['entry_order_end'] = $this->language->get('entry_order_end');
 		$this->data['entry_store'] = $this->language->get('entry_stores');	
                 $this->data['entry_product'] = $this->language->get('entry_product');
                 $this->data['entry_product_dest'] = $this->language->get('entry_product_dest');
@@ -196,6 +212,14 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
 		if (isset($this->request->get['filter_date_end'])) {
 			$url .= '&filter_date_end=' . $this->request->get['filter_date_end'];
 		}
+                
+                if (isset($this->request->get['filter_order_start'])) {
+			$url .= '&filter_order_start=' . $this->request->get['filter_order_start'];
+		}
+
+		if (isset($this->request->get['filter_order_end'])) {
+			$url .= '&filter_order_end=' . $this->request->get['filter_order_end'];
+		}
 
 		if (isset($this->request->get['filter_order_statuses_ids'])) {
 			$url .= '&filter_order_statuses_ids=' . $this->request->get['filter_order_statuses_ids'];
@@ -216,6 +240,8 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
 
 		$this->data['filter_date_start'] = $filter_date_start;
 		$this->data['filter_date_end'] = $filter_date_end;		
+                $this->data['filter_order_start'] = $filter_order_start;
+		$this->data['filter_order_end'] = $filter_order_end;		
 		$this->data['filter_order_statuses_ids'] = $filter_order_statuses_ids;
 		$this->data['filter_order_stores_ids'] = $filter_order_stores_ids;
                 $this->data['filter_options_to_delete'] = $filter_options_to_delete;
@@ -270,6 +296,18 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                     } else {
                             $filter_date_end = date('Y-m-d');
                     }
+                    
+                    if (isset($this->request->post['filter_order_start'])) {
+                            $filter_order_start = $this->request->post['filter_order_start'];
+                    } else {
+                            $filter_order_start = 1;
+                    }
+
+                    if (isset($this->request->post['filter_order_end'])) {
+                            $filter_order_end = $this->request->post['filter_order_end'];
+                    } else {
+                            $filter_order_end = 99999999999;
+                    }
 
                     if (isset($this->request->post['filter_order_statuses_ids'])) {
                             $filter_order_statuses_ids = $this->request->post['filter_order_statuses_ids'];
@@ -316,6 +354,8 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                     $data = array(
                             'filter_date_start'	     => $filter_date_start, 
                             'filter_date_end'	     => $filter_date_end, 
+                            'filter_order_start'     => $filter_order_start, 
+                            'filter_order_end'	     => $filter_order_end, 
                             'filter_order_statuses_ids'  => $filter_order_statuses_ids,
                             'filter_order_stores_ids'    => $filter_order_stores_ids,
                             'product_to_delete'         => $product_to_delete_id,
@@ -328,140 +368,160 @@ class ControllerSaleSidOrdersProductsUpdater extends Controller {
                     } else{
                         //Obtenemos los pedidos afectados
                         $orders = $this->model_sale_sid_orders_products_updater->getOrders($data);
-                    
-                        //Recorremos el array de resultados
-                        foreach($orders as $order){
-                            $this->load->model('sale/order');
+                        $order_total= count($orders);
+                        if ($order_total>0){
+                            //Recorremos el array de resultados
+                            foreach($orders as $order){
+                                $this->load->model('sale/order');
+                                //Cargamos la información del lenguage del pedido
+                                $this->load->model('localisation/language');
 
-                            if((int)$order['pendingProducts']==0 && $product_to_add_id==""){
-                                //Si el pedido se queda sin artículos, lo marcamos como cancelado por falta de stock
-                                //y lo notificamos al cliente
-                                $status_data=array('order_status_id'=>7, //Canceled
-                                                   'notify'=>-1,
-                                                   'comment'=>$this->language->get('text_canceled_order_comment'));
-                                $this->model_sale_order->addOrderHistory($order['order_id'],$status_data);
-                            } else {
-                                //Borro los productos / opciones seleccionados
-                                ////$this->log->write($product_to_add_id);
-                                if ($this->model_sale_sid_orders_products_updater->removeProducts($order['order_id'], $data)){
-                                    $this->session->data['success'] = $this->language->get('text_success');
-                                    //Cargo los datos del producto borrado para grabar la acción en el historial
-                                    $this->load->model('catalog/product');
-                                    $descriptions=$this->model_catalog_product->getProductDescriptions($product_to_delete_id);
-                                    $product_info=$this->language->get('text_removed_products_comment') . "<br/>  - " .$product_to_delete_id . ":" . $descriptions[$this->config->get('config_language_id')]["name"];
-                                    if(!empty($filter_options_to_delete)){
-                                        $product_ops=$this->model_sale_sid_orders_products_updater->getProductOptions($product_to_delete_id);
-                                        $product_info.=":";
-                                        foreach($filter_options_to_delete as $key=>$value){
-                                            $aux=explode("~",$key);
-                                            $product_info.= "<br/>&nbsp;&nbsp;- " . $product_ops[$aux[0]]['name'] . ":" . $value;
-                                        }
-                                        //$this->log->write($product_info);
-                                        /*foreach($product_ops as $option){
-                                            if (in_array($option['otp_id'], $filter_product_options)){
-                                                $product_info.= "\n&nbsp;&nbsp;- " . $option['otp_id'] . ':' . $option['description'];
-                                            }
-                                        }*/
-                                    }
+                                $language_info = $this->model_localisation_language->getLanguage($order['language_id']);
 
-                                    //Recalculo el pedido
-                                    $json=$this->recalculateOrder($order['order_id'],$product_to_add_id, $filter_options_to_add);
-                                    //$this->log->write($json);
-                                    //Añado el nuevo producto en caso de existir
-                                    $response=json_decode($json,true);
-                                    if (isset($response)){
-                                        //$this->log->write("Response OK");
-                                        if ($product_to_add_id!=""){
-                                            //Si hemos indicado un artículo para añadir, procedemos a añadirlo
-                                            $products=$response['order_product'];
-                                            $order_product=end($products);
-                                            $this->model_sale_sid_orders_products_updater->addProduct($order['order_id'],$order_product);
-                                            //Añado la información para añadirla al historial del pedido
-                                            $product_info.= "<br/>" . $this->language->get('text_added_products_comment') . "<br/>  - " .$order_product['product_id'] . ":" . $order_product['name'];
-
-                                            if (!empty($order_product['option'])){
-                                                foreach($order_product['option'] as $option){
-                                                    $product_info.= "<br/>&nbsp;&nbsp;- " . $option['name'] . ":" . $option['value'];
-                                                }
-                                            }
-                                        }
-                                        //Actualizo los totales
-                                        $this->model_sale_sid_orders_products_updater->updateTotals($order['order_id'],$response['order_total'],$newTotal);
-                                        $comment="";
-                                        if (number_format($order['total'],2,".","")!= number_format($newTotal,2,".","")){
-                                            //Obtengo la configuración del módulo
-                                            $settings= (array) $this->config->get('sid_orders_products_updater');
-                                            
-                                            //Cargamos la información del lenguage del pedido
-                                            $this->load->model('localisation/language');
-			
-                                            $language_info = $this->model_localisation_language->getLanguage($order['language_id']);
-
-                                            if ($language_info) {
-                                                $language_directory=$language_info['directory'];
-                                                $language = new Language($language_directory);
-                                                $language->load($language_info['filename']);
-                                                $language->load('sale/sid_orders_products_updater');
-                                            }else{
-                                                $language_directory='english';
-                                            }
-                                            
-                                            $layawayData = $this->model_sale_order->getLayaway($order['order_id']);
-                                            $balance = $order['total'];
-                                            foreach ($layawayData as $data) {
-                                                    $balance -= $data['deposit'];
-                                                    if (!empty($data['payments'])) {
-                                                            foreach (unserialize($data['payments']) as $payment) {
-                                                                    $balance -= $payment['payment_amount'];
-                                                            }
-                                                    }
-                                            }
-                                            $balance = number_format($balance, 2, ".", "");
-                                            
-                                            
-                                            //$this->log->write("Order_total:" . $order['total']);
-                                            //$this->log->write("New_total:" . $newTotal);
-                                            if (number_format($order['total'],2,".","")<number_format($newTotal,2,".","")){
-                                                $order['status_id']=$settings['pending_payment_order_status'];
-                                                if($balance==number_format($order['total'],2,".","")){
-                                                    //Significa que no hay ni deposito ni pago con layaway por lo que tenemos que el pedido se pago completo
-                                                    //y ahora tenemos que crear un deposito por el total pagado previamente para que el pendiente sea la diferencia
-                                                    //que se pagará con layaway
-                                                    $this->model_sale_order->addLayawayDeposit($order['order_id'],$order['customer_id'],$order['total']);
-                                                }
-                                                
-                                                $comment=  str_replace("{difference}", number_format($newTotal-$order['total'],2,".",""), $language->get('text_pending_added_payment_comment')) . "<br/>";
-                                            } else if (number_format($order['total'],2,".","")>number_format($newTotal,2,".","")){
-                                                $order['status_id']=$settings['pending_refound_order_status'];
-                                                
-                                                if($balance<=0 || $balance==number_format($order['total'],2,".","")){
-                                                    //Si el pedido estaba pagado por completo solicitamos datos bancarios del cliente para reembolsar el dinero en cuenta
-                                                    $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_refound_comment')) . "<br/>";
-                                                } else {
-                                                    $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_discounted_payment_comment')) . "<br/>";
-                                                }
-                                            }
-                                        }
-                                        
-                                        
-                                        
-                                        $comment.= $product_info;
-                                        $history_data=array('order_status_id'=>$order['status_id'],
-                                                            'notify'=>1,
-                                                            'comment' =>$comment);
-                                        $this->model_sale_order->addOrderHistory($order['order_id'],$history_data);
-                                    }
-
+                                if ($language_info) {
+                                    $language_directory=$language_info['directory'];
+                                    $language = new Language($language_directory);
+                                    $language->load($language_info['filename']);
+                                    $language->load('sale/sid_orders_products_updater');
+                                }else{
+                                    $language_directory='english';
+                                }
+                                if((int)$order['pendingProducts']==0 && $product_to_add_id==""){
+                                    //Si el pedido se queda sin artículos, lo marcamos como cancelado por falta de stock
+                                    //y lo notificamos al cliente
+                                    $status_data=array('order_status_id'=>7, //Canceled
+                                                       'notify'=>-1,
+                                                       'comment'=>$language->get('text_canceled_order_comment'));
+                                    $this->model_sale_order->addOrderHistory($order['order_id'],$status_data);
                                 } else {
-                                    $this->session->data['error_warning'] =$this->language->get('error_removing');
-                                    break;
-                                }                            
+                                    //Borro los productos / opciones seleccionados
+                                    ////$this->log->write($product_to_add_id);
+                                    if ($this->model_sale_sid_orders_products_updater->removeProducts($order['order_id'], $data)){
+                                        $this->session->data['success'] = $this->language->get('text_success');
+                                        //Cargo los datos del producto borrado para grabar la acción en el historial
+                                        $this->load->model('catalog/product');
+                                        $descriptions=$this->model_catalog_product->getProductDescriptions($product_to_delete_id);
+                                        $product_info=$language->get('text_removed_products_comment') . "<br/>  - " .$product_to_delete_id . ":" . $descriptions[$order['language_id']]["name"];
+                                        if(!empty($filter_options_to_delete)){
+                                            $product_ops=$this->model_sale_sid_orders_products_updater->getProductOptions($product_to_delete_id);
+                                            $product_info.=":";
+                                            foreach($filter_options_to_delete as $key=>$value){
+                                                $aux=explode("~",$key);
+                                                $product_info.= "<br/>&nbsp;&nbsp;- " . $product_ops[$aux[0]]['name'] . ":" . $value;
+                                            }
+                                            //$this->log->write($product_info);
+                                            /*foreach($product_ops as $option){
+                                                if (in_array($option['otp_id'], $filter_product_options)){
+                                                    $product_info.= "\n&nbsp;&nbsp;- " . $option['otp_id'] . ':' . $option['description'];
+                                                }
+                                            }*/
+                                        }
+
+                                        //Recalculo el pedido
+                                        $json=$this->recalculateOrder($order['order_id'],$product_to_add_id, $filter_options_to_add);
+                                        //$this->log->write($json);
+                                        //Añado el nuevo producto en caso de existir
+                                        $response=json_decode($json,true);
+                                        if (isset($response)){
+                                            //$this->log->write("Response OK");
+                                            if ($product_to_add_id!=""){
+                                                //Si hemos indicado un artículo para añadir, procedemos a añadirlo
+                                                $products=$response['order_product'];
+                                                $order_product=end($products);
+                                                $this->model_sale_sid_orders_products_updater->addProduct($order['order_id'],$order_product);
+                                                //Añado la información para añadirla al historial del pedido
+                                                $product_info.= "<br/>" . $language->get('text_added_products_comment') . "<br/>  - " .$order_product['product_id'] . ":" . $order_product['name'];
+
+                                                if (!empty($order_product['option'])){
+                                                    foreach($order_product['option'] as $option){
+                                                        $product_info.= "<br/>&nbsp;&nbsp;- " . $option['name'] . ":" . $option['value'];
+                                                    }
+                                                }
+                                            }
+                                            //Actualizo los totales
+                                            $this->model_sale_sid_orders_products_updater->updateTotals($order['order_id'],$response['order_total'],$newTotal);
+                                            $comment="";
+                                            if (number_format($order['total'],2,".","")!= number_format($newTotal,2,".","")){
+                                                //Obtengo la configuración del módulo
+                                                $settings= (array) $this->config->get('sid_orders_products_updater');
+
+                                                //Cargamos la información del lenguage del pedido
+                                                $this->load->model('localisation/language');
+
+                                                $language_info = $this->model_localisation_language->getLanguage($order['language_id']);
+
+                                                if ($language_info) {
+                                                    $language_directory=$language_info['directory'];
+                                                    $language = new Language($language_directory);
+                                                    $language->load($language_info['filename']);
+                                                    $language->load('sale/sid_orders_products_updater');
+                                                }else{
+                                                    $language_directory='english';
+                                                }
+
+                                                $layawayData = $this->model_sale_order->getLayaway($order['order_id']);
+                                                $balance = $order['total'];
+                                                foreach ($layawayData as $data) {
+                                                        $balance -= $data['deposit'];
+                                                        if (!empty($data['payments'])) {
+                                                                foreach (unserialize($data['payments']) as $payment) {
+                                                                        $balance -= $payment['payment_amount'];
+                                                                }
+                                                        }
+                                                }
+                                                $balance = number_format($balance, 2, ".", "");
+
+
+                                                //$this->log->write("Order_total:" . $order['total']);
+                                                //$this->log->write("New_total:" . $newTotal);
+                                                if (number_format($order['total'],2,".","")<number_format($newTotal,2,".","")){
+                                                    $order['status_id']=$settings['pending_payment_order_status'];
+                                                    if($balance==number_format($order['total'],2,".","")){
+                                                        //Significa que no hay ni deposito ni pago con layaway por lo que tenemos que el pedido se pago completo
+                                                        //y ahora tenemos que crear un deposito por el total pagado previamente para que el pendiente sea la diferencia
+                                                        //que se pagará con layaway
+                                                        $this->model_sale_order->addLayawayDeposit($order['order_id'],$order['customer_id'],$order['total']);
+                                                    }
+
+                                                    $comment=  str_replace("{difference}", number_format($newTotal-$order['total'],2,".",""), $language->get('text_pending_added_payment_comment')) . "<br/>";
+                                                } else if (number_format($order['total'],2,".","")>number_format($newTotal,2,".","")){
+                                                    $order['status_id']=$settings['pending_refound_order_status'];
+
+                                                    if($balance<=0 || $balance==number_format($order['total'],2,".","")){
+                                                        //Si el pedido estaba pagado por completo solicitamos datos bancarios del cliente para reembolsar el dinero en cuenta
+                                                        $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_refound_comment')) . "<br/>";
+                                                    } else {
+                                                        $comment=str_replace("{difference}", number_format($order['total']-$newTotal,2,".",""),$language->get('text_pending_discounted_payment_comment')) . "<br/>";
+                                                    }
+                                                }
+                                            }
+
+
+
+                                            $comment.= $product_info;
+                                            $history_data=array('order_status_id'=>$order['status_id'],
+                                                                'notify'=>1,
+                                                                'comment' =>$comment);
+                                            $this->model_sale_order->addOrderHistory($order['order_id'],$history_data);
+                                        }
+
+                                    } else {
+                                        $this->session->data['error_warning'] =$this->language->get('error_removing');
+                                        break;
+                                    }                            
+                                }
                             }
-                        }
+                        } else {
+                            $this->session->data['error_warning'] =$this->language->get('error_noorders');
+                        }    
                     }
             }
-            $this->redirect($this->url->link('sale/sid_orders_products_updater', 'token=' . $this->session->data['token'], 'SSL'));
-            $this->response->setOutput($this->render());
+            if (isset($this->session->data['error_warning'])){
+                $this->index();
+            }else{
+                $this->redirect($this->url->link('sale/sid_orders_products_updater', 'token=' . $this->session->data['token'], 'SSL'));
+                $this->response->setOutput($this->render());
+            }
         }
         public function autocomplete() {
 		$json = array();

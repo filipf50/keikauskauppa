@@ -21894,3 +21894,45 @@ Array
     [date_modified] => 2015-02-11 22:00:20
 )
 
+
+Tax rate
+Array
+(
+    [tax_rate_id] => 88
+    [name] => Vero/Vat 10%
+    [rate] => 10.0000
+    [type] => P
+    [geo_zone_id] => 5
+    [geo_zone] => Suomi
+    [date_added] => 2013-12-30 23:30:16
+    [date_modified] => 2015-02-11 22:00:20
+)
+
+
+Tax rate
+Array
+(
+    [tax_rate_id] => 88
+    [name] => Vero/Vat 10%
+    [rate] => 10.0000
+    [type] => P
+    [geo_zone_id] => 5
+    [geo_zone] => Suomi
+    [date_added] => 2013-12-30 23:30:16
+    [date_modified] => 2015-02-11 22:00:20
+)
+
+
+Tax rate
+Array
+(
+    [tax_rate_id] => 88
+    [name] => Vero/Vat 10%
+    [rate] => 10.0000
+    [type] => P
+    [geo_zone_id] => 5
+    [geo_zone] => Suomi
+    [date_added] => 2013-12-30 23:30:16
+    [date_modified] => 2015-02-11 22:00:20
+)
+
