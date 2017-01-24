@@ -1,0 +1,136 @@
+<modification>
+    <id>Order list improvements</id>
+    <version>1.0</version>
+    <vqmver>2.1</vqmver>
+    <author>@filipf50</author>
+    <!-- ADMIN LANGUAGE -->
+    <file name="admin/language/english/sale/order.php">
+        <operation>
+            <search position="before"><![CDATA[$_['column_total']                            = 'Total';]]></search>
+            <add><![CDATA[
+                    $_['column_email']                            = 'E-Mail';
+                ]]>                
+            </add>
+        </operation>
+   </file>
+    
+    <!-- ADMIN CONTROLLER -->
+    <file name="admin/controller/sale/order.php">
+        <operation>
+            <search position="after" index="5"><![CDATA[$url = '';]]></search>
+            <add><![CDATA[
+                    if (isset($this->request->get['filter_email'])) {
+                        $filter_email=$this->request->get['filter_email'];
+                        $url .= '&filter_email=' . $this->request->get['filter_email'];
+                    }else {
+                        $filter_email=null;
+                    }
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before" index="1"><![CDATA['filter_total'           => $filter_total,]]></search>
+            <add><![CDATA[
+                    'filter_email'  => $filter_email,
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before" index="1"><![CDATA[$this->data['column_total'] = $this->language->get('column_total');]]></search>
+            <add><![CDATA[
+                    $this->data['column_email'] = $this->language->get('column_email');
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before" index="1"><![CDATA['status'        => $result['status'],]]></search>
+            <add><![CDATA[
+                    'email'        => $result['email'],
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before" index="1"><![CDATA[$this->data['sort_total'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.total' . $url, 'SSL');]]></search>
+            <add><![CDATA[
+                    $this->data['sort_email'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.email' . $url, 'SSL');
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[$this->data['filter_total'] = $filter_total;]]></search>
+            <add><![CDATA[
+                    $this->data['filter_email'] = $filter_email;
+                ]]>                
+            </add>
+        </operation>        
+    </file>
+    
+    <!-- ADMIN MODEL -->
+    <file name="admin/model/sale/order.php">
+        <operation>
+            <search position="replace"><![CDATA[$sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, o.order_status_id, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS status, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified FROM `" . DB_PREFIX . "order` o";]]></search>
+            <add><![CDATA[
+                    $sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, o.order_status_id, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS status, o.email, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified FROM `" . DB_PREFIX . "order` o";
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[if (!empty($data['filter_total'])) {]]></search>
+            <add><![CDATA[
+                    if (!empty($data['filter_email'])) {
+			$sql .= " AND email = '" . $data['filter_email'] . "'";
+                    }
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA['o.total']]></search>
+            <add><![CDATA[
+                    'o.email',
+                ]]>                
+            </add>
+        </operation>
+        
+    </file>
+    
+    <!-- ADMIN VIEW -->
+    <file name="admin/view/template/sale/order_list.tpl">
+        <operation>
+            <search position="before"><![CDATA[<td class="right"><?php if ($sort == 'o.total') { ?>]]></search>
+            <add><![CDATA[
+                    <td class="left"><?php if ($sort == 'o.email') { ?>
+                    <a href="<?php echo $sort_email; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_email; ?></a>
+                    <?php } else { ?>
+                    <a href="<?php echo $sort_email; ?>"><?php echo $column_email; ?></a>
+                    <?php } ?></td>
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<td align="right"><input type="text" name="filter_total" value="<?php echo $filter_total; ?>" size="4" style="text-align: right;" /></td>]]></search>
+            <add><![CDATA[
+                    <td align="left"><input type="text" name="filter_email" value="<?php echo $filter_email; ?>" /></td>
+                ]]>                
+            </add>
+        </operation> 
+        <operation>
+            <search position="after"><![CDATA[<td class="left"><?php echo $order['status']; ?></td>]]></search>
+            <add><![CDATA[
+                    <td class="left"><?php echo $order['email']; ?></td>       
+                ]]>                
+            </add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[var filter_total = $('input[name=\'filter_total\']').attr('value');]]></search>
+            <add><![CDATA[
+                    var filter_email = $('input[name=\'filter_email\']').attr('value');
+
+                    if (filter_email) {
+                            url += '&filter_email=' + encodeURIComponent(filter_email);
+                    }	
+                ]]>                
+            </add>
+        </operation>
+        
+    </file>
+</modification>
