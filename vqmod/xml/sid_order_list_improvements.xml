@@ -18,7 +18,7 @@
     <!-- ADMIN CONTROLLER -->
     <file name="admin/controller/sale/order.php">
         <operation>
-            <search position="after" index="5"><![CDATA[$url = '';]]></search>
+            <search position="after" index="5,6,7"><![CDATA[$url = '';]]></search>
             <add><![CDATA[
                     if (isset($this->request->get['filter_email'])) {
                         $filter_email=$this->request->get['filter_email'];
@@ -109,14 +109,13 @@
                     if (!empty($data['filter_email'])) {
 			$sql .= " AND email = '" . $data['filter_email'] . "'";
                     }
-                    if (!empty($data['filter_pending'])){
-                        if ($data['filter_pending']=="0"){
+                    if (isset($data['filter_pending'])){
+                        if ($data['filter_pending']=='cero'){
                             $sql .= " AND layaway_pending = 0 ";
                         } else {
                             $sql .= " AND layaway_pending > 0 ";
                         }
-                        $this->log->write($data['filter_pending']);
-                        $this->log->write($sql);
+                        
                     }
                 ]]>                
             </add>
@@ -155,9 +154,9 @@
             <add><![CDATA[
                     <td align="left"><input type="text" name="filter_email" value="<?php echo $filter_email; ?>" /></td>
                     <td align="left">
-                        <input type="radio" name="filter_pending" value=">0">Pending
-                        <input type="radio" name="filter_pending" value="0"> No Pending
-                        <input type="radio" name="filter_pending" value=""> All
+                        <input type="radio" name="filter_pending" value="mayorCero" <?php echo ($filter_pending == 'mayorCero' ? 'checked' : ''); ?> >Pending
+                        <input type="radio" name="filter_pending" value="cero" <?php echo ($filter_pending == 'cero' ? 'checked' : ''); ?>> No Pending
+                        <input type="radio" name="filter_pending" value="" <?php echo (is_null($filter_pending) ? 'checked' : ''); ?>> All
                     </td>
                 ]]>                
             </add>
