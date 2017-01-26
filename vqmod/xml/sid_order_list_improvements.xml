@@ -9,6 +9,7 @@
             <search position="before"><![CDATA[$_['column_total']                            = 'Total';]]></search>
             <add><![CDATA[
                     $_['column_email']                            = 'E-Mail';
+                    $_['column_pending']                          = 'Pending';
                 ]]>                
             </add>
         </operation>
@@ -25,6 +26,12 @@
                     }else {
                         $filter_email=null;
                     }
+                    if (isset($this->request->get['filter_pending'])) {
+                        $filter_pending=$this->request->get['filter_pending'];
+                        $url .= '&filter_pending=' . $this->request->get['filter_pending'];
+                    }else {
+                        $filter_pending=null;
+                    }
                 ]]>                
             </add>
         </operation>
@@ -32,6 +39,7 @@
             <search position="before" index="1"><![CDATA['filter_total'           => $filter_total,]]></search>
             <add><![CDATA[
                     'filter_email'  => $filter_email,
+                    'filter_pending'  => $filter_pending,
                 ]]>                
             </add>
         </operation>
@@ -39,6 +47,7 @@
             <search position="before" index="1"><![CDATA[$this->data['column_total'] = $this->language->get('column_total');]]></search>
             <add><![CDATA[
                     $this->data['column_email'] = $this->language->get('column_email');
+                    $this->data['column_pending'] = $this->language->get('column_pending');
                 ]]>                
             </add>
         </operation>
@@ -46,6 +55,7 @@
             <search position="before" index="1"><![CDATA['status'        => $result['status'],]]></search>
             <add><![CDATA[
                     'email'        => $result['email'],
+                    'layaway_pending'        => $this->currency->format($result['layaway_pending'], $result['currency_code'], $result['currency_value']),
                 ]]>                
             </add>
         </operation>
@@ -53,6 +63,7 @@
             <search position="before" index="1"><![CDATA[$this->data['sort_total'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.total' . $url, 'SSL');]]></search>
             <add><![CDATA[
                     $this->data['sort_email'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.email' . $url, 'SSL');
+                    $this->data['sort_pending'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'] . '&sort=o.layaway_pending' . $url, 'SSL');
                 ]]>                
             </add>
         </operation>
@@ -60,17 +71,35 @@
             <search position="before"><![CDATA[$this->data['filter_total'] = $filter_total;]]></search>
             <add><![CDATA[
                     $this->data['filter_email'] = $filter_email;
+                    $this->data['filter_pending'] = $filter_pending;
                 ]]>                
             </add>
-        </operation>        
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[if (number_format($balance, 2, ".", "") > 0)]]></search>
+            <add><![CDATA[
+                $this->model_sale_order->updateLayawayPending($result['order_id'], number_format($balance,2,".",""));
+                $result['layaway_pending']=number_format($balance, 2, ".", "");
+                ]]>
+            </add>
+        </operation>
     </file>
     
     <!-- ADMIN MODEL -->
     <file name="admin/model/sale/order.php">
         <operation>
+            <search position="before"><![CDATA[public function createInvoiceNo($order_id) {]]></search>
+            <add><![CDATA[
+                    public function updateLayawayPending($order_id, $pending){
+                        $this->db->query("UPDATE `" . DB_PREFIX . "order` SET layaway_pending=" . $pending . " WHERE order_id=" . $order_id);
+                    }
+                ]]>
+            </add>
+        </operation>
+        <operation>
             <search position="replace"><![CDATA[$sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, o.order_status_id, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS status, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified FROM `" . DB_PREFIX . "order` o";]]></search>
             <add><![CDATA[
-                    $sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, o.order_status_id, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS status, o.email, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified FROM `" . DB_PREFIX . "order` o";
+                    $sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, o.order_status_id, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS status, o.email, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified, o.layaway_pending FROM `" . DB_PREFIX . "order` o";
                 ]]>                
             </add>
         </operation>
@@ -80,6 +109,15 @@
                     if (!empty($data['filter_email'])) {
 			$sql .= " AND email = '" . $data['filter_email'] . "'";
                     }
+                    if (!empty($data['filter_pending'])){
+                        if ($data['filter_pending']=="0"){
+                            $sql .= " AND layaway_pending = 0 ";
+                        } else {
+                            $sql .= " AND layaway_pending > 0 ";
+                        }
+                        $this->log->write($data['filter_pending']);
+                        $this->log->write($sql);
+                    }
                 ]]>                
             </add>
         </operation>
@@ -87,6 +125,7 @@
             <search position="before"><![CDATA['o.total']]></search>
             <add><![CDATA[
                     'o.email',
+                    'o.layaway_pending',
                 ]]>                
             </add>
         </operation>
@@ -103,6 +142,11 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_email; ?>"><?php echo $column_email; ?></a>
                     <?php } ?></td>
+                    <td class="right"><?php if ($sort == 'o.layaway_pending') { ?>
+                    <a href="<?php echo $sort_pending; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_pending; ?></a>
+                    <?php } else { ?>
+                    <a href="<?php echo $sort_pending; ?>"><?php echo $column_pending; ?></a>
+                    <?php } ?></td>
                 ]]>                
             </add>
         </operation>
@@ -110,6 +154,11 @@
             <search position="before"><![CDATA[<td align="right"><input type="text" name="filter_total" value="<?php echo $filter_total; ?>" size="4" style="text-align: right;" /></td>]]></search>
             <add><![CDATA[
                     <td align="left"><input type="text" name="filter_email" value="<?php echo $filter_email; ?>" /></td>
+                    <td align="left">
+                        <input type="radio" name="filter_pending" value=">0">Pending
+                        <input type="radio" name="filter_pending" value="0"> No Pending
+                        <input type="radio" name="filter_pending" value=""> All
+                    </td>
                 ]]>                
             </add>
         </operation> 
@@ -117,6 +166,7 @@
             <search position="after"><![CDATA[<td class="left"><?php echo $order['status']; ?></td>]]></search>
             <add><![CDATA[
                     <td class="left"><?php echo $order['email']; ?></td>       
+                    <td class="right"><?php echo $order['layaway_pending']; ?></td>
                 ]]>                
             </add>
         </operation>
@@ -127,6 +177,12 @@
 
                     if (filter_email) {
                             url += '&filter_email=' + encodeURIComponent(filter_email);
+                    }	
+                
+                    var filter_pending = $('input[name=\'filter_pending\']:checked').attr('value');
+
+                    if (filter_pending) {
+                            url += '&filter_pending=' + encodeURIComponent(filter_pending);
                     }	
                 ]]>                
             </add>
