@@ -1,0 +1,14 @@
+---------- Date: 2017-01-27 00:33:55 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /keikauskauppa/admin/
+MOD DETAILS:
+   modFile   : E:\Backup\WEBS\wampserver\www\keikauskauppa\vqmod/xml/opencart_emailtemplate.xml
+   id        : Opencart fixes/missing features - extension independent
+   version   : 4.5.1.6
+   vqmver    : 2.4.0
+   author    : opencart-templates.co.uk
+
+File Name    : system/library/language.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): DIR_LANGUAGE . $this->directory
+----------------------------------------------------------------------
+
+
