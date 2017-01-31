@@ -9,13 +9,6 @@
   
     <file name="admin/controller/sale/customer.php">
 		<operation>
-			<search position="before" offset="0"><![CDATA[$this->data['approve'] = $this->url->link('sale/customer/approve', 'token=' . $this->session->data['token'] . $url, 'SSL');]]></search>
-			<add><![CDATA[
-$this->data['export'] = $this->url->link('sale/customer/export', 'token=' . $this->session->data['token'], 'SSL');]]></add>
-		</operation>
-        
-	
-        	<operation>
 			<search position="before" offset="0"><![CDATA[$this->data['button_approve'] = $this->language->get('button_approve');]]></search>
             <add><![CDATA[$this->data['button_export'] = $this->language->get('button_export');]]></add>
 		</operation>
@@ -64,7 +57,7 @@ $this->data['export'] = $this->url->link('sale/customer/export', 'token=' . $thi
     	 
 $sql = "SELECT c.customer_id, CONCAT(c.firstname, ' ', c.lastname) AS name, c.email, c.telephone, CONCAT(oca.address_1,oca.address_2) AS address, oca.city, oca.postcode, occ.name as Country, c.ip, IF( c.status = 1, 'Enabled', 'Disabled' ) AS status, IF( c.approved = 1, 'Yes', 'No' ) AS approved, c.date_added, cgd.name AS customer_group FROM " . DB_PREFIX . "customer c LEFT JOIN " . DB_PREFIX . "customer_group_description cgd ON (c.customer_group_id = cgd.customer_group_id) LEFT JOIN " . DB_PREFIX . "address oca ON (c.address_id=oca.address_id) LEFT JOIN " . DB_PREFIX . "country occ ON (oca.country_id=occ.country_id) WHERE cgd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
 
-		$query = $this->db->query($sql);
+                $query = $this->db->query($sql);
         
 		return $query->rows;	
 	}]]></add>
@@ -101,8 +94,66 @@ $this->data['export'] = $this->url->link('sale/order/export', 'token=' . $this->
         	<operation>
 			<search position="before" offset="0"><![CDATA[protected function getList() {]]></search>
             <add><![CDATA[public function export() {
-        
-		$data = array();
+                if (isset($this->request->get['filter_order_id'])) {
+			$filter_order_id = $this->request->get['filter_order_id'];
+		} else {
+			$filter_order_id = null;
+		}
+
+		if (isset($this->request->get['filter_customer'])) {
+			$filter_customer = $this->request->get['filter_customer'];
+		} else {
+			$filter_customer = null;
+		}
+
+		if (isset($this->request->get['filter_order_status_id'])) {
+			$filter_order_status_id = $this->request->get['filter_order_status_id'];
+		} else {
+			$filter_order_status_id = null;
+		}
+		
+		if (isset($this->request->get['filter_total'])) {
+			$filter_total = $this->request->get['filter_total'];
+		} else {
+			$filter_total = null;
+		}
+		
+		if (isset($this->request->get['filter_date_added'])) {
+			$filter_date_added = $this->request->get['filter_date_added'];
+		} else {
+			$filter_date_added = null;
+		}
+		
+		if (isset($this->request->get['filter_date_modified'])) {
+			$filter_date_modified = $this->request->get['filter_date_modified'];
+		} else {
+			$filter_date_modified = null;
+		}
+
+		if (isset($this->request->get['sort'])) {
+			$sort = $this->request->get['sort'];
+		} else {
+			$sort = 'o.order_id';
+		}
+
+		if (isset($this->request->get['order'])) {
+			$order = $this->request->get['order'];
+		} else {
+			$order = 'DESC';
+		}
+                
+                $url = '';
+                
+		$data = array(
+			'filter_order_id'        => $filter_order_id,
+			'filter_customer'	     => $filter_customer,
+			'filter_order_status_id' => $filter_order_status_id,
+			'filter_total'           => $filter_total,
+			'filter_date_added'      => $filter_date_added,
+			'filter_date_modified'   => $filter_date_modified,
+			'sort'                   => $sort,
+			'order'                  => $order
+		);
                 
         $orders = array();
         
@@ -169,16 +220,81 @@ $this->data['export'] = $this->url->link('sale/order/export', 'token=' . $this->
 		<operation>
 			<search position="before" offset="0"><![CDATA[public function getOrders($data = array()) {]]></search>
 			<add><![CDATA[public function getOrdersexport($data = array()) {
- $sql = "SELECT o.order_id, cgd.name as customer_group, CONCAT(o.firstname, ' ', o.lastname) AS customer_name,
+ $sql = "SELECT DISTINCT o.order_id, cgd.name as customer_group, CONCAT(o.firstname, ' ', o.lastname) AS customer_name,
 email, telephone, CONCAT(o.payment_firstname, ' ', o.payment_lastname,',',o.payment_address_1,',',o.payment_address_2,',',o.payment_city,'-',o.payment_postcode) AS payment_address,
 CONCAT(o.shipping_firstname, ' ', o.shipping_lastname,',',o.shipping_address_1,',',o.shipping_address_2,',', o.shipping_city,'-',o.shipping_postcode) AS shipping_address,
  o.payment_method, o.shipping_method, o.total, o.currency_code,o.currency_value,
  o.date_added, oos.name as order_status
 FROM `" . DB_PREFIX . "order` o
 LEFT JOIN " . DB_PREFIX . "customer_group_description cgd ON (o.customer_group_id = cgd.customer_group_id)
-LEFT JOIN " . DB_PREFIX . "order_status oos ON (o.order_status_id = oos.order_status_id) WHERE cgd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+LEFT JOIN " . DB_PREFIX . "order_status oos ON (o.order_status_id = oos.order_status_id) WHERE (cgd.language_id = '" . (int)$this->config->get('config_language_id') . "' OR cgd.language_id IS NULL) AND (oos.language_id = '" . (int)$this->config->get('config_language_id') . "' OR oos.language_id IS NULL)";
 
-		$query = $this->db->query($sql);
+                if (isset($data['filter_order_status_id']) && !is_null($data['filter_order_status_id'])) {
+			$sql .= " AND o.order_status_id = '" . (int)$data['filter_order_status_id'] . "'";
+		} else {
+			$sql .= " AND o.order_status_id > '0'";
+		}
+
+		if (!empty($data['filter_order_id'])) {
+			$sql .= " AND o.order_id = '" . (int)$data['filter_order_id'] . "'";
+		}
+
+		if (!empty($data['filter_customer'])) {
+			$sql .= " AND CONCAT(o.firstname, ' ', o.lastname) LIKE '%" . $this->db->escape($data['filter_customer']) . "%'";
+		}
+
+		if (!empty($data['filter_date_added'])) {
+			$sql .= " AND DATE(o.date_added) = DATE('" . $this->db->escape($data['filter_date_added']) . "')";
+		}
+		
+		if (!empty($data['filter_date_modified'])) {
+			$sql .= " AND DATE(o.date_modified) = DATE('" . $this->db->escape($data['filter_date_modified']) . "')";
+		}
+		
+
+                    if (!empty($data['filter_email'])) {
+			$sql .= " AND o.email = '" . $data['filter_email'] . "'";
+                    }
+                    if (isset($data['filter_pending'])){
+                        if ($data['filter_pending']=='cero'){
+                            $sql .= " AND o.layaway_pending = 0 ";
+                        } else {
+                            $sql .= " AND o.layaway_pending > 0 ";
+                        }
+                        
+                    }
+                                
+            
+		if (!empty($data['filter_total'])) {
+			$sql .= " AND o.total = '" . (float)$data['filter_total'] . "'";
+		}
+
+		$sort_data = array(
+			'o.order_id',
+			'customer',
+			'status',
+			'o.date_added',
+			'o.date_modified',
+
+                    'o.email',
+                    'o.layaway_pending',
+                                
+            
+			'o.total'
+		);
+
+		if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
+			$sql .= " ORDER BY " . $data['sort'];
+		} else {
+			$sql .= " ORDER BY o.order_id";
+		}
+
+		if (isset($data['order']) && ($data['order'] == 'DESC')) {
+			$sql .= " DESC";
+		} else {
+			$sql .= " ASC";
+		}
+                $query = $this->db->query($sql);
 
 		return $query->rows;
 
@@ -191,7 +307,54 @@ LEFT JOIN " . DB_PREFIX . "order_status oos ON (o.order_status_id = oos.order_st
 	<file name="admin/view/template/sale/order_list.tpl">
 		<operation>
 			<search position="replace"><![CDATA[<a onclick="$('#form').attr('action', '<?php echo $invoice; ?>'); $('#form').attr('target', '_blank'); $('#form').submit();" class="button"><?php echo $button_invoice; ?></a>]]></search>
-			<add><![CDATA[<a onclick="$('form').attr('action', '<?php echo $export; ?>'); $('form').submit();" class="button"><?php echo $button_export; ?></a><a onclick="$('#form').attr('action', '<?php echo $invoice; ?>'); $('#form').attr('target', '_blank'); $('#form').submit();" class="button"><?php echo $button_invoice; ?></a>]]></add>
+			<add><![CDATA[<a onclick="exportToExcell();" class="button"><?php echo $button_export; ?></a><a onclick="$('#form').attr('action', '<?php echo $invoice; ?>'); $('#form').attr('target', '_blank'); $('#form').submit();" class="button"><?php echo $button_invoice; ?></a>]]></add>
+		</operation>
+                <operation>
+			<search position="before"><![CDATA[function filter() {]]></search>
+			<add><![CDATA[
+                                function exportToExcell(){
+                                    url = 'index.php?route=sale/order/export&token=<?php echo $token; ?>';
+
+                                    var filter_order_id = $('input[name=\'filter_order_id\']').attr('value');
+
+                                    if (filter_order_id) {
+                                            url += '&filter_order_id=' + encodeURIComponent(filter_order_id);
+                                    }
+
+                                    var filter_customer = $('input[name=\'filter_customer\']').attr('value');
+
+                                    if (filter_customer) {
+                                            url += '&filter_customer=' + encodeURIComponent(filter_customer);
+                                    }
+
+                                    var filter_order_status_id = $('select[name=\'filter_order_status_id\']').attr('value');
+
+                                    if (filter_order_status_id != '*') {
+                                            url += '&filter_order_status_id=' + encodeURIComponent(filter_order_status_id);
+                                    }	
+
+                                    var filter_total = $('input[name=\'filter_total\']').attr('value');
+
+                                    if (filter_total) {
+                                            url += '&filter_total=' + encodeURIComponent(filter_total);
+                                    }	
+
+                                    var filter_date_added = $('input[name=\'filter_date_added\']').attr('value');
+
+                                    if (filter_date_added) {
+                                            url += '&filter_date_added=' + encodeURIComponent(filter_date_added);
+                                    }
+
+                                    var filter_date_modified = $('input[name=\'filter_date_modified\']').attr('value');
+
+                                    if (filter_date_modified) {
+                                            url += '&filter_date_modified=' + encodeURIComponent(filter_date_modified);
+                                    }
+
+                                    location = url;
+                                }
+                            ]]>
+                        </add>
 		</operation>
 	</file>
 	

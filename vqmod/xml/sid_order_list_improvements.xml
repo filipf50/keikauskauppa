@@ -18,7 +18,7 @@
     <!-- ADMIN CONTROLLER -->
     <file name="admin/controller/sale/order.php">
         <operation>
-            <search position="after" index="5,6,7"><![CDATA[$url = '';]]></search>
+            <search position="after" index="5,6,7,8"><![CDATA[$url = '';]]></search>
             <add><![CDATA[
                     if (isset($this->request->get['filter_email'])) {
                         $filter_email=$this->request->get['filter_email'];
@@ -36,7 +36,7 @@
             </add>
         </operation>
         <operation>
-            <search position="before" index="1"><![CDATA['filter_total'           => $filter_total,]]></search>
+            <search position="before" index="1,2"><![CDATA['filter_total'           => $filter_total,]]></search>
             <add><![CDATA[
                     'filter_email'  => $filter_email,
                     'filter_pending'  => $filter_pending,
@@ -99,7 +99,7 @@
         <operation>
             <search position="replace"><![CDATA[$sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, o.order_status_id, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS status, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified FROM `" . DB_PREFIX . "order` o";]]></search>
             <add><![CDATA[
-                    $sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, o.order_status_id, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS status, o.email, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified, o.layaway_pending FROM `" . DB_PREFIX . "order` o";
+                    $sql = "SELECT DISTINCT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, o.order_status_id, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS status, o.email, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified, o.layaway_pending FROM `" . DB_PREFIX . "order` o";
                 ]]>                
             </add>
         </operation>
